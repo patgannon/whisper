@@ -18,7 +18,7 @@ group :development, :test do
   gem 'hpricot'
   gem 'jquery-rails', '0.2.4'
   gem 'mongoid-rspec'
-  gem 'my_generators', :path => '/home/tyler/ruby/current/my_generators'
+  gem 'my_generators'
   gem 'rspec-rails'
   gem 'ruby_parser', '2.0.5'
 end
