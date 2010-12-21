@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Domain:
+  = @site.domain
+%p
+  %b Title:
+  = @site.title
+%p
+  %b Body:
+  = @site.body
+
+= link_to 'Edit', edit_site_path(@site)
+\|
+= link_to 'Back', sites_path

@@ -1,0 +1,21 @@
+#notice= notice
+
+.field
+  .fieldName Path fragment:
+  .fieldValue= @page.path_fragment
+.field
+  .fieldName Name:
+  .fieldValue= @page.name
+.field
+  .fieldName Title:
+  .fieldValue= @page.title
+.field
+  .fieldName Body:
+  .fieldValue= @page.body
+.field
+  .fieldName Css:
+  .fieldValue= @page.css
+
+= link_to 'Edit', edit_page_path(@page) if can? :edit, Page
+\|
+= link_to 'Back', pages_path

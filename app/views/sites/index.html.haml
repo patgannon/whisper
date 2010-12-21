@@ -1,0 +1,22 @@
+%h1 sites
+
+%ul#sites.items
+  - @sites.each do |site|
+    %li.item[site]
+      %ul.details
+        %li.field.domain
+          %span.field_name Domain
+          %span.field_value= site.domain
+        %li.field.title
+          %span.field_name Title
+          %span.field_value= site.title
+        %li.field.body
+          %span.field_name Body
+          %span.field_value= site.body
+      = link_to 'Show', site
+      = link_to 'Edit', edit_site_path(site)
+      = link_to 'Destroy', site, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Site', new_site_path

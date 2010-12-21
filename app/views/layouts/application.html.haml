@@ -1,0 +1,16 @@
+!!!
+%html
+  %head
+    %title Whisper
+    = javascript_include_tag :all
+    = stylesheet_link_tag :all
+    = csrf_meta_tag
+  %body
+    - if user_signed_in?
+      Logged in as #{current_user.email} | #{link_to('Logout', destroy_user_session_path)} |
+      = link_to 'Change Password', '/change_password'
+    - else
+      = link_to('Log in', new_user_session_path)
+      = link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook)    
+    = yield
+

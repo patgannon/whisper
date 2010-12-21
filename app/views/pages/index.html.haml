@@ -1,0 +1,28 @@
+%h1 pages
+
+%ul#pages.items
+  - @pages.each do |page|
+    %li.item[page]
+      %ul.details
+        %li.field.path_fragment
+          %span.field_name Path Fragment
+          %span.field_value= page.path_fragment
+        %li.field.name
+          %span.field_name Name
+          %span.field_value= page.name
+        %li.field.title
+          %span.field_name Title
+          %span.field_value= page.title
+        %li.field.body
+          %span.field_name Body
+          %span.field_value= page.body
+        %li.field.css
+          %span.field_name Css
+          %span.field_value= page.css
+      = link_to 'Show', page
+      = link_to 'Edit', edit_page_path(page) if can? :edit, page
+      = link_to 'Destroy', page, :confirm => 'Are you sure?', :method => :delete if can? :destroy, page
+
+%br
+
+= link_to 'New Page', new_page_path
