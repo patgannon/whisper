@@ -3,12 +3,12 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.3'
 
 gem 'aws-s3', :require => 'aws/s3'
-gem 'bson_ext', '1.1.4'
-gem 'cancan', :git => 'https://github.com/bowsersenior/cancan.git'
+gem 'bson_ext', '1.1.5'
+gem 'cancan', '1.5.0.beta1' #, :git => 'https://github.com/bowsersenior/cancan.git'
 gem 'devise', '1.2.rc'
-gem 'haml', '3.0.22'
+gem 'haml', '3.0.25'
 gem 'inherited_resources', '1.1.2'
-gem 'mongoid', '~>2.0.0.beta.19'
+gem 'mongoid', '2.0.0.beta.20'
 gem 'mongoid-tree', :require => 'mongoid/tree'
 gem 'oa-oauth', :require => 'omniauth/oauth'
 gem 'openpgp'
@@ -21,6 +21,7 @@ group :development, :test do
   gem 'my_generators'
   gem 'rspec-rails'
   gem 'ruby_parser', '2.0.5'
+  gem 'ruby-debug'
 end
 
 group :test do

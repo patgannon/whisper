@@ -75,7 +75,7 @@ describe User do
   end  
   
   describe Ability do
-    it "Can be created from a CanDefinition" do
+    it "Can be created from a Rule" do
       a = Ability.from(new_can_definition true, :read, User, :id=>3425)
       a.user = @user
       a.save

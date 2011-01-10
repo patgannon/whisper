@@ -17,7 +17,7 @@ class Ability
   end
   
   def to_can_definition
-    CanCan::CanDefinition.new base_behavior, 
+    CanCan::Rule.new base_behavior, 
                               actions.map(&:to_sym), 
                               subjects.map(&:constantize),
                               conditions, nil

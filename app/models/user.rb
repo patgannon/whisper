@@ -40,6 +40,7 @@ class User < Node
     can :read, User
     can :edit, User, :id => self.id
   end
+  
   def loading_can?(*args)
     unless @cd_loaded
       set_abilities

@@ -829,3 +829,15 @@ admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
 admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
 admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
 admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+
+
+Started GET "/pages" for 127.0.0.1 at 2011-01-09 19:36:50 -0800
+  Processing by PagesController#index as HTML
+whisper_development['nodes'].find({:domain=>"localhost", :_type=>{"$in"=>["Site"]}}, {}).limit(-1)
+whisper_development['nodes'].find({:_type=>{"$in"=>["Site", "Page"]}}, {})
+Rendered pages/index.html.haml within layouts/application (14.2ms)
+Completed 200 OK in 184ms (Views: 22.1ms)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)

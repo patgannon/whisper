@@ -25,7 +25,8 @@ def set_current_site
 end
 
 def new_can_definition(base_behavior, action, subject, conditions=nil)
-  CanCan::CanDefinition.new base_behavior, action, subject, conditions, nil
+  CanCan::Rule.new base_behavior, action, subject, conditions, nil
 end
 
+Devise::OmniAuth.test_mode!
 

@@ -2,6 +2,8 @@ require 'spec_helper'
 
 describe "pages/index.html.haml" do
   before(:each) do
+    controller.stub(:current_user) {User.guest}
+    controller.stub(:current_ability) {User.guest}
     assign(:pages, [
       stub_model(Page,
         :path_fragment => "Path Fragment",
