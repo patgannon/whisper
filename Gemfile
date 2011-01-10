@@ -5,7 +5,7 @@ gem 'rails', '3.0.3'
 gem 'aws-s3', :require => 'aws/s3'
 gem 'bson_ext', '1.1.5'
 gem 'cancan', '1.5.0.beta1' #, :git => 'https://github.com/bowsersenior/cancan.git'
-gem 'devise', '1.2.rc'
+gem 'devise', :git => 'https://github.com/plataformatec/devise.git'  # '1.2.rc'
 gem 'haml', '3.0.25'
 gem 'inherited_resources', '1.1.2'
 gem 'mongoid', '2.0.0.beta.20'
@@ -25,6 +25,8 @@ group :development, :test do
 end
 
 group :test do
+  gem 'cucumber-rails'
+  gem 'capybara'
   gem 'autotest'
   gem 'database_cleaner'
   gem 'webrat'

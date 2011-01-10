@@ -841,3 +841,164 @@ Rendered pages/index.html.haml within layouts/application (14.2ms)
 Completed 200 OK in 184ms (Views: 22.1ms)
 admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
 admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+
+
+Started GET "/pages" for 127.0.0.1 at Sun Jan 09 22:31:32 -0800 2011
+  Processing by PagesController#index as HTML
+whisper_development['nodes'].find({:_type=>{"$in"=>["Site"]}, :domain=>"localhost"}, {}).limit(-1)
+whisper_development['nodes'].find({:_type=>{"$in"=>["Site", "Page"]}}, {})
+Rendered pages/index.html.haml within layouts/application (16.7ms)
+Completed 200 OK in 36ms (Views: 33.5ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at Sun Jan 09 22:31:35 -0800 2011
+
+
+Started GET "/users/auth/facebook/callback?code=f0b273423fd650e7e34183ab-6714565%7Cg0C07fQeWF4Q2l8w2eNjQj_9WSk" for 127.0.0.1 at Sun Jan 09 22:31:47 -0800 2011
+  Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"f0b273423fd650e7e34183ab-6714565|g0C07fQeWF4Q2l8w2eNjQj_9WSk"}
+whisper_development['nodes'].find({:_type=>{"$in"=>["Site"]}, :domain=>"localhost"}, {}).limit(-1)
+Completed   in 2ms
+
+NoMethodError (undefined method `persisted?' for nil:NilClass):
+  app/controllers/users/omniauth_callbacks_controller.rb:6:in `facebook'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (260.0ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (347.7ms)
+
+
+Started GET "/users/auth/facebook/callback?code=f0b273423fd650e7e34183ab-6714565%7Cg0C07fQeWF4Q2l8w2eNjQj_9WSk" for 127.0.0.1 at Sun Jan 09 22:33:27 -0800 2011
+  Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"f0b273423fd650e7e34183ab-6714565|g0C07fQeWF4Q2l8w2eNjQj_9WSk"}
+whisper_development['nodes'].find({:_type=>{"$in"=>["Site"]}, :domain=>"localhost"}, {}).limit(-1)
+Completed   in 2ms
+
+TypeError (exception class/object expected):
+  app/models/user.rb:50:in `raise'
+  app/models/user.rb:50:in `find_for_facebook_oauth'
+  app/controllers/users/omniauth_callbacks_controller.rb:4:in `facebook'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (350.1ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (441.0ms)
+
+
+Started GET "/users/auth/facebook/callback?code=f0b273423fd650e7e34183ab-6714565%7Cg0C07fQeWF4Q2l8w2eNjQj_9WSk" for 127.0.0.1 at Sun Jan 09 22:33:42 -0800 2011
+  Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"f0b273423fd650e7e34183ab-6714565|g0C07fQeWF4Q2l8w2eNjQj_9WSk"}
+whisper_development['nodes'].find({:_type=>{"$in"=>["Site"]}, :domain=>"localhost"}, {}).limit(-1)
+Completed   in 2ms
+
+TypeError (exception class/object expected):
+  app/models/user.rb:50:in `raise'
+  app/models/user.rb:50:in `find_for_facebook_oauth'
+  app/controllers/users/omniauth_callbacks_controller.rb:4:in `facebook'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (345.8ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (352.9ms)
+
+
+Started GET "/pages" for 127.0.0.1 at Sun Jan 09 22:33:47 -0800 2011
+  Processing by PagesController#index as HTML
+whisper_development['nodes'].find({:_type=>{"$in"=>["Site"]}, :domain=>"localhost"}, {}).limit(-1)
+whisper_development['nodes'].find({:_type=>{"$in"=>["Site", "Page"]}}, {})
+Rendered pages/index.html.haml within layouts/application (15.7ms)
+Completed 200 OK in 26ms (Views: 23.8ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at Sun Jan 09 22:33:52 -0800 2011
+
+
+Started GET "/users/auth/facebook/callback?code=f0b273423fd650e7e34183ab-6714565%7Cg0C07fQeWF4Q2l8w2eNjQj_9WSk" for 127.0.0.1 at Sun Jan 09 22:33:53 -0800 2011
+  Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"f0b273423fd650e7e34183ab-6714565|g0C07fQeWF4Q2l8w2eNjQj_9WSk"}
+whisper_development['nodes'].find({:_type=>{"$in"=>["Site"]}, :domain=>"localhost"}, {}).limit(-1)
+Completed   in 2ms
+
+TypeError (exception class/object expected):
+  app/models/user.rb:50:in `raise'
+  app/models/user.rb:50:in `find_for_facebook_oauth'
+  app/controllers/users/omniauth_callbacks_controller.rb:4:in `facebook'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (361.8ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (368.7ms)
+
+
+Started GET "/users/auth/facebook/callback?code=f0b273423fd650e7e34183ab-6714565%7Cg0C07fQeWF4Q2l8w2eNjQj_9WSk" for 127.0.0.1 at Sun Jan 09 22:34:52 -0800 2011
+  Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"f0b273423fd650e7e34183ab-6714565|g0C07fQeWF4Q2l8w2eNjQj_9WSk"}
+whisper_development['nodes'].find({:_type=>{"$in"=>["Site"]}, :domain=>"localhost"}, {}).limit(-1)
+Completed   in 2ms
+
+RuntimeError ({"user_info"=>{"name"=>"Tyler Gannon", "urls"=>{"Facebook"=>"http://www.facebook.com/tyboji", "Website"=>nil}, "nickname"=>"tyboji", "last_name"=>"Gannon", "first_name"=>"Tyler"}, "uid"=>"6714565", "credentials"=>{"token"=>"111380765596113|f0b273423fd650e7e34183ab-6714565|imq0U8JaQQZBCOtruQkUWOPavuw"}, "extra"=>{"user_hash"=>{"name"=>"Tyler Gannon", "timezone"=>-8, "gender"=>"male", "id"=>"6714565", "last_name"=>"Gannon", "updated_time"=>"2010-12-23T21:38:26+0000", "verified"=>true, "locale"=>"en_US", "link"=>"http://www.facebook.com/tyboji", "email"=>"tgannon@gmail.com", "first_name"=>"Tyler"}}, "provider"=>"facebook"}):
+  app/models/user.rb:50:in `find_for_facebook_oauth'
+  app/controllers/users/omniauth_callbacks_controller.rb:4:in `facebook'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (285.0ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (292.2ms)
+
+
+Started GET "/pages" for 127.0.0.1 at Sun Jan 09 23:06:33 -0800 2011
+  Processing by PagesController#index as HTML
+whisper_development['nodes'].find({:_type=>{"$in"=>["Site"]}, :domain=>"localhost"}, {}).limit(-1)
+whisper_development['nodes'].find({:_type=>{"$in"=>["Site", "Page"]}}, {})
+Rendered pages/index.html.haml within layouts/application (15.4ms)
+Completed 200 OK in 26ms (Views: 23.4ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at Sun Jan 09 23:06:40 -0800 2011
+
+
+Started GET "/users/auth/facebook/callback?code=f0b273423fd650e7e34183ab-6714565%7Cg0C07fQeWF4Q2l8w2eNjQj_9WSk" for 127.0.0.1 at Sun Jan 09 23:06:41 -0800 2011
+  Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"f0b273423fd650e7e34183ab-6714565|g0C07fQeWF4Q2l8w2eNjQj_9WSk"}
+whisper_development['nodes'].find({:_type=>{"$in"=>["Site"]}, :domain=>"localhost"}, {}).limit(-1)
+Completed   in 2ms
+
+RuntimeError ({"user_info"=>{"name"=>"Tyler Gannon", "urls"=>{"Facebook"=>"http://www.facebook.com/tyboji", "Website"=>nil}, "nickname"=>"tyboji", "last_name"=>"Gannon", "first_name"=>"Tyler"}, "uid"=>"6714565", "credentials"=>{"token"=>"111380765596113|f0b273423fd650e7e34183ab-6714565|imq0U8JaQQZBCOtruQkUWOPavuw"}, "extra"=>{"user_hash"=>{"name"=>"Tyler Gannon", "timezone"=>-8, "gender"=>"male", "id"=>"6714565", "last_name"=>"Gannon", "updated_time"=>"2010-12-23T21:38:26+0000", "verified"=>true, "locale"=>"en_US", "link"=>"http://www.facebook.com/tyboji", "email"=>"tgannon@gmail.com", "first_name"=>"Tyler"}}, "provider"=>"facebook"}):
+  app/models/user.rb:50:in `find_for_facebook_oauth'
+  app/controllers/users/omniauth_callbacks_controller.rb:4:in `facebook'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (275.4ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (283.3ms)
+
+
+Started GET "/pages" for 127.0.0.1 at Sun Jan 09 23:25:32 -0800 2011
+  Processing by PagesController#index as HTML
+whisper_development['nodes'].find({:_type=>{"$in"=>["Site"]}, :domain=>"localhost"}, {}).limit(-1)
+whisper_development['nodes'].find({:_type=>{"$in"=>["Site", "Page"]}}, {})
+Rendered pages/index.html.haml within layouts/application (15.1ms)
+Completed 200 OK in 25ms (Views: 22.8ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at Sun Jan 09 23:25:34 -0800 2011
+
+
+Started GET "/users/auth/facebook/callback?code=ceb23531dd64c0540f702c30-6714565%7C1Zst2mGLAN7BtBXJFuZBjyRprjw" for 127.0.0.1 at Sun Jan 09 23:26:36 -0800 2011
+  Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"ceb23531dd64c0540f702c30-6714565|1Zst2mGLAN7BtBXJFuZBjyRprjw"}
+whisper_development['nodes'].find({:_type=>{"$in"=>["Site"]}, :domain=>"localhost"}, {}).limit(-1)
+Completed   in 2ms
+
+RuntimeError ({"user_info"=>{"name"=>"Tyler Gannon", "urls"=>{"Facebook"=>"http://www.facebook.com/tyboji", "Website"=>nil}, "nickname"=>"tyboji", "last_name"=>"Gannon", "first_name"=>"Tyler"}, "uid"=>"6714565", "credentials"=>{"token"=>"111380765596113|ceb23531dd64c0540f702c30-6714565|f5pr4ZdwldNutvaPzapLp5wh5cI"}, "extra"=>{"user_hash"=>{"name"=>"Tyler Gannon", "timezone"=>-8, "gender"=>"male", "id"=>"6714565", "last_name"=>"Gannon", "updated_time"=>"2010-12-23T21:38:26+0000", "verified"=>true, "locale"=>"en_US", "link"=>"http://www.facebook.com/tyboji", "email"=>"tgannon@gmail.com", "first_name"=>"Tyler"}}, "provider"=>"facebook"}):
+  app/models/user.rb:50:in `find_for_facebook_oauth'
+  app/controllers/users/omniauth_callbacks_controller.rb:4:in `facebook'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (271.2ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (278.3ms)
