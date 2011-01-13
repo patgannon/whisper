@@ -21,7 +21,7 @@ group :development, :test do
   gem 'my_generators'
   gem 'rspec-rails'
   gem 'ruby_parser', '2.0.5'
-  gem 'ruby-debug'
+  #gem 'ruby-debug19'
 end
 
 group :test do
