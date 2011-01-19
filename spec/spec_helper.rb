@@ -4,6 +4,8 @@ require 'rspec/rails'
 
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
+SOME_USER_ID = 2346234523
+
 RSpec.configure do |config|
   config.mock_with :rspec
   config.include Mongoid::Matchers
@@ -12,6 +14,19 @@ RSpec.configure do |config|
   config.before(:suite) do
     DatabaseCleaner.strategy = :truncation
     DatabaseCleaner.orm = "mongoid"
+  end
+
+  config.before :each do
+   Devise::OmniAuth.short_circuit_authorizers!
+   Devise::OmniAuth.stub!(:facebook) do |b|
+     b.post('/oauth/access_token') { [200, {}, ACCESS_TOKEN.to_json] }
+     b.get('/me?access_token=plataformatec') { [200, {}, FACEBOOK_INFO.to_json] }
+   end
+  end
+  
+  config.after :each do
+   Devise::OmniAuth.unshort_circuit_authorizers!
+   Devise::OmniAuth.reset_stubs!
   end
 
 #  config.after(:each) do
@@ -24,7 +39,7 @@ def set_current_site
   Site.stub(:find).with(anything()) {@site}
 end
 
-def new_can_definition(base_behavior, action, subject, conditions=nil)
+def new_can_can_rule(base_behavior, action, subject, conditions=nil)
   CanCan::Rule.new base_behavior, action, subject, conditions, nil
 end
 
@@ -44,18 +59,6 @@ FACEBOOK_INFO = {
   :website => 'http://blog.plataformatec.com.br'
 }
 
-#before :each do
-#  Devise::OmniAuth.short_circuit_authorizers!
-#  Devise::OmniAuth.stub!(:facebook) do |b|
-#    b.post('/oauth/access_token') { [200, {}, ACCESS_TOKEN.to_json] }
-#    b.get('/me?access_token=plataformatec') { [200, {}, FACEBOOK_INFO.to_json] }
-#  end
-#end
-#
-#after :each do
-#  Devise::OmniAuth.unshort_circuit_authorizers!
-#  Devise::OmniAuth.reset_stubs!
-#end
 
 
 

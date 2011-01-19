@@ -1,5 +1,7 @@
-class User < Node
+class User
+  include Mongoid::Document
   include CanCan::Ability
+  include Whisper::Renameable
   # Include default devise modules. Others available are:
   # 
   devise :database_authenticatable, :registerable,
@@ -8,11 +10,8 @@ class User < Node
 
   field :first_name
   field :last_name
-  field :company
-  field :title
   field :facebook_id, :type=>Integer
-  
-  canonical_name :alias
+  field :alias, :type=>String
 
   validates :alias, :presence => true
   validates :email, :uniqueness => true
@@ -32,23 +31,11 @@ class User < Node
   #  if there's no :domain in in the *fields* hash.
   #
   #  This method will be chained as :new.
-  def self.new_with_domain(fields={})
-    if fields && fields[:domain]
-      domain = fields.delete(:domain)
-      Site.find(:first, :conditions=>{:name=>domain}).users.build(fields)
-    else
-      new_without_domain(fields)
-    end
-  end
-  class << self
-    alias_method :new_without_domain, :new
-    alias_method :new, :new_with_domain
-  end
 
    def self.find_for_facebook_oauth(access_token, signed_in_resource=nil)
     data = access_token['extra']['user_hash']
-    raise access_token.inspect
-    if user = User.find_by_email(data["email"])
+    # raise access_token.inspect
+    if user = User.where(:email => data["email"]).first
       user
     else # Create an user with a stub password. 
       User.create!(:email => data["email"], :password => Devise.friendly_token[0,20]) 
@@ -56,12 +43,13 @@ class User < Node
   end 
   
   def set_abilities
-    can :read, User
-    can :edit, User, :id => self.id
+    can :manage, :all
+    # can :read, User
+    # can :edit, User, :id => self.id
   end
   
   def loading_can?(*args)
-    unless @cd_loaded
+    unless !rules.empty?
       set_abilities
     end
     nonloading_can? *args
@@ -72,38 +60,9 @@ class User < Node
   def self.guest
     @guest ||= User.new
   end
-  
-  class Adapter
-    def get(key)
-      begin
-        get! key
-      rescue Mongoid::Errors::DocumentNotFound
-      end
-    end
-    
-    def get!(key)
-      raise "Invalid params" unless key.kind_of?(Array) && key.count
-      a = Site.find(key[0]).users.find(key[1])
-      raise Mongoid::Errors::DocumentNotFound.new(User, key) unless a
-      a
-    end
-    def find_first(conditions = {})
-      domain = conditions.delete(:domain)
-      raise ArgumentError.new("Must provide :domain condition to look up Users") unless domain
-      site = Site.where(:domain=>domain).first.users.where(conditions).first
-    end
-  end
-  
-  def to_key
-    [site.id, id]
-  end
-  
-  def self.to_adapter
-    Adapter.new
-  end
-  
+
   def self.find_for_authentication(conditions)
-    Site.where(:name=>conditions[:domain]).first.users.where(:email=>conditions[:email]).first
+    User.where(:email=>conditions[:email]).first
   end
 end
 

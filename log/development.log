@@ -1002,3 +1002,1111 @@ RuntimeError ({"user_info"=>{"name"=>"Tyler Gannon", "urls"=>{"Facebook"=>"http:
 Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
 Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (271.2ms)
 Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (278.3ms)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+
+
+Started GET "/pages" for 127.0.0.1 at 2011-01-18 13:36:32 -0800
+  Processing by PagesController#index as HTML
+whisper_development['nodes'].find({:domain=>"localhost", :_type=>{"$in"=>["Site"]}}, {}).limit(-1)
+whisper_development['nodes'].find({:_type=>{"$in"=>["Site", "Page"]}}, {})
+Rendered pages/index.html.haml within layouts/application (15.3ms)
+Completed 200 OK in 183ms (Views: 23.8ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2011-01-18 13:36:35 -0800
+
+
+Started GET "/users/auth/facebook/callback?code=ceb23531dd64c0540f702c30-6714565%7C1Zst2mGLAN7BtBXJFuZBjyRprjw" for 127.0.0.1 at 2011-01-18 13:36:35 -0800
+
+MultiJson::DecodeError (#<NoMethodError: undefined method `parse' for JSON:Module>):
+  
+
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (16.2ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.7ms)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+
+
+Started GET "/pages" for 127.0.0.1 at 2011-01-18 14:34:01 -0800
+  Processing by PagesController#index as HTML
+whisper_development['nodes'].find({:domain=>"localhost", :_type=>{"$in"=>["Site"]}}, {}).limit(-1)
+whisper_development['nodes'].find({:_type=>{"$in"=>["Site", "Page"]}}, {})
+Rendered pages/index.html.haml within layouts/application (14.0ms)
+Completed 200 OK in 30ms (Views: 27.8ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2011-01-18 14:34:03 -0800
+
+
+Started GET "/users/auth/facebook/callback?code=ceb23531dd64c0540f702c30-6714565%7C1Zst2mGLAN7BtBXJFuZBjyRprjw" for 127.0.0.1 at 2011-01-18 14:34:04 -0800
+
+MultiJson::DecodeError (#<NoMethodError: undefined method `parse' for JSON:Module>):
+  
+
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (16.2ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.7ms)
+
+
+Started GET "/users/auth/facebook/callback?code=ceb23531dd64c0540f702c30-6714565%7C1Zst2mGLAN7BtBXJFuZBjyRprjw" for 127.0.0.1 at 2011-01-18 14:40:18 -0800
+
+MultiJson::DecodeError (#<NoMethodError: undefined method `parse' for JSON:Module>):
+  
+
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (51.1ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (55.8ms)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+
+
+Started GET "/pages" for 127.0.0.1 at 2011-01-18 14:48:43 -0800
+  Processing by PagesController#index as HTML
+whisper_development['nodes'].find({:domain=>"localhost", :_type=>{"$in"=>["Site"]}}, {}).limit(-1)
+whisper_development['nodes'].find({:_type=>{"$in"=>["Site", "Page"]}}, {})
+Rendered pages/index.html.haml within layouts/application (15.0ms)
+Completed 200 OK in 31ms (Views: 29.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2011-01-18 14:48:45 -0800
+
+
+Started GET "/users/auth/facebook/callback?code=ceb23531dd64c0540f702c30-6714565%7C1Zst2mGLAN7BtBXJFuZBjyRprjw" for 127.0.0.1 at 2011-01-18 14:48:46 -0800
+
+MultiJson::DecodeError (#<NoMethodError: undefined method `parse' for JSON:Module>):
+  
+
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (16.0ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.5ms)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+
+
+Started GET "/pages" for 127.0.0.1 at 2011-01-18 15:07:52 -0800
+  Processing by PagesController#index as HTML
+whisper_development['nodes'].find({:domain=>"localhost", :_type=>{"$in"=>["Site"]}}, {}).limit(-1)
+whisper_development['nodes'].find({:_type=>{"$in"=>["Site", "Page"]}}, {})
+Rendered pages/index.html.haml within layouts/application (14.1ms)
+Completed 200 OK in 22ms (Views: 20.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2011-01-18 15:07:54 -0800
+
+
+Started GET "/users/auth/facebook/callback?code=ceb23531dd64c0540f702c30-6714565%7C1Zst2mGLAN7BtBXJFuZBjyRprjw" for 127.0.0.1 at 2011-01-18 15:07:54 -0800
+
+MultiJson::DecodeError (#<NoMethodError: undefined method `parse' for JSON:Module>):
+  
+
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (15.1ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.9ms)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+
+
+Started GET "/pages" for 127.0.0.1 at 2011-01-18 15:11:42 -0800
+  Processing by PagesController#index as HTML
+whisper_development['nodes'].find({:domain=>"localhost", :_type=>{"$in"=>["Site"]}}, {}).limit(-1)
+whisper_development['nodes'].find({:_type=>{"$in"=>["Site", "Page"]}}, {})
+Rendered pages/index.html.haml within layouts/application (14.4ms)
+Completed 200 OK in 22ms (Views: 19.8ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2011-01-18 15:11:44 -0800
+
+
+Started GET "/users/auth/facebook/callback?code=ceb23531dd64c0540f702c30-6714565%7C1Zst2mGLAN7BtBXJFuZBjyRprjw" for 127.0.0.1 at 2011-01-18 15:11:45 -0800
+
+MultiJson::DecodeError (#<NoMethodError: undefined method `parse' for JSON:Module>):
+  
+
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (15.9ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.6ms)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2011-01-18 15:13:07 -0800
+
+
+Started GET "/users/auth/facebook/callback?code=ceb23531dd64c0540f702c30-6714565%7C1Zst2mGLAN7BtBXJFuZBjyRprjw" for 127.0.0.1 at 2011-01-18 15:13:07 -0800
+
+MultiJson::DecodeError (#<NoMethodError: undefined method `parse' for JSON:Module>):
+  
+
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (60.3ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (65.9ms)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2011-01-18 15:14:05 -0800
+
+
+Started GET "/users/auth/facebook/callback?code=ceb23531dd64c0540f702c30-6714565%7C1Zst2mGLAN7BtBXJFuZBjyRprjw" for 127.0.0.1 at 2011-01-18 15:14:05 -0800
+
+MultiJson::DecodeError (#<NoMethodError: undefined method `parse' for JSON:Module>):
+  
+
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (59.3ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (64.4ms)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+
+
+Started GET "/pages" for 127.0.0.1 at 2011-01-18 15:18:03 -0800
+  Processing by PagesController#index as HTML
+whisper_development['nodes'].find({:domain=>"localhost", :_type=>{"$in"=>["Site"]}}, {}).limit(-1)
+whisper_development['nodes'].find({:_type=>{"$in"=>["Site", "Page"]}}, {})
+Rendered pages/index.html.haml within layouts/application (14.8ms)
+Completed 200 OK in 23ms (Views: 20.8ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2011-01-18 15:18:06 -0800
+
+
+Started GET "/users/auth/facebook/callback?code=ceb23531dd64c0540f702c30-6714565%7C1Zst2mGLAN7BtBXJFuZBjyRprjw" for 127.0.0.1 at 2011-01-18 15:18:07 -0800
+
+MultiJson::DecodeError (#<NoMethodError: undefined method `parse' for JSON:Module>):
+  
+
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (16.4ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.5ms)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+
+
+Started GET "/pages" for 127.0.0.1 at 2011-01-18 15:22:12 -0800
+  Processing by PagesController#index as HTML
+whisper_development['nodes'].find({:domain=>"localhost", :_type=>{"$in"=>["Site"]}}, {}).limit(-1)
+whisper_development['nodes'].find({:_type=>{"$in"=>["Site", "Page"]}}, {})
+Rendered pages/index.html.haml within layouts/application (14.4ms)
+Completed 200 OK in 22ms (Views: 20.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2011-01-18 15:22:13 -0800
+
+
+Started GET "/users/auth/facebook/callback?code=ceb23531dd64c0540f702c30-6714565%7C1Zst2mGLAN7BtBXJFuZBjyRprjw" for 127.0.0.1 at 2011-01-18 15:22:14 -0800
+
+MultiJson::DecodeError (#<NoMethodError: undefined method `parse' for JSON:Module>):
+  
+
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (15.7ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.9ms)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+
+
+Started GET "/pages" for 127.0.0.1 at 2011-01-18 15:29:27 -0800
+  Processing by PagesController#index as HTML
+whisper_development['nodes'].find({:domain=>"localhost", :_type=>{"$in"=>["Site"]}}, {}).limit(-1)
+whisper_development['nodes'].find({:_type=>{"$in"=>["Site", "Page"]}}, {})
+Rendered pages/index.html.haml within layouts/application (13.3ms)
+Completed 200 OK in 21ms (Views: 18.9ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2011-01-18 15:29:28 -0800
+
+
+Started GET "/users/auth/facebook/callback?code=ceb23531dd64c0540f702c30-6714565%7C1Zst2mGLAN7BtBXJFuZBjyRprjw" for 127.0.0.1 at 2011-01-18 15:29:29 -0800
+
+MultiJson::DecodeError (#<NoMethodError: undefined method `parse' for JSON:Module>):
+  
+
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (15.9ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.7ms)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2011-01-18 16:04:53 -0800
+
+Errno::ENOENT (No such file or directory - /Users/tyler/ruby/current/devise/config/locales/en.yml):
+  
+
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.4ms)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2011-01-18 16:05:23 -0800
+
+
+Started GET "/users/auth/facebook/callback?code=ceb23531dd64c0540f702c30-6714565%7C1Zst2mGLAN7BtBXJFuZBjyRprjw" for 127.0.0.1 at 2011-01-18 16:05:24 -0800
+  Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"ceb23531dd64c0540f702c30-6714565|1Zst2mGLAN7BtBXJFuZBjyRprjw"}
+whisper_development['nodes'].find({:domain=>"localhost", :_type=>{"$in"=>["Site"]}}, {}).limit(-1)
+Completed   in 2ms
+
+RuntimeError ({"provider"=>"facebook", "uid"=>"6714565", "credentials"=>{"token"=>"111380765596113|ceb23531dd64c0540f702c30-6714565|f5pr4ZdwldNutvaPzapLp5wh5cI"}, "user_info"=>{"nickname"=>"tyboji", "email"=>"tgannon@gmail.com", "first_name"=>"Tyler", "last_name"=>"Gannon", "name"=>"Tyler Gannon", "image"=>"http://graph.facebook.com/6714565/picture?type=square", "urls"=>{"Facebook"=>"http://www.facebook.com/tyboji", "Website"=>nil}}, "extra"=>{"user_hash"=>{"id"=>"6714565", "name"=>"Tyler Gannon", "first_name"=>"Tyler", "last_name"=>"Gannon", "link"=>"http://www.facebook.com/tyboji", "gender"=>"male", "email"=>"tgannon@gmail.com", "timezone"=>-8, "locale"=>"en_US", "verified"=>true, "updated_time"=>"2011-01-15T02:44:37+0000"}}}):
+  app/models/user.rb:50:in `find_for_facebook_oauth'
+  app/controllers/users/omniauth_callbacks_controller.rb:4:in `facebook'
+
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (534.2ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (577.9ms)
+
+
+Started GET "/users/auth/facebook/callback?code=ceb23531dd64c0540f702c30-6714565%7C1Zst2mGLAN7BtBXJFuZBjyRprjw" for 127.0.0.1 at 2011-01-18 16:07:20 -0800
+  Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"ceb23531dd64c0540f702c30-6714565|1Zst2mGLAN7BtBXJFuZBjyRprjw"}
+whisper_development['nodes'].find({:domain=>"localhost", :_type=>{"$in"=>["Site"]}}, {}).limit(-1)
+Completed   in 2ms
+
+NoMethodError (undefined method `find_by_email' for User:Class):
+  app/models/user.rb:51:in `find_for_facebook_oauth'
+  app/controllers/users/omniauth_callbacks_controller.rb:4:in `facebook'
+
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (460.5ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (470.2ms)
+
+
+Started GET "/users/auth/facebook/callback?code=ceb23531dd64c0540f702c30-6714565%7C1Zst2mGLAN7BtBXJFuZBjyRprjw" for 127.0.0.1 at 2011-01-18 16:08:11 -0800
+  Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"ceb23531dd64c0540f702c30-6714565|1Zst2mGLAN7BtBXJFuZBjyRprjw"}
+whisper_development['nodes'].find({:domain=>"localhost", :_type=>{"$in"=>["Site"]}}, {}).limit(-1)
+whisper_development['nodes'].find({:email=>"tgannon@gmail.com", :_type=>{"$in"=>["User"]}}, {}).limit(-1)
+Completed   in 77ms
+
+NoMethodError (undefined method `identify' for nil:NilClass):
+  app/models/node.rb:42:in `set_path_fragment'
+  app/models/user.rb:54:in `find_for_facebook_oauth'
+  app/controllers/users/omniauth_callbacks_controller.rb:4:in `facebook'
+
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (465.8ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (474.0ms)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2011-01-18 16:14:18 -0800
+
+
+Started GET "/users/auth/facebook/callback?code=ceb23531dd64c0540f702c30-6714565%7C1Zst2mGLAN7BtBXJFuZBjyRprjw" for 127.0.0.1 at 2011-01-18 16:14:19 -0800
+  Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"ceb23531dd64c0540f702c30-6714565|1Zst2mGLAN7BtBXJFuZBjyRprjw"}
+whisper_development['nodes'].find({:domain=>"localhost", :_type=>{"$in"=>["Site"]}}, {}).limit(-1)
+whisper_development['nodes'].find({:email=>"tgannon@gmail.com", :_type=>{"$in"=>["User"]}}, {}).limit(-1)
+Completed   in 75ms
+
+NoMethodError (undefined method `identify' for nil:NilClass):
+  app/models/node.rb:42:in `set_path_fragment'
+  app/models/user.rb:54:in `find_for_facebook_oauth'
+  app/controllers/users/omniauth_callbacks_controller.rb:4:in `facebook'
+
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (499.7ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (510.0ms)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2011-01-18 16:30:49 -0800
+
+
+Started GET "/users/auth/facebook/callback?code=ceb23531dd64c0540f702c30-6714565%7C1Zst2mGLAN7BtBXJFuZBjyRprjw" for 127.0.0.1 at 2011-01-18 16:30:50 -0800
+  Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"ceb23531dd64c0540f702c30-6714565|1Zst2mGLAN7BtBXJFuZBjyRprjw"}
+whisper_development['nodes'].find({:domain=>"localhost", :_type=>{"$in"=>["Site"]}}, {}).limit(-1)
+whisper_development['users'].find({:email=>"tgannon@gmail.com"}, {}).limit(-1)
+whisper_development['$cmd'].find({"count"=>"users", "query"=>{:email=>/^tgannon@gmail\.com$/i}, "fields"=>nil}, {}).limit(-1)
+Completed   in 76ms
+
+NoMethodError (undefined method `name' for #<User:0x00000102f45d78>):
+  app/models/user.rb:56:in `find_for_facebook_oauth'
+  app/controllers/users/omniauth_callbacks_controller.rb:4:in `facebook'
+
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (534.9ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (578.8ms)
+
+
+Started GET "/users/auth/facebook/callback?code=ceb23531dd64c0540f702c30-6714565%7C1Zst2mGLAN7BtBXJFuZBjyRprjw" for 127.0.0.1 at 2011-01-18 16:33:12 -0800
+  Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"ceb23531dd64c0540f702c30-6714565|1Zst2mGLAN7BtBXJFuZBjyRprjw"}
+whisper_development['nodes'].find({:domain=>"localhost", :_type=>{"$in"=>["Site"]}}, {}).limit(-1)
+whisper_development['users'].find({:email=>"tgannon@gmail.com"}, {}).limit(-1)
+whisper_development['$cmd'].find({"count"=>"users", "query"=>{:email=>/^tgannon@gmail\.com$/i}, "fields"=>nil}, {}).limit(-1)
+whisper_development['$cmd'].find({"count"=>"users", "query"=>{:email=>"tgannon@gmail.com"}, "fields"=>nil}, {}).limit(-1)
+MONGODB whisper_development['users'].insert([{"email"=>"tgannon@gmail.com", "encrypted_password"=>"$2a$10$0c6NxQZAJMDXxvx/e384yOEM3Tpa8/dZfTaMeDNUIAWisGxssaJ/W", "failed_attempts"=>0, "sign_in_count"=>0, "_id"=>BSON::ObjectId('4d36314909cd45cd1e000002')}])
+MONGODB whisper_development['users'].update({"_id"=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {"$set"=>{"last_sign_in_at"=>2011-01-19 00:33:13 UTC, "current_sign_in_at"=>2011-01-19 00:33:13 UTC, "last_sign_in_ip"=>"127.0.0.1", "current_sign_in_ip"=>"127.0.0.1", "sign_in_count"=>1}})
+Redirected to http://localhost:3000/
+Completed 302 Found in 81ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-18 16:33:13 -0800
+  Processing by SitesController#show as HTML
+  Parameters: {"id0"=>"root"}
+whisper_development['nodes'].find({:domain=>"localhost", :_type=>{"$in"=>["Site"]}}, {}).limit(-1)
+whisper_development['nodes'].find({:domain=>"localhost", :_type=>{"$in"=>["Site"]}}, {}).limit(-1)
+Completed   in 3ms
+
+Mongoid::Errors::InvalidOptions (Calling Document#find with nil is invalid):
+  
+
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (297.6ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (339.1ms)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-01-19 11:25:19 -0800
+
+ActionController::RoutingError (No route matches "/users"):
+  
+
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-01-19 11:25:25 -0800
+  Processing by ProjectsController#index as HTML
+whisper_development['projects'].find({}, {})
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Rendered projects/index.html.haml within layouts/application (83.2ms)
+Completed   in 89ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-01-19 11:25:25 -0800
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.haml (2.8ms)
+Rendered devise/sessions/new.html.haml within layouts/application (14.5ms)
+Completed 200 OK in 20ms (Views: 19.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-01-19 11:26:35 -0800
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.haml (2.7ms)
+Rendered devise/sessions/new.html.haml within layouts/application (13.8ms)
+Completed 200 OK in 18ms (Views: 17.8ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-01-19 11:27:37 -0800
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.haml (2.7ms)
+Rendered devise/sessions/new.html.haml within layouts/application (13.5ms)
+Completed 200 OK in 18ms (Views: 17.3ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-01-19 11:27:39 -0800
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.haml (2.7ms)
+Rendered devise/sessions/new.html.haml within layouts/application (13.6ms)
+Completed 200 OK in 18ms (Views: 17.4ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-01-19 11:28:46 -0800
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.haml (2.8ms)
+Rendered devise/sessions/new.html.haml within layouts/application (49.5ms)
+Completed 200 OK in 54ms (Views: 53.3ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-01-19 11:29:06 -0800
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.haml (2.8ms)
+Rendered devise/sessions/new.html.haml within layouts/application (50.4ms)
+Completed 200 OK in 55ms (Views: 54.8ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-01-19 11:29:21 -0800
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.haml (2.8ms)
+Rendered devise/sessions/new.html.haml within layouts/application (13.7ms)
+Completed 200 OK in 18ms (Views: 17.5ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-01-19 11:29:26 -0800
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.haml (2.7ms)
+Rendered devise/sessions/new.html.haml within layouts/application (13.7ms)
+Completed 200 OK in 18ms (Views: 17.6ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2011-01-19 11:29:50 -0800
+
+
+Started GET "/users/auth/facebook/callback?code=ceb23531dd64c0540f702c30-6714565%7C1Zst2mGLAN7BtBXJFuZBjyRprjw" for 127.0.0.1 at 2011-01-19 11:29:51 -0800
+  Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"ceb23531dd64c0540f702c30-6714565|1Zst2mGLAN7BtBXJFuZBjyRprjw"}
+whisper_development['users'].find({:email=>"tgannon@gmail.com"}, {}).limit(-1)
+MONGODB whisper_development['users'].update({"_id"=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {"$set"=>{"current_sign_in_at"=>2011-01-19 19:29:52 UTC, "sign_in_count"=>2}})
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 3ms
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-01-19 11:29:52 -0800
+  Processing by ProjectsController#index as HTML
+whisper_development['projects'].find({}, {})
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Rendered projects/index.html.haml within layouts/application (10.6ms)
+Completed 200 OK in 16ms (Views: 15.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-01-19 11:31:07 -0800
+  Processing by ProjectsController#index as HTML
+whisper_development['projects'].find({}, {})
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Rendered projects/index.html.haml within layouts/application (11.6ms)
+Completed 200 OK in 18ms (Views: 17.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-01-19 11:31:09 -0800
+  Processing by ProjectsController#index as HTML
+whisper_development['projects'].find({}, {})
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Rendered projects/index.html.haml within layouts/application (10.7ms)
+Completed 200 OK in 16ms (Views: 15.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-01-19 11:31:48 -0800
+  Processing by ProjectsController#index as HTML
+whisper_development['projects'].find({}, {})
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Rendered projects/index.html.haml within layouts/application (10.8ms)
+Completed 200 OK in 17ms (Views: 16.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-01-19 11:31:49 -0800
+  Processing by ProjectsController#index as HTML
+whisper_development['projects'].find({}, {})
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Rendered projects/index.html.haml within layouts/application (11.0ms)
+Completed 200 OK in 17ms (Views: 16.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-01-19 11:32:32 -0800
+  Processing by ProjectsController#index as HTML
+whisper_development['projects'].find({}, {})
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Rendered projects/index.html.haml within layouts/application (11.0ms)
+Completed 200 OK in 17ms (Views: 16.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-01-19 11:32:33 -0800
+  Processing by ProjectsController#index as HTML
+whisper_development['projects'].find({}, {})
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Rendered projects/index.html.haml within layouts/application (10.7ms)
+Completed 200 OK in 16ms (Views: 15.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-19 12:05:59 -0800
+
+ActionController::RoutingError (No route matches "/"):
+  
+
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-01-19 12:10:06 -0800
+  Processing by ProjectsController#index as HTML
+whisper_development['projects'].find({}, {})
+Rendered projects/index.html.haml within layouts/application (13.6ms)
+Completed 200 OK in 34ms (Views: 33.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-01-19 12:10:56 -0800
+  Processing by ProjectsController#index as HTML
+whisper_development['projects'].find({}, {})
+Rendered projects/index.html.haml within layouts/application (9.6ms)
+Completed 200 OK in 16ms (Views: 15.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-01-19 12:11:53 -0800
+  Processing by ProjectsController#index as HTML
+whisper_development['projects'].find({}, {})
+Rendered projects/index.html.haml within layouts/application (10.9ms)
+Completed 200 OK in 18ms (Views: 17.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-01-19 12:12:06 -0800
+  Processing by ProjectsController#index as HTML
+whisper_development['projects'].find({}, {})
+Rendered projects/index.html.haml within layouts/application (9.9ms)
+Completed 200 OK in 16ms (Views: 15.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-01-19 12:14:52 -0800
+  Processing by ProjectsController#index as HTML
+whisper_development['projects'].find({}, {})
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Rendered projects/index.html.haml within layouts/application (34.2ms)
+Completed   in 40ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-01-19 12:14:52 -0800
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.haml (2.9ms)
+Rendered devise/sessions/new.html.haml within layouts/application (49.4ms)
+Completed 200 OK in 54ms (Views: 53.4ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2011-01-19 12:14:57 -0800
+
+
+Started GET "/users/auth/facebook/callback?code=ceb23531dd64c0540f702c30-6714565%7C1Zst2mGLAN7BtBXJFuZBjyRprjw" for 127.0.0.1 at 2011-01-19 12:14:57 -0800
+  Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"ceb23531dd64c0540f702c30-6714565|1Zst2mGLAN7BtBXJFuZBjyRprjw"}
+whisper_development['users'].find({:email=>"tgannon@gmail.com"}, {}).limit(-1)
+MONGODB whisper_development['users'].update({"_id"=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {"$set"=>{"last_sign_in_at"=>2011-01-19 19:29:52 UTC, "current_sign_in_at"=>2011-01-19 20:14:58 UTC, "sign_in_count"=>3}})
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 3ms
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-01-19 12:14:58 -0800
+  Processing by ProjectsController#index as HTML
+whisper_development['projects'].find({}, {})
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Rendered projects/index.html.haml within layouts/application (10.7ms)
+Completed 200 OK in 16ms (Views: 15.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-01-19 12:15:10 -0800
+  Processing by ProjectsController#index as HTML
+whisper_development['projects'].find({}, {})
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Rendered projects/index.html.haml within layouts/application (14.0ms)
+Completed 200 OK in 37ms (Views: 36.9ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2011-01-19 12:15:57 -0800
+  Processing by ProjectsController#new as HTML
+Rendered projects/_form.html.haml (39.8ms)
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Rendered projects/new.html.haml within layouts/application (48.6ms)
+Completed 200 OK in 55ms (Views: 53.9ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2011-01-19 12:17:03 -0800
+  Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jX9a6YEGBdSvebjMDjcQVtXJynZIAuK1o8Jde28fbAs=", "project"=>{"name"=>"Whisper Service", "description"=>"Whisper is a service that uses all the best forms of marketing intelligence to assist people in making informed decisions about their own lives."}, "commit"=>"Save"}
+MONGODB whisper_development['projects'].insert([{"name"=>"Whisper Service", "description"=>"Whisper is a service that uses all the best forms of marketing intelligence to assist people in making informed decisions about their own lives.", "_id"=>BSON::ObjectId('4d3746bf09cd45d60600000b')}])
+Redirected to http://localhost:3000/projects/4d3746bf09cd45d60600000b
+Completed 302 Found in 7ms
+
+
+Started GET "/projects/4d3746bf09cd45d60600000b" for 127.0.0.1 at 2011-01-19 12:17:03 -0800
+  Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"4d3746bf09cd45d60600000b"}
+whisper_development['projects'].find({:_id=>BSON::ObjectId('4d3746bf09cd45d60600000b')}, {}).limit(-1)
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Rendered projects/show.html.haml within layouts/application (4.1ms)
+Completed   in 11ms
+
+ActionView::Template::Error (undefined method `each_pair' for #<User:0x000001049c12d8>):
+    7:   .fieldName Description:
+    8:   .fieldValue= @project.description
+    9: 
+    10: = link_to 'Edit', edit_project_path(@project) if can? :edit, Project
+    11: \|
+    12: = link_to 'Back', projects_path
+  app/views/projects/show.html.haml:10:in `_app_views_projects_show_html_haml__1983937917199182551_2189560520__1117241699391937916'
+
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (270.0ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (279.5ms)
+
+
+Started GET "/projects/4d3746bf09cd45d60600000b" for 127.0.0.1 at 2011-01-19 12:18:22 -0800
+  Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"4d3746bf09cd45d60600000b"}
+whisper_development['projects'].find({:_id=>BSON::ObjectId('4d3746bf09cd45d60600000b')}, {}).limit(-1)
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Rendered projects/show.html.haml within layouts/application (4.1ms)
+Completed   in 11ms
+
+ActionView::Template::Error (undefined method `each_pair' for #<User:0x0000010499d590>):
+    7:   .fieldName Description:
+    8:   .fieldValue= @project.description
+    9: 
+    10: = link_to 'Edit', edit_project_path(@project) if can? :edit, Project
+    11: \|
+    12: = link_to 'Back', projects_path
+  app/views/projects/show.html.haml:10:in `_app_views_projects_show_html_haml__1983937917199182551_2189481420__1117241699391937916'
+
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (265.3ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (270.7ms)
+
+
+Started GET "/projects/4d3746bf09cd45d60600000b" for 127.0.0.1 at 2011-01-19 12:19:28 -0800
+  Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"4d3746bf09cd45d60600000b"}
+whisper_development['projects'].find({:_id=>BSON::ObjectId('4d3746bf09cd45d60600000b')}, {}).limit(-1)
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Rendered projects/show.html.haml within layouts/application (4.2ms)
+Completed   in 12ms
+
+ActionView::Template::Error (undefined method `each_pair' for #<User:0x0000010501d0a0>):
+    7:   .fieldName Description:
+    8:   .fieldValue= @project.description
+    9: 
+    10: = link_to 'Edit', edit_project_path(@project) if can? :edit, Project
+    11: \|
+    12: = link_to 'Back', projects_path
+  app/views/projects/show.html.haml:10:in `_app_views_projects_show_html_haml__1983937917199182551_2189661980__1117241699391937916'
+
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (231.3ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (268.9ms)
+
+
+Started GET "/projects/4d3746bf09cd45d60600000b" for 127.0.0.1 at 2011-01-19 12:19:30 -0800
+  Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"4d3746bf09cd45d60600000b"}
+whisper_development['projects'].find({:_id=>BSON::ObjectId('4d3746bf09cd45d60600000b')}, {}).limit(-1)
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Rendered projects/show.html.haml within layouts/application (4.1ms)
+Completed   in 11ms
+
+ActionView::Template::Error (undefined method `each_pair' for #<User:0x000001048caa78>):
+    7:   .fieldName Description:
+    8:   .fieldValue= @project.description
+    9: 
+    10: = link_to 'Edit', edit_project_path(@project) if can? :edit, Project
+    11: \|
+    12: = link_to 'Back', projects_path
+  app/views/projects/show.html.haml:10:in `_app_views_projects_show_html_haml__1983937917199182551_2185796380__1117241699391937916'
+
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (266.0ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (273.3ms)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+
+
+Started GET "/projects/4d3746bf09cd45d60600000b" for 127.0.0.1 at 2011-01-19 12:19:49 -0800
+  Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"4d3746bf09cd45d60600000b"}
+whisper_development['projects'].find({:_id=>BSON::ObjectId('4d3746bf09cd45d60600000b')}, {}).limit(-1)
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Rendered projects/show.html.haml within layouts/application (8.8ms)
+Completed 200 OK in 17ms (Views: 14.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-01-19 12:20:05 -0800
+  Processing by ProjectsController#index as HTML
+whisper_development['projects'].find({}, {})
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Rendered projects/index.html.haml within layouts/application (11.6ms)
+Completed 200 OK in 17ms (Views: 16.8ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2011-01-19 12:20:30 -0800
+  Processing by ProjectsController#new as HTML
+Rendered projects/_form.html.haml (19.5ms)
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Rendered projects/new.html.haml within layouts/application (29.9ms)
+Completed 200 OK in 36ms (Views: 35.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-01-19 12:32:26 -0800
+  Processing by ProjectsController#index as HTML
+whisper_development['projects'].find({}, {})
+Rendered projects/index.html.haml within layouts/application (10.9ms)
+Completed 200 OK in 16ms (Views: 16.1ms)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-01-19 13:16:35 -0800
+  Processing by ProjectsController#index as HTML
+whisper_development['projects'].find({}, {})
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Rendered projects/index.html.haml within layouts/application (19.7ms)
+Completed   in 36ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-01-19 13:16:36 -0800
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.haml (2.8ms)
+Rendered devise/sessions/new.html.haml within layouts/application (15.0ms)
+Completed 200 OK in 34ms (Views: 33.1ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2011-01-19 13:16:38 -0800
+
+
+Started GET "/users/auth/facebook/callback?code=ceb23531dd64c0540f702c30-6714565%7C1Zst2mGLAN7BtBXJFuZBjyRprjw" for 127.0.0.1 at 2011-01-19 13:16:39 -0800
+  Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"ceb23531dd64c0540f702c30-6714565|1Zst2mGLAN7BtBXJFuZBjyRprjw"}
+whisper_development['users'].find({:email=>"tgannon@gmail.com"}, {}).limit(-1)
+MONGODB whisper_development['users'].update({"_id"=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {"$set"=>{"last_sign_in_at"=>2011-01-19 20:14:58 UTC, "current_sign_in_at"=>2011-01-19 21:16:40 UTC, "sign_in_count"=>4}})
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 4ms
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-01-19 13:16:40 -0800
+  Processing by ProjectsController#index as HTML
+whisper_development['projects'].find({}, {})
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Rendered projects/index.html.haml within layouts/application (11.6ms)
+Completed 200 OK in 17ms (Views: 16.8ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2011-01-19 13:16:44 -0800
+  Processing by ProjectsController#new as HTML
+Rendered projects/_form.html.haml (5.0ms)
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Rendered projects/new.html.haml within layouts/application (13.7ms)
+Completed 200 OK in 20ms (Views: 19.0ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2011-01-19 13:17:22 -0800
+  Processing by ProjectsController#new as HTML
+Rendered projects/_form.html.haml (5.2ms)
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Rendered projects/new.html.haml within layouts/application (13.6ms)
+Completed 200 OK in 19ms (Views: 18.8ms)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+MONGODB whisper_development['projects'].insert([{"name"=>"name 1", "description"=>"description 1", "_id"=>BSON::ObjectId('4d375bc609cd456760000001')}])
+whisper_development['projects'].find({}, {}).limit(-1).sort([[:_id, :desc]])
+MONGODB whisper_development['projects'].remove({:_id=>BSON::ObjectId('4d375bc609cd456760000001')})
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-01-19 13:48:42 -0800
+  Processing by ProjectsController#index as HTML
+whisper_development['projects'].find({}, {})
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Rendered projects/index.html.haml within layouts/application (23.1ms)
+Completed   in 29ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-01-19 13:48:42 -0800
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.haml (3.1ms)
+Rendered devise/sessions/new.html.haml within layouts/application (14.9ms)
+Completed 200 OK in 20ms (Views: 19.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2011-01-19 13:48:45 -0800
+
+
+Started GET "/users/auth/facebook/callback?code=ceb23531dd64c0540f702c30-6714565%7C1Zst2mGLAN7BtBXJFuZBjyRprjw" for 127.0.0.1 at 2011-01-19 13:48:45 -0800
+  Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"ceb23531dd64c0540f702c30-6714565|1Zst2mGLAN7BtBXJFuZBjyRprjw"}
+whisper_development['users'].find({:email=>"tgannon@gmail.com"}, {}).limit(-1)
+MONGODB whisper_development['users'].update({"_id"=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {"$set"=>{"last_sign_in_at"=>2011-01-19 21:16:40 UTC, "current_sign_in_at"=>2011-01-19 21:48:46 UTC, "sign_in_count"=>5}})
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 3ms
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-01-19 13:48:46 -0800
+  Processing by ProjectsController#index as HTML
+whisper_development['projects'].find({}, {})
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Rendered projects/index.html.haml within layouts/application (11.5ms)
+Completed 200 OK in 17ms (Views: 16.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-01-19 14:07:51 -0800
+  Processing by ProjectsController#index as HTML
+whisper_development['projects'].find({}, {})
+Rendered projects/index.html.haml within layouts/application (11.5ms)
+Completed 200 OK in 18ms (Views: 17.1ms)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-01-19 14:22:10 -0800
+  Processing by ProjectsController#index as HTML
+whisper_development['projects'].find({}, {})
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Rendered projects/index.html.haml within layouts/application (22.9ms)
+Completed   in 28ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-01-19 14:22:10 -0800
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.haml (2.8ms)
+Rendered devise/sessions/new.html.haml within layouts/application (14.8ms)
+Completed 200 OK in 20ms (Views: 19.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2011-01-19 14:22:12 -0800
+
+
+Started GET "/users/auth/facebook/callback?code=ceb23531dd64c0540f702c30-6714565%7C1Zst2mGLAN7BtBXJFuZBjyRprjw" for 127.0.0.1 at 2011-01-19 14:22:12 -0800
+  Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"ceb23531dd64c0540f702c30-6714565|1Zst2mGLAN7BtBXJFuZBjyRprjw"}
+whisper_development['users'].find({:email=>"tgannon@gmail.com"}, {}).limit(-1)
+MONGODB whisper_development['users'].update({"_id"=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {"$set"=>{"last_sign_in_at"=>2011-01-19 21:48:46 UTC, "current_sign_in_at"=>2011-01-19 22:22:13 UTC, "sign_in_count"=>6}})
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 3ms
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-01-19 14:22:13 -0800
+  Processing by ProjectsController#index as HTML
+whisper_development['projects'].find({}, {})
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Rendered projects/index.html.haml within layouts/application (11.9ms)
+Completed 200 OK in 17ms (Views: 17.0ms)
+
+
+Started POST "/projects/4d3746bf09cd45d60600000b" for 127.0.0.1 at 2011-01-19 14:22:19 -0800
+  Processing by ProjectsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jX9a6YEGBdSvebjMDjcQVtXJynZIAuK1o8Jde28fbAs=", "id"=>"4d3746bf09cd45d60600000b"}
+whisper_development['projects'].find({:_id=>BSON::ObjectId('4d3746bf09cd45d60600000b')}, {}).limit(-1)
+MONGODB whisper_development['projects'].remove({:_id=>BSON::ObjectId('4d3746bf09cd45d60600000b')})
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 8ms
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-01-19 14:22:20 -0800
+  Processing by ProjectsController#index as HTML
+whisper_development['projects'].find({}, {})
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Rendered projects/index.html.haml within layouts/application (10.7ms)
+Completed 200 OK in 16ms (Views: 15.8ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2011-01-19 14:22:23 -0800
+  Processing by ProjectsController#new as HTML
+Rendered projects/_form.html.haml (5.1ms)
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Rendered projects/new.html.haml within layouts/application (13.5ms)
+Completed 200 OK in 19ms (Views: 18.6ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2011-01-19 14:22:30 -0800
+  Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jX9a6YEGBdSvebjMDjcQVtXJynZIAuK1o8Jde28fbAs=", "project"=>{"name"=>"Coolio", "description"=>"Test"}, "commit"=>"Create Project"}
+MONGODB whisper_development['projects'].insert([{"name"=>"Coolio", "description"=>"Test", "_id"=>BSON::ObjectId('4d37642609cd455a23000008')}])
+Redirected to http://localhost:3000/projects/4d37642609cd455a23000008
+Completed 302 Found in 44ms
+
+
+Started GET "/projects/4d37642609cd455a23000008" for 127.0.0.1 at 2011-01-19 14:22:30 -0800
+  Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"4d37642609cd455a23000008"}
+whisper_development['projects'].find({:_id=>BSON::ObjectId('4d37642609cd455a23000008')}, {}).limit(-1)
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Rendered projects/show.html.haml within layouts/application (9.2ms)
+Completed 200 OK in 16ms (Views: 14.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-01-19 14:22:37 -0800
+  Processing by ProjectsController#index as HTML
+whisper_development['projects'].find({}, {})
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Rendered projects/index.html.haml within layouts/application (13.6ms)
+Completed 200 OK in 19ms (Views: 19.0ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2011-01-19 14:22:48 -0800
+  Processing by ProjectsController#new as HTML
+Rendered projects/_form.html.haml (5.1ms)
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Rendered projects/new.html.haml within layouts/application (13.8ms)
+Completed 200 OK in 20ms (Views: 18.9ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2011-01-19 14:22:56 -0800
+  Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jX9a6YEGBdSvebjMDjcQVtXJynZIAuK1o8Jde28fbAs=", "project"=>{"name"=>"Another project", "description"=>"Test"}, "commit"=>"Create Project"}
+MONGODB whisper_development['projects'].insert([{"name"=>"Another project", "description"=>"Test", "_id"=>BSON::ObjectId('4d37644009cd455a2300000a')}])
+Redirected to http://localhost:3000/projects/4d37644009cd455a2300000a
+Completed 302 Found in 7ms
+
+
+Started GET "/projects/4d37644009cd455a2300000a" for 127.0.0.1 at 2011-01-19 14:22:56 -0800
+  Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"4d37644009cd455a2300000a"}
+whisper_development['projects'].find({:_id=>BSON::ObjectId('4d37644009cd455a2300000a')}, {}).limit(-1)
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Rendered projects/show.html.haml within layouts/application (8.7ms)
+Completed 200 OK in 15ms (Views: 13.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-01-19 14:22:58 -0800
+  Processing by ProjectsController#index as HTML
+whisper_development['projects'].find({}, {})
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Rendered projects/index.html.haml within layouts/application (13.5ms)
+Completed 200 OK in 19ms (Views: 18.8ms)

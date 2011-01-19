@@ -1,0 +1,12 @@
+#notice= notice
+
+.field
+  .fieldName Name:
+  .fieldValue= @project.name
+.field
+  .fieldName Description:
+  .fieldValue= @project.description
+
+= link_to 'Edit', edit_project_path(@project) if can? :edit, Project
+\|
+= link_to 'Back', projects_path

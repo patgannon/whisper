@@ -16,5 +16,14 @@ module Whisper
     require 'whisper'
     config.encoding = "utf-8"
     config.filter_parameters += [:password]
+
+    config.generators do |g|
+      g.orm                 :my_generators
+      g.integration_tool    :my_spec
+      g.test_framework      :my_spec
+      g.scaffold_controller :my_controller
+      g.stylesheets         :my_stylesheets
+      g.template_engine     :my_generators
+    end
   end
 end
