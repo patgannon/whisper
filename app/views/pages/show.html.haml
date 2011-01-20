@@ -1,0 +1,12 @@
+#notice= notice
+
+.field
+  .fieldName Title:
+  .fieldValue= @page.title
+.field
+  .fieldName Html:
+  .fieldValue= @page.html
+
+= link_to 'Edit', edit_page_path(@page) if can? :edit, Page
+\|
+= link_to 'Back', pages_path

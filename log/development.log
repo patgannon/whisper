@@ -2110,3 +2110,125 @@ whisper_development['projects'].find({}, {})
 whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
 Rendered projects/index.html.haml within layouts/application (13.5ms)
 Completed 200 OK in 19ms (Views: 18.8ms)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+
+
+Started GET "/pages" for 127.0.0.1 at 2011-01-19 17:56:47 -0800
+  Processing by PagesController#index as HTML
+whisper_development['pages'].find({}, {})
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Rendered pages/index.html.haml within layouts/application (76.6ms)
+Completed   in 83ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-01-19 17:56:48 -0800
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.haml (40.2ms)
+Rendered devise/sessions/new.html.haml within layouts/application (52.6ms)
+Completed 200 OK in 68ms (Views: 67.2ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2011-01-19 17:56:51 -0800
+
+
+Started GET "/users/auth/facebook/callback?code=ceb23531dd64c0540f702c30-6714565%7C1Zst2mGLAN7BtBXJFuZBjyRprjw" for 127.0.0.1 at 2011-01-19 17:56:51 -0800
+  Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"ceb23531dd64c0540f702c30-6714565|1Zst2mGLAN7BtBXJFuZBjyRprjw"}
+whisper_development['users'].find({:email=>"tgannon@gmail.com"}, {}).limit(-1)
+MONGODB whisper_development['users'].update({"_id"=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {"$set"=>{"last_sign_in_at"=>2011-01-19 22:22:13 UTC, "current_sign_in_at"=>2011-01-20 01:56:53 UTC, "sign_in_count"=>7}})
+Redirected to http://localhost:3000/pages
+Completed 302 Found in 3ms
+
+
+Started GET "/pages" for 127.0.0.1 at 2011-01-19 17:56:53 -0800
+  Processing by PagesController#index as HTML
+whisper_development['pages'].find({}, {})
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Rendered pages/index.html.haml within layouts/application (10.7ms)
+Completed 200 OK in 16ms (Views: 16.0ms)
+
+
+Started GET "/users/me" for 127.0.0.1 at 2011-01-19 17:56:58 -0800
+
+ActionController::RoutingError (No route matches "/users/me"):
+  
+
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+
+
+Started GET "/users/me" for 127.0.0.1 at 2011-01-19 17:59:04 -0800
+  Processing by UsersController#me as HTML
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Redirected to http://localhost:3000/users.4d36314909cd45cd1e000002
+Completed 302 Found in 2ms
+
+
+Started GET "/users.4d36314909cd45cd1e000002" for 127.0.0.1 at 2011-01-19 17:59:04 -0800
+
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.7ms)
+
+
+Started GET "/users/4d36314909cd45cd1e000002" for 127.0.0.1 at 2011-01-19 17:59:24 -0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4d36314909cd45cd1e000002"}
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Rendered users/show.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 26ms (Views: 23.1ms)
+
+
+Started GET "/users/me" for 127.0.0.1 at 2011-01-19 18:00:56 -0800
+  Processing by UsersController#me as HTML
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Redirected to http://localhost:3000/users.4d36314909cd45cd1e000002
+Completed 302 Found in 2ms
+
+
+Started GET "/users.4d36314909cd45cd1e000002" for 127.0.0.1 at 2011-01-19 18:00:56 -0800
+
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.6ms)
+
+
+Started GET "/users/me" for 127.0.0.1 at 2011-01-19 18:09:02 -0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"me"}
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Completed   in 2ms
+
+BSON::InvalidObjectId (illegal ObjectId format):
+  app/controllers/users_controller.rb:5:in `show'
+
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (431.6ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (482.3ms)
+
+
+Started GET "/users/me" for 127.0.0.1 at 2011-01-19 18:09:44 -0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"me"}
+whisper_development['users'].find({:_id=>BSON::ObjectId('4d36314909cd45cd1e000002')}, {}).limit(-1)
+Completed   in 2ms
+
+RuntimeError (me):
+  app/controllers/users_controller.rb:5:in `show'
+
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (346.7ms)
+Rendered /Users/tyler/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (387.5ms)

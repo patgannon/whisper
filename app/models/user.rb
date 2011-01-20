@@ -20,6 +20,7 @@ class User
 
   embeds_many :abilities  
   alias_attribute :site, :parent
+  references_many :projects, :inverse_of => :owner
   
   #  Chained up to :new.
   #  Used to help Devise authentication which can't by default find users embedded in
@@ -43,9 +44,9 @@ class User
   end 
   
   def set_abilities
-    can :manage, :all
-    # can :read, User
-    # can :edit, User, :id => self.id
+    can :read, User
+    can :edit, User, :id => self.id
+    can :manage, Project, :owner_id => self.id
   end
   
   def loading_can?(*args)

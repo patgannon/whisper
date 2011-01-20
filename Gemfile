@@ -21,13 +21,13 @@ gem 'oa-oauth', '0.2.0.beta2', :require => 'omniauth/oauth'
 
 group :development, :test do
   gem 'gherkin', '2.3.2'
-  gem 'cucumber-rails' , :git => 'https://github.com/johnf/cucumber-rails.git'
+  gem 'cucumber-rails' , :git => 'https://github.com/johnf/cucumber-rails.gitd'
   gem 'haml-rails'
   gem 'hpricot'
   gem 'jquery-rails'
   gem 'lipsum'  # Used in my_generators to generate lorem ipsum text.
   gem 'mongoid-rspec', '1.3.2'
-  gem 'my_generators', :path => "/Users/tyler/ruby/current/my_generators"
+  gem 'my_generators'
   gem 'rspec-rails', '2.4.1'
   gem 'capybara'
   gem 'webrat'

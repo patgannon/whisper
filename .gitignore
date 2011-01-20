@@ -1,4 +1,5 @@
 .rvmrc
+config/mongoid.yml
 tmp/*
 .bundle/*
 log/*

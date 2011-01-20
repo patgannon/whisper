@@ -33,3 +33,4 @@ ActionController::Base.allow_rescue = false
 # For some databases (like MongoDB and CouchDB) you may need to use :truncation instead.
 DatabaseCleaner.strategy = :truncation
 
+# require File.expand_path(File.join(File.dirname(__FILE__), "devise_steps"))
