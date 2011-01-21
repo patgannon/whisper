@@ -13,6 +13,7 @@ Whisper::Application.routes.draw do
 
   resources :businesses do
     member do
+      get :rate
       post :rate
     end
   end

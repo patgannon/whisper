@@ -21,7 +21,7 @@ gem 'oa-oauth', '0.2.0.beta2', :require => 'omniauth/oauth'
 
 group :development, :test do
   gem 'gherkin', '2.3.2'
-  gem 'cucumber-rails' , :git => 'https://github.com/johnf/cucumber-rails.gitd'
+  gem 'cucumber-rails' , :git => 'https://github.com/johnf/cucumber-rails.git'
   gem 'haml-rails'
   gem 'hpricot'
   gem 'jquery-rails'
