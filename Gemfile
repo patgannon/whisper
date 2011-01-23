@@ -15,22 +15,28 @@ gem 'devise', :git => 'https://github.com/plataformatec/devise.git'
 gem 'haml', '3.0.25'
 gem 'inherited_resources', '1.1.2'
 gem 'mongoid', '2.0.0.beta.20'
-gem 'mongoid-tree', :require => 'mongoid/tree'
+# gem 'mongoid-tree', :require => 'mongoid/tree'  # Not actually in use.
 gem 'oa-oauth', '0.2.0.beta2', :require => 'omniauth/oauth'
-#gem 'openpgp'
 
 group :development, :test do
-  gem 'gherkin', '2.3.2'
-  gem 'cucumber-rails' , :git => 'https://github.com/johnf/cucumber-rails.git'
-  gem 'haml-rails'
+    #  Allows testing activemodel validations.
+  gem 'accept_values_for', :git => 'https://github.com/tylergannon/accept_values_for.git'
+    #  Offers support for some testing framework
   gem 'hpricot'
-  gem 'jquery-rails'
-  gem 'lipsum'  # Used in my_generators to generate lorem ipsum text.
+
+    #  Actual test frameworks
+  gem 'gherkin', '2.3.2'
   gem 'mongoid-rspec', '1.3.2'
-  gem 'my_generators'
   gem 'rspec-rails', '2.4.1'
   gem 'capybara'
   gem 'webrat'
+
+    # The following are just generators.  
+  gem 'cucumber-rails' , :git => 'https://github.com/johnf/cucumber-rails.git'
+  gem 'lipsum'  # Used in my_generators to generate lorem ipsum text.
+  gem 'my_generators'
+  gem 'haml-rails'
+  gem 'jquery-rails'
 end
 
 group :test do
@@ -40,8 +46,8 @@ end
 
 # Use these commands to get gems installed locally with yarddoc for them all.
 # gem install bluecloth yard
-# gem install rails aws-s3 cancan cucumber-rails haml-rails hpricot  
-# gem install jquery-rails lipsum capybara autotest database_cleaner webrat
+# gem install rails aws-s3 cancan cucumber-rails haml-rails hpricot accept_values_for  
+# gem install jquery-rails lipsum capybara autotest database_cleaner webrat has_scope
 # gem install bson_ext --pre
 # gem install haml -v '3.0.25'
 # gem install inherited_resources -v '1.1.2'

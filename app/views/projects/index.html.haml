@@ -1,4 +1,4 @@
-%h1 projects
+%h1 My Projects
 
 %ul#projects.items
   - @projects.each do |project|
@@ -12,8 +12,8 @@
           %span.field_value= project.description
       = link_to 'Show', project
       = link_to 'Edit', edit_project_path(project) if can? :edit, project
+      = link_to 'Manage Web', project_pages_path(project) if can? :edit, project
       = link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete if can? :destroy, project
-
 %br
 
 = link_to 'New Project', new_project_path

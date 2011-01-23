@@ -2,50 +2,31 @@ Feature: Manage projects
   In order to better his life
   User
   wants to be able to create a list of projects.
+
+  Scenario: I view my own projects
+  Given I am logged in as "tgannon@gmail.com"
+  And the following projects owned by "tgannon@gmail.com":
+    |name|description|
+    |name 1|description 1|
+    |name 2|description 2|
+  When I go to the my projects page
+  Then I should be on the my projects page
+  And I should see "My Projects"
+  And I should see "name 2"
   
   Scenario: Register new project
-    Given I am on the new project page
+    Given I am logged in as "tgannon@gmail.com"
+      And I am on the new project page
     When I fill in "Name" with "name 1"
-    And I fill in "Description" with "description 1"
-    And I press "Create Project"
+      And I fill in "Description" with "description 1"
+      And I press "Create Project"
     Then I should see "name 1"
-    And I should see "description 1"
-
-  # Rails generates Delete links that use Javascript to pop up a confirmation
-  # dialog and then do a HTTP POST request (emulated DELETE request).
-  #
-  # Capybara must use Culerity/Celerity or Selenium2 (webdriver) when pages rely
-  # on Javascript events. Only Culerity/Celerity supports clicking on confirmation
-  # dialogs.
-  #
-  # Since Culerity/Celerity and Selenium2 has some overhead, Cucumber-Rails will
-  # detect the presence of Javascript behind Delete links and issue a DELETE request 
-  # instead of a GET request.
-  #
-  # You can turn this emulation off by tagging your scenario with @no-js-emulation.
-  # Turning on browser testing with @selenium, @culerity, @celerity or @javascript
-  # will also turn off the emulation. (See the Capybara documentation for 
-  # details about those tags). If any of the browser tags are present, Cucumber-Rails
-  # will also turn off transactions and clean the database with DatabaseCleaner 
-  # after the scenario has finished. This is to prevent data from leaking into 
-  # the next scenario.
-  #
-  # Another way to avoid Cucumber-Rails' javascript emulation without using any
-  # of the tags above is to modify your views to use <button> instead. You can
-  # see how in http://github.com/jnicklas/capybara/issues#issue/12
-  #
+      And I should see "description 1"
+    
+  Scenario: Only manage my own projects
+    Given I am logged in as "tgannon@gmail.com"
+    And I have created a project with title "Tyler's Project"
+    When I log in as "othertg@gmail.com"
+    And I go to the my projects page
+    Then I should not see "Tyler's Project"
   
-  # Scenario: Delete project
-  #   Given the following projects:
-  #     |name|description|
-  #     |name 1|description 1|
-  #     |name 2|description 2|
-  #     |name 3|description 3|
-  #     |name 4|description 4|
-  #   When I delete the 3rd project
-  #   Then I should see the following projects:
-  #     |Name|Description|
-  #     |name 1|description 1|
-  #     |name 2|description 2|
-  #     |name 4|description 4|
-  #     

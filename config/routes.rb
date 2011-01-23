@@ -1,16 +1,10 @@
 Whisper::Application.routes.draw do
-  resources :pages
-
-  resources :projects
+  resources :projects do
+    resources :pages
+  end
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }  
   
-  resources :users do
-    member do
-      get :me
-    end
-  end
-
   resources :businesses do
     member do
       get :rate
@@ -18,5 +12,5 @@ Whisper::Application.routes.draw do
     end
   end
   
-  root :to => "users#me"
+  root :to => "projects#index"
 end

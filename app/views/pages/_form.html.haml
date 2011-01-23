@@ -1,4 +1,4 @@
-= form_for @page do |f|
+= form_for [@project, @page] do |f|
   -if @page.errors.any?
     #error_explanation
       %h2= "#{pluralize(@page.errors.count, "error")} prohibited this page from being saved:"
@@ -9,8 +9,5 @@
   .field
     = f.label :title
     = f.text_field :title
-  .field
-    = f.label :html
-    = f.text_area :html
   .actions
-    = f.submit 'Save'
+    = f.submit 'New Page'

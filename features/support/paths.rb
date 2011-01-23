@@ -10,6 +10,22 @@ module NavigationHelpers
 
     when /the home\s?page/
       '/'
+    when /the users? sign in page/
+      '/users/sign_in'
+    when /the users? sign out page/
+      '/users/sign_out'
+    when /the edit page for "([^"]*)"/
+      page = Page.where(:title=>$1).sort{|x,y| 
+          y.date_created <=> x.date_created
+      }.first
+      "/projects/#{page.project.id}/pages/#{page.id}/edit"
+    when /any (.*) page/
+      "/#{$1.tableize}/#{$1.singularize.camelize.constantize.create!.id}"
+    when /the my projects page/
+      '/projects'
+    when /the edit page for a project titled "([^"]*)"/
+      "/projects/#{new_project_id $1}/edit"
+
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
@@ -27,6 +43,9 @@ module NavigationHelpers
           "Now, go and add a mapping in #{__FILE__}"
       end
     end
+  end
+  def new_project_id(title)
+    User.last.projects.create!(:title=>title).id
   end
 end
 

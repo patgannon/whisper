@@ -1,6 +1,8 @@
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
+require 'accept_values_for'
+require 'discover'
 
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
@@ -43,6 +45,12 @@ def new_can_can_rule(base_behavior, action, subject, conditions=nil)
   CanCan::Rule.new base_behavior, action, subject, conditions, nil
 end
 
+def user(email)
+  a = User.where(:email=>email).first
+  a ? a : User.create(:email=>email, :password=>'coms3dt.df', \
+                      :password_combination=>'coms3dt.df')
+end
+
 Devise::OmniAuth.test_mode!
 
 # Inside our integration tests for Oauth
@@ -58,11 +66,6 @@ FACEBOOK_INFO = {
   :last_name => 'Example',
   :website => 'http://blog.plataformatec.com.br'
 }
-
-
-
-
-
 
 BULLSHIT = {"user_info"=>
   {"name"=>"Tyler Gannon", 

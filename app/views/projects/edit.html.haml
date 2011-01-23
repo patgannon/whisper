@@ -2,6 +2,7 @@
 
 = render 'form'
 
+= link_to 'Manage Web', project_pages_path(@project) if can? :edit, @project
 = link_to 'Show', @project
 \|
 = link_to 'Back', projects_path

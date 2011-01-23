@@ -1,6 +1,7 @@
-Given /^the following projects:$/ do |projects|
+Given /^the following projects owned by "([^"]*)":$/ do |email, projects|
+  user = User.where(:email=>email).first
   projects.hashes.each do |project|
-    Project.create! project
+    user.projects.create! project
   end
 end
 
@@ -18,3 +19,8 @@ end
 Given /^I have created a project%/ do
   Project.create!(:name => 'project sdfas', :description => 'sdfsdaretasd')
 end
+
+Given /^I have created a project with title "([^\"]*)"$/ do |project_title|
+  User.last.projects.build(:title=>project_title)
+end
+
