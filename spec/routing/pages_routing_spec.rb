@@ -3,6 +3,10 @@ require "spec_helper"
 describe PagesController do
   describe "routing" do
     
+    it "Captures unrecognized routes as web page paths" do
+      { :get => "/Home" }.should route_to(:controller => "pages", :title1 => "Home", :action => "show")
+      { :get => "/Home/About-Us" }.should route_to(:controller => "pages", :title1 => "Home", :title2=>"About-Us", :action => "show")
+    end
 
     it "recognizes and generates #index" do
       { :get => "/projects/2345/pages" }.should route_to(:controller => "pages", :project_id => "2345", :action => "index")

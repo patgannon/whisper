@@ -9,5 +9,6 @@ describe Project do
   it {should_not accept_values_for(:owner, nil)}
   it {should accept_values_for(:owner, user('othertg@gmail.com'))}
   it {should reference_many(:pages)}
+  it {should reference_many(:domain_names)}
 end
 

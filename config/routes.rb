@@ -1,5 +1,8 @@
 Whisper::Application.routes.draw do
+  resources :domain_names
+
   resources :projects do
+    resources :domain_names
     resources :pages
   end
 
@@ -12,5 +15,7 @@ Whisper::Application.routes.draw do
     end
   end
   
-  root :to => "projects#index"
+  match '/:title1' => 'pages#show', :via => :get
+  
+  root :to => 'pages#show', :root_path => true
 end

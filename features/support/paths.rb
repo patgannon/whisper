@@ -12,6 +12,9 @@ module NavigationHelpers
       '/'
     when /the users? sign in page/
       '/users/sign_in'
+    when /the project page for "([^"]*)"/
+      project = Project.where(:name=>$1).sort{|x,y| y.date_created <=> x.date_created}.first
+      "/projects/#{project.id}"
     when /the users? sign out page/
       '/users/sign_out'
     when /the edit page for "([^"]*)"/

@@ -19,6 +19,7 @@ RSpec.configure do |config|
   end
 
   config.before :each do
+   DomainName.where(:domain_name=>'www.example.com').exists?.should be == true
    Devise::OmniAuth.short_circuit_authorizers!
    Devise::OmniAuth.stub!(:facebook) do |b|
      b.post('/oauth/access_token') { [200, {}, ACCESS_TOKEN.to_json] }
@@ -49,6 +50,12 @@ def user(email)
   a = User.where(:email=>email).first
   a ? a : User.create(:email=>email, :password=>'coms3dt.df', \
                       :password_combination=>'coms3dt.df')
+end
+
+def some_new_project
+  User.create!(:email=>'email54@car.com', :password=>'coms3dt.df', \
+                      :password_combination=>'coms3dt.df'
+  ).projects.create!(:name => 'My new project')
 end
 
 Devise::OmniAuth.test_mode!

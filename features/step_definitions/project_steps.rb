@@ -24,3 +24,11 @@ Given /^I have created a project with title "([^\"]*)"$/ do |project_title|
   User.last.projects.build(:title=>project_title)
 end
 
+
+Given /^within project "([^"]*)" I create the following pages:$/ do |proj_name, web_pages|
+  project = Project.where(:name=>proj_name).
+                    sort{|x,y| y.date_created <=> x.date_created}.first
+  web_pages.hashes.each do |web_page|
+    project.pages.create! web_page
+  end
+end

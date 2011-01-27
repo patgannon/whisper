@@ -1,0 +1,2 @@
+module DomainNamesHelper
+end

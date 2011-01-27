@@ -12,6 +12,13 @@ When /^I manage the (\d+)(?:st|nd|rd|th) project web site$/ do |pos|
   end
 end
 
+When /^I edit the (\d+)nd project$/ do |pos|
+  visit projects_path
+  within("ul#projects > li:nth-child(#{pos.to_i})") do
+    click_link "Edit"
+  end
+end
+
 Given /^I am "([^"]*)" managing projects:$/ do |email, projects|
   Given %{I am logged in as "#{email}"}
   user = User.where(:email=>email).first

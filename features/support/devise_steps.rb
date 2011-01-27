@@ -19,6 +19,16 @@ def create_user(email, password)
   end
 end  
 
+Before do
+  User.create!(:email=>'tester@gmail.com', :password=>'password', :password_confirmation=>'password').
+  projects.create!(:name=>'Whisper').tap{|project|
+    ['whisper.com', 'localhost', 'www.example.com', 'example.com', 'example.org'].each do |domain_name|
+      project.domain_names.create!(:domain_name=>domain_name)
+    end
+    project.pages.create!(:title=>'Home', :html => 'Welcome to Whisper')
+  }
+end
+
 Given /^I am a new, authenticated user$/ do
   Given %{Existing user "testing@man.net" logged in with password "secretpass"}
 end
@@ -48,8 +58,8 @@ Given /^(?:|I )browse to (.+)$/ do |page_name|
 end
 
 Given /^I am logged in as "([^"]*)"$/ do |email|
-  visit "/"
-  user = User.create! :email=>email, :password=>'123joec00L', :password_confirmation=>'123joec00L'
+  # visit "/"
+  create_user email, '123joec00L'
   Given %{I browse to path /users/sign_in}
   And %{I fill in "user_email" with "#{email}"}
   And %{I fill in "user_password" with "123joec00L"}
@@ -81,7 +91,7 @@ Given /^I manage my own project$/ do
 end
 
 Given /^I click "([^"]*)"$/ do |arg1|
-  Given %{I follow "#{arg1}" }
+  click_link arg1
 end
 
 Then /^I should see editable content$/ do

@@ -6,5 +6,6 @@ class Project
   validates :owner, :presence => true
   validates :name, :presence => true
   references_many :pages
+  references_many :domain_names
 end
 

@@ -5,8 +5,8 @@ Feature: Manage project pages
   
 
   Scenario: Edit project main page
-    Given I am logged in as "tgannon@gmail.com"
-    And the following projects owned by "tgannon@gmail.com":
+    Given I am logged in as "somebody@gmail.com"
+    And the following projects owned by "somebody@gmail.com":
       |name|description|
       |My First Project|description 1|
       |My Second Project|description 2|
@@ -15,7 +15,7 @@ Feature: Manage project pages
     And I should see "Make a web page"
     
   Scenario: Make a new web page
-    Given I am "tgannon@gmail.com" managing projects:
+    Given I am "foobar@example.com" managing projects:
       |name|description|
       |Build software to manage a web site|description 1|
       |Profit|description 2|
