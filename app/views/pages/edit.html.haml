@@ -1,7 +1,36 @@
-%h1 Editing page
+= content_for :head do
+  = stylesheet_link_tag 'aloha'
+  = stylesheet_link_tag 'ui-lightness/jquery-ui-1.8.9.custom.css'
+  - aloha_scripts.each do |script|
+    = javascript_include_tag script
+  = javascript_include_tag 'aloha'
+  = javascript_tag "const FORM_ACTION = '#{resource_url(@page)}';"
+  = javascript_include_tag 'jquery-ui-1.8.9.custom.min.js'
+  
+  
+= form_for [@project, @page], :html=>{:id=>'form'}, :remote=>true do |f|
+  -if @page.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@page.errors.count, "error")} prohibited this page from being saved:"
+      %ul
+        - @page.errors.full_messages.each do |msg|
+          %li= msg
 
-= render 'form'
+  .field
+    = f.text_area :html, :class => 'article', :id=>'article'
+  .actions
+    = f.submit 'New Page'
 
-= link_to 'Show', @page
+#html.article
+  != raw @page.html
+
+#content_area
+  .resizable.article Foolio
+  .resizable.article Coolio
+  .resizable.article Losebag
+
+  
+= link_to 'Me', '.'
+= link_to 'Show', resource_url(@page)
 \|
-= link_to 'Back', pages_path
+= link_to 'Back', collection_url

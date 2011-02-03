@@ -20,7 +20,20 @@ describe User do
       @user.should_not be_able_to(:edit, User.new)
       @user.should be_able_to(:edit, @user)
     end
+    
+    it "should be able to create pages in its own projects" do
+      @page = @user.projects.create!(:name=>'project1').pages.build
+      @user.should be_able_to(:create, @page)
+    end
+
+    it "should not be able to create pages in someone else's projects" do
+      @another_project = user('someone@yourbusiness.com').projects.create!(
+         :name=>'project1')
+      @page = @another_project.pages.build
+      @user.should_not be_able_to(:create, @page)
+    end
   end  
+  
 
   it "should respond to find_for_authentication" do
     User.find_for_authentication(:email=>'tgannon@gmail.com').should == @user

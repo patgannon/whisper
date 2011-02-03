@@ -2,33 +2,38 @@ require "spec_helper"
 
 describe PagesController do
   describe "routing" do
+    
+    it "Captures unrecognized routes as web page paths" do
+      { :get => "/Home" }.should route_to(:controller => "pages", :title1 => "Home", :action => "show")
+      { :get => "/Home/About-Us" }.should route_to(:controller => "pages", :title1 => "Home", :title2=>"About-Us", :action => "show")
+    end
 
     it "recognizes and generates #index" do
-      { :get => "/pages" }.should route_to(:controller => "pages", :action => "index")
+      { :get => "/projects/2345/pages" }.should route_to(:controller => "pages", :project_id => "2345", :action => "index")
     end
 
     it "recognizes and generates #new" do
-      { :get => "/pages/new" }.should route_to(:controller => "pages", :action => "new")
+      { :get => "/projects/2345/pages/new" }.should route_to(:controller => "pages", :project_id => "2345", :action => "new")
     end
 
     it "recognizes and generates #show" do
-      { :get => "/pages/1" }.should route_to(:controller => "pages", :action => "show", :id => "1")
+      { :get => "/projects/2345/pages/1" }.should route_to(:controller => "pages", :project_id => "2345", :action => "show", :id => "1")
     end
 
     it "recognizes and generates #edit" do
-      { :get => "/pages/1/edit" }.should route_to(:controller => "pages", :action => "edit", :id => "1")
+      { :get => "/projects/2345/pages/1/edit" }.should route_to(:controller => "pages", :project_id => "2345", :action => "edit", :id => "1")
     end
 
     it "recognizes and generates #create" do
-      { :post => "/pages" }.should route_to(:controller => "pages", :action => "create")
+      { :post => "/projects/2345/pages" }.should route_to(:controller => "pages", :project_id => "2345", :action => "create")
     end
 
     it "recognizes and generates #update" do
-      { :put => "/pages/1" }.should route_to(:controller => "pages", :action => "update", :id => "1")
+      { :put => "/projects/2345/pages/1" }.should route_to(:controller => "pages", :project_id => "2345", :action => "update", :id => "1")
     end
 
     it "recognizes and generates #destroy" do
-      { :delete => "/pages/1" }.should route_to(:controller => "pages", :action => "destroy", :id => "1")
+      { :delete => "/projects/2345/pages/1" }.should route_to(:controller => "pages", :project_id => "2345", :action => "destroy", :id => "1")
     end
 
   end

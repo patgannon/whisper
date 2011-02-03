@@ -7,6 +7,6 @@
   .fieldName Html:
   .fieldValue= @page.html
 
-= link_to 'Edit', edit_page_path(@page) if can? :edit, Page
+= link_to 'Edit', edit_resource_url(@page) if can? :edit, Page
 \|
-= link_to 'Back', pages_path
+= link_to 'Back', collection_url

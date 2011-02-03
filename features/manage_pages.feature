@@ -3,29 +3,26 @@ Feature: Manage project pages
   User
   wants to be able to create one or more html pages about any project.
   
-  Scenario: Edit project main page
-    Given I am logged in
-    Given the following projects:
-      |name|description|
-      |name 1|description 1|
-      |name 2|description 2|
-    When I manage the 1st project web site
-    Then I should see "Manage project name 1"
 
-  Scenario: Try to edit someone else's pages
-    Given I am not logged in
-    When I go to any project page
-    Then I should not see "Manage"
+  Scenario: Edit project main page
+    Given I am logged in as "somebody@gmail.com"
+    And the following projects owned by "somebody@gmail.com":
+      |name|description|
+      |My First Project|description 1|
+      |My Second Project|description 2|
+    When I manage the 1st project web site
+    Then I should see "Web Pages for project My First Project"
+    And I should see "Make a web page"
     
-  Scenario: Edit my own page
-    Given I am logged in
-    And I have created a project
-    When I edit that project
-    Then I should see "Manage Web"
-    
-  Scenario: Edit my project's web
-    Given I am logged in
-    And I manage my own project
-    And I click "Manage Web"
-    Then I should see editable content
+  Scenario: Make a new web page
+    Given I am "foobar@example.com" managing projects:
+      |name|description|
+      |Build software to manage a web site|description 1|
+      |Profit|description 2|
+    And I manage the 1st project web site
+    And I click on "Make a web page"
+    When I fill in "page_title" with "Check out whisper.com"
+    And press "New Page"
+    Then I should be on the edit page for "Check out whisper.com"
+    And I should see "Check out whisper.com"
     

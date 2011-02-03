@@ -1,4 +1,3 @@
-#notice= notice
 
 .field
   .fieldName Name:
@@ -6,6 +5,14 @@
 .field
   .fieldName Description:
   .fieldValue= @project.description
+  
+#domain_names
+  Web site names for this project:
+  %ul.domain_names
+    - @project.domain_names.each do |domain_name|
+      %li
+        = domain_name.domain_name
+        = link_to 'Destroy', project_domain_name_path(@project, domain_name), :confirm => 'Are you sure?', :method => :delete if can? :delete, domain_name
 
 = link_to 'Edit', edit_project_path(@project) if can? :edit, Project
 \|

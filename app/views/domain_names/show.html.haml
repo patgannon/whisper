@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Domain name:
+  = @domain_name.domain_name
+
+= link_to 'Edit', edit_resource_url(resource)
+\|
+= link_to 'Back', collection_url

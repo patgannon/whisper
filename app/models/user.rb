@@ -6,21 +6,18 @@ class User
   # 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable,
-         :token_authenticatable, :lockable, :timeoutable, :authentication_keys =>[:email, :domain]
+         :token_authenticatable, :lockable, :timeoutable
 
   field :first_name
   field :last_name
   field :facebook_id, :type=>Integer
-  field :alias, :type=>String
 
-  validates :alias, :presence => true
   validates :email, :uniqueness => true
   validates :email, :presence => true
-  attr_accessible :alias, :first_name, :last_name, :email, :password, :password_confirmation, :remember_me
+  attr_accessible :first_name, :last_name, :email, :password, :password_confirmation, :remember_me
 
   embeds_many :abilities  
-  alias_attribute :site, :parent
-  references_many :projects, :inverse_of => :owner
+  references_many :projects, :inverse_of => :owner, :foreign_key => :owner_id, :dependent => :destroy
   
   #  Chained up to :new.
   #  Used to help Devise authentication which can't by default find users embedded in
@@ -47,6 +44,9 @@ class User
     can :read, User
     can :edit, User, :id => self.id
     can :manage, Project, :owner_id => self.id
+    can :manage, Page do |page|
+      can? :manage, page.project
+    end
   end
   
   def loading_can?(*args)

@@ -1,6 +1,7 @@
-Given /^the following projects:$/ do |projects|
+Given /^the following projects owned by "([^"]*)":$/ do |email, projects|
+  user = User.where(:email=>email).first
   projects.hashes.each do |project|
-    Project.create! project
+    user.projects.create! project
   end
 end
 
@@ -17,4 +18,17 @@ end
 
 Given /^I have created a project%/ do
   Project.create!(:name => 'project sdfas', :description => 'sdfsdaretasd')
+end
+
+Given /^I have created a project with title "([^\"]*)"$/ do |project_title|
+  User.last.projects.build(:title=>project_title)
+end
+
+
+Given /^within project "([^"]*)" I create the following pages:$/ do |proj_name, web_pages|
+  project = Project.where(:name=>proj_name).
+                    sort{|x,y| y.date_created <=> x.date_created}.first
+  web_pages.hashes.each do |web_page|
+    project.pages.create! web_page
+  end
 end

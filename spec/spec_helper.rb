@@ -1,6 +1,8 @@
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
+require 'accept_values_for'
+require 'discover'
 
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
@@ -17,6 +19,7 @@ RSpec.configure do |config|
   end
 
   config.before :each do
+   DomainName.where(:domain_name=>'www.example.com').exists?.should be == true
    Devise::OmniAuth.short_circuit_authorizers!
    Devise::OmniAuth.stub!(:facebook) do |b|
      b.post('/oauth/access_token') { [200, {}, ACCESS_TOKEN.to_json] }
@@ -43,6 +46,18 @@ def new_can_can_rule(base_behavior, action, subject, conditions=nil)
   CanCan::Rule.new base_behavior, action, subject, conditions, nil
 end
 
+def user(email)
+  a = User.where(:email=>email).first
+  a ? a : User.create(:email=>email, :password=>'coms3dt.df', \
+                      :password_combination=>'coms3dt.df')
+end
+
+def some_new_project
+  User.create!(:email=>'email54@car.com', :password=>'coms3dt.df', \
+                      :password_combination=>'coms3dt.df'
+  ).projects.create!(:name => 'My new project')
+end
+
 Devise::OmniAuth.test_mode!
 
 # Inside our integration tests for Oauth
@@ -58,11 +73,6 @@ FACEBOOK_INFO = {
   :last_name => 'Example',
   :website => 'http://blog.plataformatec.com.br'
 }
-
-
-
-
-
 
 BULLSHIT = {"user_info"=>
   {"name"=>"Tyler Gannon", 

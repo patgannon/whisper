@@ -1,0 +1,13 @@
+= form_for [@project, @domain_name] do |f|
+  -if @domain_name.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@domain_name.errors.count, "error")} prohibited this domain_name from being saved:"
+      %ul
+        - @domain_name.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :domain_name
+    = f.text_field :domain_name
+  .actions
+    = f.submit 'Add domain name'
