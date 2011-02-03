@@ -1,31 +1,20 @@
-%script{:src=>"https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.8/jquery-ui.min.js"}
-%script{:src=>"/public/javascripts/jquery.ui.stars.min.js", :type=>"text/javascript"}
-%link{:rel=>"stylesheet", :type=>"text/css", :src=>"/public/javascripts/jquery.ui.stars.min.css"}
-%script{:type=>"text/javascript"} $(document).ready(function(){ $("option[value='#{@rating_value || 3}']").attr('selected', 'selected'); $("#stars-wrapper2").stars({ inputType: "select" }); $("#form_ocv1").stars(); });
+%script{:src=>"/javascripts/jquery.js", :type=>"text/javascript"}
+%script{:src=>"/javascripts/jquery.rating.js", :type=>"text/javascript"}
+%link{:rel=>"stylesheet", :type=>"text/css", :media=>"screen", :href=>"/stylesheets/jquery.rating.css"}
+%script{:type=>"text/javascript"} $(document).ready(function(){ $(".rating").rating(); $('.rating').val(#{@rating_value || 3}).change(); });
 
 - form_for(url_for(:action=>'rate'), {:method=>"post"}) do
   Rating:
-  %span#stars-cap
-  #stars-wrapper2
-    %select{:name=>"rating"}
+  #serialStar
+    %select.rating{:name=>"rating"}
       %option{:value=>1} Very Poor
       %option{:value=>2} Poor
       %option{:value=>3} Fair
       %option{:value=>4} Good
       %option{:value=>5} Excellent
+  %br
   Comment:
   %br
   %textarea{:name=>"comment"}= @rating? @rating.comment : ''
   %br
   %input{:type=>"submit", :value=>"rate"}
-
--# %br
--# .rating
--#  %span.rating-cap#hover_ocv1
--#  %form#form_ocv1{:action=>"#", :method=>"post"}
--#    %input{:type=>"radio", :name=>"newrate", :value=>"1", :title=>"Very poor"}
--#    %input{:type=>"radio", :name=>"newrate", :value=>"2", :title=>"Poor"}
--#    %input{:type=>"radio", :name=>"newrate", :value=>"2", :title=>"Fair"}
--#    %input{:type=>"radio", :name=>"newrate", :value=>"4", :title=>"Good"}
--#    %input{:type=>"radio", :name=>"newrate", :value=>"5", :title=>"Excellent"}
--#    %input{:type=>"button", :value=>"rate"}
