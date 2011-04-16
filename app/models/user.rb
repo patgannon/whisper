@@ -45,7 +45,7 @@ class User
     can :edit, User, :id => self.id
     can :manage, Project, :owner_id => self.id
     can :manage, Page do |page|
-      can? :manage, page.project
+      can? :manage, page.root.project
     end
   end
   

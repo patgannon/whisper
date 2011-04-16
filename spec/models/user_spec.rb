@@ -10,7 +10,6 @@ describe User do
   after :each do
     DatabaseCleaner.clean
   end
-
   
   describe "default permissions" do
     it "Should let anyone read users" do
@@ -32,9 +31,8 @@ describe User do
       @page = @another_project.pages.build
       @user.should_not be_able_to(:create, @page)
     end
-  end  
+  end
   
-
   it "should respond to find_for_authentication" do
     User.find_for_authentication(:email=>'tgannon@gmail.com').should == @user
   end

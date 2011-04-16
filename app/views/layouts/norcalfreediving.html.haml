@@ -1,0 +1,60 @@
+!!! Strict
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "content-type"}/
+    %title NORCAL Freediving
+    %meta{:content => "", :name => "keywords"}/
+    %meta{:content => "", :name => "description"}/
+    = javascript_include_tag :defaults
+    = stylesheet_link_tag "norcalfreediving"
+    = yield :head
+    = csrf_meta_tag
+    = javascript_tag "const AUTH_TOKEN = #{form_authenticity_token.inspect};" if protect_against_forgery?
+  %body
+    #header
+      %h1 Norcal Freediving
+    #menu
+      %ul#main_menu
+        - for page in @project.pages.sort{|x,y| x.position <=> y.position}
+          %li[page, :menu]= link_to page.title, "/#{page.title}"
+    #content
+      #left
+        = yield
+      #right
+        %h2 What's New?
+        %h3 There's a voice
+        %p
+          There's a voice that keeps on calling me. Down the road, that's where I'll always be.
+          %a{:href => "#"} More…
+        %h3 Every stop I make
+        %p
+          Every stop I make, I make a new friend. Can't stay for long, just turn around and I'm gone again. Maybe tomorrow, I'll want to settle down, Until tomorrow, I'll just keep moving on.
+          %a{:href => "#"} More…
+        %h3 Hong Kong Phooey
+        %p
+          Hong Kong Phooey, number one super guy. Hong Kong Phooey, quicker than the human eye. He's got style, a groovy style, and a car that just won't stop.
+          %a{:href => "#"} More…
+        %h2 Archive
+        %ul
+          %li
+            %a{:href => "#"} One for all
+          %li
+            %a{:href => "#"} Can't stay for long
+          %li
+            %a{:href => "#"} Muskehounds
+          %li
+            %a{:href => "#"} Hong Kong Phooey
+    #footer
+      %p!= "Copyright &copy; #{DateTime.now.year} Norcal Freediving."
+      %p
+        Design by
+        %a{:href => "http://360guide.info"} 360guide.info
+        - if user_signed_in?
+          = link_to 'Logout', destroy_user_session_path
+          #control_panel
+            = link_to "New Page", new_project_page_path(@project)
+            #sort_menu Sort
+        - else
+          = link_to('Log in', new_user_session_path)
+
+

@@ -37,9 +37,5 @@ Then /^using "([^"]*)" I browse:$/ do |host, pages|
     Capybara.app_host = old_host
   end
 end
-# 
-# some_new_project.tap{|proj|
-#    proj.domain_names.create!(:domain_name=>'www.example.com')
-#    proj.pages.create! :title => 'Home'
-#  }
-# 
+
+

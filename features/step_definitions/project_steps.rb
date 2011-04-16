@@ -30,5 +30,9 @@ Given /^within project "([^"]*)" I create the following pages:$/ do |proj_name, 
                     sort{|x,y| y.date_created <=> x.date_created}.first
   web_pages.hashes.each do |web_page|
     project.pages.create! web_page
+    
+    proj = Project.find(project.id)
+    proj.pages.select{|t| t.html.index(web_page[:html])}.first.should_not be_nil
   end
+  
 end

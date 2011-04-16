@@ -1,7 +1,7 @@
 %h1 My Projects
 
 %ul#projects.items
-  - @projects.each do |project|
+  - for project in @projects
     %li.item[project]
       %ul.details
         %li.field.name

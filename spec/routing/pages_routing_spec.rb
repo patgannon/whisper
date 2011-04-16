@@ -16,6 +16,10 @@ describe PagesController do
       { :get => "/projects/2345/pages/new" }.should route_to(:controller => "pages", :project_id => "2345", :action => "new")
     end
 
+    it "recognizes and generates #sort" do
+      { :post => "/projects/2345/pages/sort" }.should route_to(:controller => "pages", :project_id => "2345", :action => "sort")
+    end
+
     it "recognizes and generates #show" do
       { :get => "/projects/2345/pages/1" }.should route_to(:controller => "pages", :project_id => "2345", :action => "show", :id => "1")
     end
