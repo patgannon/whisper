@@ -1,5 +1,7 @@
 Whisper::Application.routes.draw do
-  resources :domain_names
+  resources :galleries do
+    resources :images
+  end
 
   resources :projects do
     resources :domain_names

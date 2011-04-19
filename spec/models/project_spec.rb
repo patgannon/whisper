@@ -10,6 +10,7 @@ describe Project do
   it {should accept_values_for(:owner, user('othertg@gmail.com'))}
   it {should reference_one(:web_root).of_type(Page)}
   it {should reference_many(:domain_names)}
+  it {should have_many(:galleries)}
   
   it "should build the web_root on creation" do
     some_new_project.web_root.should_not be_nil

@@ -15,6 +15,7 @@
       %h1 Norcal Freediving
     #menu
       %ul#main_menu
+        %li= link_to 'Galleries', galleries_path
         - for page in @project.pages.sort{|x,y| x.position <=> y.position}
           %li[page, :menu]= link_to page.title, "/#{page.title}"
     #content

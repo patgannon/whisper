@@ -13,6 +13,7 @@ class Project
   references_many :domain_names
 
   after_save :save_web_root
+  has_many :galleries
   
   def pages
     web_root.children

@@ -1,28 +1,18 @@
 class PagesController < ApplicationController
   respond_to :html, :js, :json
-  layout :choose_layout
   
-  before_filter :load_project
   before_filter :load_page, :only => :show
+  before_filter :load_parent_project
   
   def index
     @pages = @project.pages
   end
   
-  def load_project
-    domain_name = DomainName.where(:domain_name=>request.env["SERVER_NAME"]).first
-    unless domain_name
-      raise "Domain name not found '#{request.env["SERVER_NAME"]}'"
-    else
-      @project = domain_name.project
-    end
-  end
-  
   def load_page
     if params["title1"]
-      @page = @project.pages.where(:title => params["title1"]).first
+      @page = @project.pages.where(:title => CGI.unescape(params["title1"])).first
       if params["title2"]
-        @page = @page.children.where(:title=>params["title2"]).first
+        @page = @page.children.where(:title=>CGI.unescape(params["title2"])).first
       end
     elsif params["root_path"]
       @page = @project.pages.first
@@ -39,7 +29,7 @@ class PagesController < ApplicationController
     @page.html = "<h1>This is your new page</h1>#{@page.title}" unless @page.html
     if @page.save
       flash[:notice] = "Your page has been created."
-      redirect_to "/#{@page.title}"
+      redirect_to "/#{CGI.escape(@page.title)}"
     end
   end
   
@@ -74,7 +64,8 @@ class PagesController < ApplicationController
     respond_with @page
   end
   
-  def choose_layout
-    @project.layout
+  def load_parent_project
+    @project = Project.find(params[:project_id]) if params[:project_id]
   end
+  
 end

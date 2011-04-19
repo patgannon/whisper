@@ -11,7 +11,8 @@ Feature: Manage project pages
       |My First Project|description 1|
       |My Second Project|description 2|
     When I manage the 1st project web site
-    Then I should see "Web Pages for project My First Project"
+    Then I should be on the project pages index for "My First Project"
+    And I should see "Web Pages for project My First Project"
     And I should see "Make a web page"
     
   Scenario: Make a new web page

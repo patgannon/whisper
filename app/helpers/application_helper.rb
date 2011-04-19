@@ -12,4 +12,5 @@ module ApplicationHelper
     "aloha/plugins/com.gentics.aloha.plugins.Paste/plugin.js",
     "aloha/plugins/com.gentics.aloha.plugins.Paste/wordpastehandler.js"]
   end
+  
 end

@@ -47,6 +47,9 @@ class User
     can :manage, Page do |page|
       can? :manage, page.root.project
     end
+    can :manage, Gallery do |gallery|
+      can? :manage, gallery.project
+    end
   end
   
   def loading_can?(*args)
