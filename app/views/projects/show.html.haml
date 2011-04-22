@@ -1,10 +1,14 @@
 
-.field
-  .fieldName Name:
-  .fieldValue= @project.name
-.field
-  .fieldName Description:
-  .fieldValue= @project.description
+%table
+  %tr
+    %td Web Site:
+    %td= @project.name
+  %tr
+    %td Paypal Email Address:
+    %td= @project.paypal_email_address
+  %tr
+    %td Paypal For Reals?:
+    %td= @project.paypal_sandbox ? "Yes" : "No"
   
 #domain_names
   Web site names for this project:
@@ -15,5 +19,4 @@
         = link_to 'Destroy', project_domain_name_path(@project, domain_name), :confirm => 'Are you sure?', :method => :delete if can? :delete, domain_name
 
 = link_to 'Edit', edit_project_path(@project) if can? :edit, Project
-\|
-= link_to 'Back', projects_path
+

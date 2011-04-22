@@ -1,0 +1,12 @@
+%h1 Listing articles
+
+- @articles.each do |article|
+  %h2= article.title
+  .article!= article.body
+  .article_footer
+    = "published at #{article.date_published}"
+    = link_to 'Edit', edit_article_path(article) if can? :manage, @project
+  
+
+= link_to 'New Article', new_article_path if can? :manage, @project
+

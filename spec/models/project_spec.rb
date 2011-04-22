@@ -11,6 +11,9 @@ describe Project do
   it {should reference_one(:web_root).of_type(Page)}
   it {should reference_many(:domain_names)}
   it {should have_many(:galleries)}
+  it {should have_many(:articles)}
+  it {should have_field(:paypal_email_address)}
+  it {should have_field(:paypal_sandbox)}
   
   it "should build the web_root on creation" do
     some_new_project.web_root.should_not be_nil

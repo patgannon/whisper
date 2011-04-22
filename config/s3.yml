@@ -1,0 +1,13 @@
+  development:
+    access_key_id: AKIAIDEFW5P6AQLRXWGQ
+    secret_access_key: 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
+    bucket: whisper_dev
+  test:
+    access_key_id: AKIAIDEFW5P6AQLRXWGQ
+    secret_access_key: 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
+    bucket: whisper_dev
+  production:
+    access_key_id: AKIAIDEFW5P6AQLRXWGQ
+    secret_access_key: 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
+    bucket: whisper_project
+

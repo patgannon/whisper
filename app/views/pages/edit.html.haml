@@ -6,9 +6,7 @@
     = javascript_include_tag script
   = javascript_include_tag 'aloha'
   = javascript_tag "const FORM_ACTION = '#{project_page_path(@project, @page)}';"
-  = javascript_tag "const SORT_ACTION = '#{sort_project_pages_path(@project, :format => :js)}';"
   = javascript_include_tag 'jquery-ui-1.8.9.custom.min.js'
-  = javascript_include_tag 'sortable_menu'
   
 #html.article
   != raw @page.html

@@ -1,0 +1,41 @@
+= content_for :head do
+  = stylesheet_link_tag 'aloha'
+  = stylesheet_link_tag 'ui-lightness/jquery-ui-1.8.9.custom.css'
+  
+  - aloha_scripts.each do |script|
+    = javascript_include_tag script
+  = javascript_include_tag 'aloha'
+  = javascript_tag "//const FORM_ACTION = '';"
+  = javascript_include_tag 'jquery-ui-1.8.9.custom.min.js'
+
+  :javascript
+    $(document).ready(function() {
+      $('#sort_menu').toggle(
+        function(){
+          $('#main_menu').sortable({
+            containment: 'parent',
+            axis: 'x',
+            update: postSortData
+          });
+        },
+        function(){
+          $('#menu').sortable('destroy');
+        }
+      );
+    });
+  
+    function postSortData(event, ui){
+      $.post(
+        '#{sort_project_pages_path(@project, :format => :js)}', 
+        $('#main_menu').sortable('serialize')
+      );
+    }
+  = javascript_include_tag 'sortable_menu'
+
+.instructions
+  Drag the items around.
+  
+
+
+
+

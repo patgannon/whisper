@@ -1,0 +1,68 @@
+%h1 Editing gallery
+
+= render 'form'
+
+= link_to 'Show', @gallery
+\|
+= link_to 'Back', galleries_path
+
+Showing photos from gallery
+%h3= @gallery.name
+
+%ul#images.hoverbox
+  - for image in @gallery.images.map(&:image)
+    %li
+      %a{:href=>image.url}
+        %img{:src=>image.url(:medium)}
+        %img.preview{:src=>image.url(:medium)}
+
+= form_for [@gallery, Image.new], :html => {:multipart => true} do |f|
+  = f.file_field :image, :id => 'file_upload_field1'
+  = f.submit "Upload"
+
+
+= content_for :head do
+  = stylesheet_link_tag '/uploadify/uploadify'
+  = javascript_include_tag '/uploadify/swfobject'
+  = javascript_include_tag '/uploadify/jquery.uploadify.min.js'
+  
+  
+  :javascript
+    $(document).ready(function() {
+      function uploadify_complete(){alert('done');}
+      function uploadify_error(event,ID,fileObj,errorObj){
+        console.log('Error uploading. Id: ' + ID.toString());
+        console.log('Error type: ' + errorObj.type + '\nError info: ' + errorObj.info);
+      }
+      var S3_BUCKET='http://#{s3_upload_info[:bucket]}.s3.amazonaws.com/';
+      var UPLOADIFY = { 
+        'AWSAccessKeyId' : encodeURIComponent(encodeURIComponent('#{s3_upload_info[:access_key]}')),
+        'key': encodeURIComponent(encodeURIComponent('#{s3_upload_info[:key]}${filename}')),
+        'policy': encodeURIComponent(encodeURIComponent('#{s3_upload_info[:policy]}')),
+        'signature': encodeURIComponent(encodeURIComponent('#{s3_upload_info[:signature]}')),
+        'success_action_status': '#{s3_upload_info[:sas]}',
+        'folder': '',
+        'Filename': '' 
+      };
+      $("#file_upload_field").uploadify({
+        'swf'  : '/uploadify/uploadify.swf',
+        'uploader'    : '#{gallery_images_path(@gallery, :format=>:json)}',
+        'cancelImg' : '/uploadify/uploadify-cancel.png',
+        'script'         : S3_BUCKET,
+        'fileDataName': 'file',
+        'scriptData'     : UPLOADIFY,
+        'checkExisting'  : false,
+        'buttonImage'    : false,
+        'fileDesc' : 'Music',
+        'fileExt' : '*.*;', //list of uploadable filetypes
+        'onUploadComplete'    : uploadify_complete,
+        'onUploadError': uploadify_error,
+        'scriptAccess'   : 'always',
+        'queueID'        : 'uploadifyQueue',
+        'auto'           : true,
+        'sizeLimit' : 31457280,
+        'multi'          : true
+      });
+      
+    });
+    

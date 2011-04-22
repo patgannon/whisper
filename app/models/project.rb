@@ -6,11 +6,16 @@ class Project
   field :api_key
   field :app_secret
   field :layout
+  
+  field :paypal_email_address
+  field :paypal_sandbox, :default => false
+  
   referenced_in :owner, :class_name => 'User'
   validates :owner, :presence => true
   validates :name, :presence => true
   has_one :web_root, :class_name => 'Page'
   references_many :domain_names
+  has_many :articles
 
   after_save :save_web_root
   has_many :galleries

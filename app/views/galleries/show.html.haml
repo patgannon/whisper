@@ -1,0 +1,16 @@
+%p#notice= notice
+
+Showing photos from gallery
+%h3= @gallery.name
+
+%ul#images.hoverbox
+  - for image in @gallery.images.map(&:image)
+    %li
+      %a{:href=>image.url}
+        %img{:src=>image.url(:medium)}
+        %img.preview{:src=>image.url(:medium)}
+    
+= content_for :head do
+  = stylesheet_link_tag 'galleries/hoverbox'
+  
+= link_to "Upload Photos", edit_gallery_path(@gallery) if can? :manage, @gallery

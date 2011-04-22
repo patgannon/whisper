@@ -7,6 +7,10 @@ describe ProjectsController do
       { :get => "/projects" }.should route_to(:controller => "projects", :action => "index")
     end
 
+    it "recognizes and generates #index" do
+      { :get => "/manage_menu" }.should route_to(:controller => "projects", :action => "manage_menu")
+    end
+
     it "recognizes and generates #new" do
       { :get => "/projects/new" }.should route_to(:controller => "projects", :action => "new")
     end
