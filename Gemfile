@@ -16,6 +16,7 @@ gem 'oa-oauth', '0.2.0', :require => 'omniauth/oauth'
 gem 'cancan'
 
 gem 'haml'
+gem 'jquery-rails'
 gem 'inherited_resources'
 
 group :development, :test do
@@ -32,7 +33,6 @@ group :development, :test do
     # The following are just generators.  
   gem 'cucumber-rails'
   gem 'haml-rails'
-  gem 'jquery-rails'
 end
 
 group :test do
