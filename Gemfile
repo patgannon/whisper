@@ -9,6 +9,8 @@ gem 'mongoid-tree', :require => 'mongoid/tree'  # Not actually in use.
 gem 'mongoid-paperclip', :require => "mongoid_paperclip"
 gem 'aws-s3', :require => 'aws/s3'
 
+
+
 gem 'devise'
 gem 'oa-oauth', '0.2.0', :require => 'omniauth/oauth'
 gem 'cancan'

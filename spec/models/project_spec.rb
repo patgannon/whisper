@@ -23,6 +23,12 @@ describe Project do
     some_new_project.web_root.new_record?.should be_false
   end
   
+  it "should create a main menu before creation." do
+    proj = build_project
+    proj.main_menu.should_not be_nil
+    proj.main_menu.items.count.should be_greater_than(2)
+  end
+  
   it "should have the same web_root after saving." do
     proj = build_project
     proj.build_web_root

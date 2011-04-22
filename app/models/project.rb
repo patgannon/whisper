@@ -17,8 +17,10 @@ class Project
   references_many :domain_names
   has_many :articles
 
+  before_create :add_main_menu_items
   after_save :save_web_root
   has_many :galleries
+  has_many :main_menu_items, :class_name => 'MenuItem'
   
   def pages
     web_root.children
@@ -31,6 +33,10 @@ class Project
   def save_web_root
     build_web_root(:title=>'Web Root') unless web_root
     web_root.save
+  end
+  
+  def add_main_menu_items
+    
   end
 end
 

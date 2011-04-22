@@ -6,11 +6,7 @@ $(document).ready(function() {
       $('#main_menu').sortable({
         containment: 'parent',
         axis: 'x',
-        update: function(event, ui){
-          $.post(
-            SORT_ACTION, $('#main_menu').sortable('serialize')
-          );
-        }
+        update: postSortData
       });
     },
     function(){
@@ -18,6 +14,5 @@ $(document).ready(function() {
     }
   );
 });
-
 
 

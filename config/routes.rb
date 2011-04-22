@@ -1,4 +1,10 @@
 Whisper::Application.routes.draw do
+  resources :feedbacks
+  resources :courses
+  resources :articles
+
+  resource :control_panel
+
   resources :galleries do
     resources :images
   end
@@ -21,6 +27,7 @@ Whisper::Application.routes.draw do
     end
   end
   
+  match '/manage_main_menu' => 'projects#manage_main_menu', :as => :manage_main_menu
   match '/:title1(/:title2)' => 'pages#show', :via => :get
   
   root :to => 'pages#show', :root_path => true
