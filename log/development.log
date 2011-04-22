@@ -28118,3 +28118,159 @@ MONGODB admin['$cmd'].find({:ismaster=>1})
 MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
 MONGODB admin['$cmd'].find({:ismaster=>1})
 MONGODB admin['$cmd'].find({:ismaster=>1})
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB whisper_development['$cmd'].find({"count"=>"users", "query"=>{}, "fields"=>nil})
+MONGODB whisper_development['users'].find({})
+MONGODB whisper_development['users'].remove({:_id=>BSON::ObjectId('4da91f12872ceb1ec2000001')})
+MONGODB whisper_development['projects'].find({"owner_id"=>BSON::ObjectId('4da91f12872ceb1ec2000001')})
+MONGODB whisper_development['projects'].remove({:_id=>BSON::ObjectId('4da91f12872ceb1ec2000002')})
+MONGODB whisper_development['users'].remove({:_id=>BSON::ObjectId('4da91f12872ceb1ec2000009')})
+MONGODB whisper_development['projects'].find({"owner_id"=>BSON::ObjectId('4da91f12872ceb1ec2000009')})
+MONGODB whisper_development['projects'].remove({:_id=>BSON::ObjectId('4dab8ead872ceb1221000004')})
+MONGODB whisper_development['projects'].remove({:_id=>BSON::ObjectId('4dab99b4872ceb122100000a')})
+MONGODB whisper_development['projects'].remove({:_id=>BSON::ObjectId('4da91f12872ceb1ec200000a')})
+MONGODB whisper_development['$cmd'].find({"count"=>"projects", "query"=>{}, "fields"=>nil})
+MONGODB whisper_development['projects'].find({})
+MONGODB whisper_development['$cmd'].find({"count"=>"domain_names", "query"=>{}, "fields"=>nil})
+MONGODB whisper_development['domain_names'].find({})
+MONGODB whisper_development['domain_names'].remove({:_id=>BSON::ObjectId('4da91f12872ceb1ec2000004')})
+MONGODB whisper_development['domain_names'].remove({:_id=>BSON::ObjectId('4da91f12872ceb1ec2000005')})
+MONGODB whisper_development['domain_names'].remove({:_id=>BSON::ObjectId('4da91f12872ceb1ec2000006')})
+MONGODB whisper_development['domain_names'].remove({:_id=>BSON::ObjectId('4da91f12872ceb1ec2000007')})
+MONGODB whisper_development['domain_names'].remove({:_id=>BSON::ObjectId('4da91f12872ceb1ec200000c')})
+MONGODB whisper_development['domain_names'].remove({:_id=>BSON::ObjectId('4da91f12872ceb1ec200000d')})
+MONGODB whisper_development['domain_names'].remove({:_id=>BSON::ObjectId('4dab8ebc872ceb1221000007')})
+MONGODB whisper_development['$cmd'].find({"count"=>"pages", "query"=>{}, "fields"=>nil})
+MONGODB whisper_development['pages'].find({}).sort([])
+MONGODB whisper_development['pages'].remove({:_id=>BSON::ObjectId('4da91f12872ceb1ec2000003')})
+MONGODB whisper_development['pages'].remove({:_id=>BSON::ObjectId('4da91f12872ceb1ec2000008')})
+MONGODB whisper_development['pages'].remove({:_id=>BSON::ObjectId('4da91f12872ceb1ec200000b')})
+MONGODB whisper_development['pages'].remove({:_id=>BSON::ObjectId('4dab8ead872ceb1221000005')})
+MONGODB whisper_development['pages'].remove({:_id=>BSON::ObjectId('4dab99b4872ceb122100000b')})
+MONGODB whisper_development['pages'].remove({:_id=>BSON::ObjectId('4dab9e34872ceb122100000e')})
+MONGODB whisper_development['pages'].remove({:_id=>BSON::ObjectId('4dab9e52872ceb1221000010')})
+MONGODB whisper_development['pages'].remove({:_id=>BSON::ObjectId('4daba027872ceb1221000012')})
+MONGODB whisper_development['pages'].remove({:_id=>BSON::ObjectId('4da91f12872ceb1ec200000e')})
+MONGODB whisper_development['$cmd'].find({"count"=>"users", "query"=>{:email=>/^tgannon@gmail\.com$/i}, "fields"=>nil})
+MONGODB whisper_development['$cmd'].find({"count"=>"users", "query"=>{:email=>"tgannon@gmail.com"}, "fields"=>nil})
+MONGODB whisper_development['users'].insert([{"email"=>"tgannon@gmail.com", "encrypted_password"=>"$2a$10$h79JxHskCbxJtcqUXjp5xuGse0dZu9c25sgLU8JYvIMhR2JCS0JHa", "failed_attempts"=>0, "sign_in_count"=>0, "_id"=>BSON::ObjectId('4db20fb4872ceb0e33000001')}])
+MONGODB whisper_development['projects'].insert([{"paypal_sandbox"=>false, "_id"=>BSON::ObjectId('4db20fb4872ceb0e33000002'), "name"=>"Whisper", "owner_id"=>BSON::ObjectId('4db20fb4872ceb0e33000001')}])
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e33000002')}).sort([])
+MONGODB whisper_development['pages'].insert([{"parent_ids"=>[], "title"=>"Web Root", "_id"=>BSON::ObjectId('4db20fb4872ceb0e33000003'), "project_id"=>BSON::ObjectId('4db20fb4872ceb0e33000002')}])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e33000003')}).sort([])
+MONGODB whisper_development['domain_names'].insert([{"_id"=>BSON::ObjectId('4db20fb4872ceb0e33000004'), "domain_name"=>"whisper.com", "project_id"=>BSON::ObjectId('4db20fb4872ceb0e33000002')}])
+MONGODB whisper_development['domain_names'].insert([{"_id"=>BSON::ObjectId('4db20fb4872ceb0e33000005'), "domain_name"=>"www.example.com", "project_id"=>BSON::ObjectId('4db20fb4872ceb0e33000002')}])
+MONGODB whisper_development['domain_names'].insert([{"_id"=>BSON::ObjectId('4db20fb4872ceb0e33000006'), "domain_name"=>"localhost", "project_id"=>BSON::ObjectId('4db20fb4872ceb0e33000002')}])
+MONGODB whisper_development['domain_names'].insert([{"_id"=>BSON::ObjectId('4db20fb4872ceb0e33000007'), "domain_name"=>"www.whisper.com", "project_id"=>BSON::ObjectId('4db20fb4872ceb0e33000002')}])
+MONGODB whisper_development['$cmd'].find({"count"=>"pages", "query"=>{"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e33000003')}, "fields"=>nil})
+MONGODB whisper_development['pages'].insert([{"parent_ids"=>[BSON::ObjectId('4db20fb4872ceb0e33000003')], "_id"=>BSON::ObjectId('4db20fb4872ceb0e33000008'), "title"=>"Home", "html"=>"Welcome to Whisper", "parent_id"=>BSON::ObjectId('4db20fb4872ceb0e33000003'), "position"=>0}])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e33000008')}).sort([])
+MONGODB whisper_development['$cmd'].find({"count"=>"users", "query"=>{:email=>/^john\.w\.gannon@citi\.com$/i}, "fields"=>nil})
+MONGODB whisper_development['$cmd'].find({"count"=>"users", "query"=>{:email=>"john.w.gannon@citi.com"}, "fields"=>nil})
+MONGODB whisper_development['users'].insert([{"email"=>"john.w.gannon@citi.com", "encrypted_password"=>"$2a$10$rAsIh8bmHeUl7/3pgAcpouagO9O4wgOlAL5tAhapiUv9cAtGGx2uW", "failed_attempts"=>0, "sign_in_count"=>0, "_id"=>BSON::ObjectId('4db20fb4872ceb0e33000009')}])
+MONGODB whisper_development['projects'].insert([{"paypal_sandbox"=>false, "_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a'), "name"=>"Norcal Freediving", "layout"=>"norcalfreediving", "owner_id"=>BSON::ObjectId('4db20fb4872ceb0e33000009')}])
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([])
+MONGODB whisper_development['pages'].insert([{"parent_ids"=>[], "title"=>"Web Root", "_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b'), "project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([])
+MONGODB whisper_development['domain_names'].insert([{"_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000c'), "domain_name"=>"norcalfreediving.com", "project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}])
+MONGODB whisper_development['domain_names'].insert([{"_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000d'), "domain_name"=>"norcalfreediving1.com", "project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}])
+MONGODB whisper_development['domain_names'].insert([{"_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000e'), "domain_name"=>"www.norcalfreediving.com", "project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}])
+MONGODB whisper_development['$cmd'].find({"count"=>"pages", "query"=>{"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}, "fields"=>nil})
+MONGODB whisper_development['pages'].insert([{"parent_ids"=>[BSON::ObjectId('4db20fb4872ceb0e3300000b')], "_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000f'), "title"=>"Home", "html"=>"Norcal Freediving Whassup!!!", "parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b'), "position"=>0}])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000f')}).sort([])
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-22 16:32:23 -0700
+  Processing by PagesController#show as HTML
+  Parameters: {"root_path"=>true}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"norcalfreediving1.com"})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([])
+Rendered pages/show.html.haml within layouts/norcalfreediving (22.7ms)
+Completed 200 OK in 60ms (Views: 55.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-22 16:33:09 -0700
+  Processing by PagesController#show as HTML
+  Parameters: {"root_path"=>true}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"norcalfreediving1.com"})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([])
+Rendered pages/show.html.haml within layouts/norcalfreediving (68.1ms)
+Completed 200 OK in 78ms (Views: 73.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-22 16:33:14 -0700
+  Processing by PagesController#show as HTML
+  Parameters: {"root_path"=>true}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"norcalfreediving1.com"})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([])
+Rendered pages/show.html.haml within layouts/norcalfreediving (22.7ms)
+Completed 200 OK in 32ms (Views: 27.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-22 16:33:21 -0700
+  Processing by PagesController#show as HTML
+  Parameters: {"root_path"=>true}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"norcalfreediving1.com"})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([])
+Rendered pages/show.html.haml within layouts/norcalfreediving (22.7ms)
+Completed 200 OK in 32ms (Views: 27.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-22 16:34:19 -0700
+  Processing by PagesController#show as HTML
+  Parameters: {"root_path"=>true}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"norcalfreediving1.com"})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([])
+Rendered pages/show.html.haml within layouts/norcalfreediving (23.2ms)
+Completed 200 OK in 34ms (Views: 28.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-22 16:34:31 -0700
+  Processing by PagesController#show as HTML
+  Parameters: {"root_path"=>true}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"norcalfreediving1.com"})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([])
+Rendered pages/show.html.haml within layouts/norcalfreediving (22.3ms)
+Completed 200 OK in 32ms (Views: 27.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-22 16:34:44 -0700
+  Processing by PagesController#show as HTML
+  Parameters: {"root_path"=>true}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"norcalfreediving1.com"})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([])
+Rendered pages/show.html.haml within layouts/norcalfreediving (21.8ms)
+Completed 200 OK in 32ms (Views: 27.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-22 16:35:29 -0700
+  Processing by PagesController#show as HTML
+  Parameters: {"root_path"=>true}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"norcalfreediving1.com"})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([])
+Rendered pages/show.html.haml within layouts/norcalfreediving (21.9ms)
+Completed 200 OK in 32ms (Views: 27.0ms)

@@ -24,6 +24,7 @@ projects.create!(:name=>'Whisper').tap{|project|
 User.create!(:email=>'john.w.gannon@citi.com', :password=>'password', :password_confirmation=>'password').
 projects.create!(:name=>'Norcal Freediving', :layout=>'norcalfreediving').tap{|project|
   project.domain_names.create!(:domain_name=>'norcalfreediving.com')
+  project.domain_names.create!(:domain_name=>'norcalfreediving1.com')
   project.domain_names.create!(:domain_name=>'www.norcalfreediving.com')
   project.pages.create!(:title=>'Home', :html => 'Norcal Freediving Whassup!!!')
 }

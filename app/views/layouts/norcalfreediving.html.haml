@@ -49,38 +49,14 @@
                 
     #menu
       %ul#main_menu
-        %li= link_to 'Galleries', galleries_path
-        %li= link_to 'Blog', articles_path
         - for page in @project.pages.sort{|x,y| x.position <=> y.position}
           %li[page, :menu]= link_to page.title, "/#{page.title}"
     #content
       #left
         = yield
       #right
-        = link_to "Buy Something", paypal_url("/")
-        %h2 What's New?
-        %h3 There's a voice
-        %p
-          There's a voice that keeps on calling me. Down the road, that's where I'll always be.
-          %a{:href => "#"} More…
-        %h3 Every stop I make
-        %p
-          Every stop I make, I make a new friend. Can't stay for long, just turn around and I'm gone again. Maybe tomorrow, I'll want to settle down, Until tomorrow, I'll just keep moving on.
-          %a{:href => "#"} More…
-        %h3 Hong Kong Phooey
-        %p
-          Hong Kong Phooey, number one super guy. Hong Kong Phooey, quicker than the human eye. He's got style, a groovy style, and a car that just won't stop.
-          %a{:href => "#"} More…
-        %h2 Archive
-        %ul
-          %li
-            %a{:href => "#"} One for all
-          %li
-            %a{:href => "#"} Can't stay for long
-          %li
-            %a{:href => "#"} Muskehounds
-          %li
-            %a{:href => "#"} Hong Kong Phooey
+        = image_tag '/images/norcalfreediving/Divelogo4.jpg', :width => '215px'
+        
     #footer
       %p!= "Copyright &copy; #{DateTime.now.year} Norcal Freediving."
       %p

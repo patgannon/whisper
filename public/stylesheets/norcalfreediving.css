@@ -67,6 +67,7 @@ a {
 /************ CONTENT *********** */
 #content {
   width: 770px;
+  height: 660px;
   margin: 0px auto;
   padding: 20px 0px 0px 0px; }
   #content h2, #content h3, #content h4, #content h5, #content h6 {
