@@ -67,7 +67,6 @@ a {
 /************ CONTENT *********** */
 #content {
   width: 770px;
-  height: 660px;
   margin: 0px auto;
   padding: 20px 0px 0px 0px; }
   #content h2, #content h3, #content h4, #content h5, #content h6 {
@@ -78,10 +77,12 @@ a {
 #left {
   float: left;
   width: 480px;
-  padding: 0px 20px 40px 20px; }
+  padding: 0px 20px 40px 20px;
+  height: 700px; }
 
 #right {
   float: right;
+  height: 500px;
   width: 210px;
   padding: 0px 20px 40px 20px;
   color: #99ccff; }
