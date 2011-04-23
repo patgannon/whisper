@@ -2,7 +2,7 @@
 
 .fieldValue!= @page.html
 
-= link_to 'Edit', edit_project_page_path(@project, @page) if can? :edit, Page
+= link_to 'Edit', edit_project_page_path(@project, @page) if can? :edit, @page
 = link_to 'Delete', project_page_path(@project, @page), :method=>:delete, :confirm_with => "Are you for sure?" if can? :destroy, Page
 
 
