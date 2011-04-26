@@ -10,6 +10,8 @@ module ApplicationHelper
     "aloha/plugins/com.gentics.aloha.plugins.Link/delicious.js",
     "aloha/plugins/com.gentics.aloha.plugins.Link/LinkList.js",
     "aloha/plugins/com.gentics.aloha.plugins.Paste/plugin.js",
+    "aloha/plugins/com.gentics.aloha.plugins.Image/dep/jcrop/jquery.jcrop.js",
+    "aloha/plugins/com.gentics.aloha.plugins.Image/src/image.js",
     "aloha/plugins/com.gentics.aloha.plugins.Paste/wordpastehandler.js"]
   end
 

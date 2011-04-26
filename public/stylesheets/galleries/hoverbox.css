@@ -3,7 +3,8 @@
 /*	border: 0;*/
 /*	margin: 0;*/
 /*	padding: 0;*/
-/*}*/
+/*}
+*/
 
 /* =Basic HTML, Non-essential
 ----------------------------------------------------------------------*/
@@ -52,7 +53,8 @@
 /*{*/
 /*	background: inherit;*/
 /*	color: #000;*/
-/*}*/
+/*}
+*/
 
 /* =Hoverbox Code
 ----------------------------------------------------------------------*/
@@ -92,7 +94,6 @@
 	padding: 2px;
 	vertical-align: top;
 	width: 100px;
-	height: 75px;
 }
 
 .hoverbox li
@@ -113,5 +114,4 @@
 {
 	border-color: #000;
 	width: 200px;
-	height: 150px;
 }

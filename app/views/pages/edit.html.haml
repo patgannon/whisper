@@ -4,6 +4,8 @@
   
   - aloha_scripts.each do |script|
     = javascript_include_tag script
+  = stylesheet_link_tag 'aloha/plugins/com.gentics.aloha.plugins.Image/dep/jcrop/jquery.jcrop.css'
+  = stylesheet_link_tag 'aloha/plugins/com.gentics.aloha.plugins.Image/src/image.css'
   = javascript_include_tag 'aloha'
   = javascript_tag "const FORM_ACTION = '#{project_page_path(@project, @page)}';"
   = javascript_include_tag 'jquery-ui-1.8.9.custom.min.js'

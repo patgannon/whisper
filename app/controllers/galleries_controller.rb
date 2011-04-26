@@ -28,7 +28,7 @@ class GalleriesController < InheritedResources::Base
   
   def edit
     @gallery = Gallery.find(params[:id])
-    @image = @gallery.images.build
+    @image = Image.new
   end
   
   def destroy
