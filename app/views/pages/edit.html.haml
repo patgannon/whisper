@@ -16,7 +16,7 @@
     });
 
 = link_to 'Save Now', '#', :id=>'save_now'  
-= link_to 'Done', project_path_path(@project, @page), :id=>'done_editing'
+= link_to 'Done', project_page_path(@project, @page), :id=>'done_editing'
 #updated Not saved
 #html.article
   != raw @page.html
