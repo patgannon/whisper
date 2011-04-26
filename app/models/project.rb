@@ -1,5 +1,6 @@
 class Project
   include Mongoid::Document
+  include Mongoid::Paperclip  
   field :name, :type => String
   field :description, :type => String
   field :app_id
@@ -21,6 +22,19 @@ class Project
   after_save :save_web_root
   has_many :galleries
   has_many :main_menu_items, :class_name => 'MenuItem'
+
+  has_mongoid_attached_file :stylesheet_attachment,
+    :path => "projects/:project_id/stylesheet.css",
+    :storage => :s3,
+    :s3_credentials => File.join(Rails.root, 'config', 's3.yml')
+  
+  def stylesheet
+    if self.stylesheet_attachment.file?
+      self.stylesheet_attachment.url
+    else
+      self.layout
+    end
+  end
   
   def pages
     web_root.children

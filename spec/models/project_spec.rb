@@ -37,5 +37,19 @@ describe Project do
     
     same_proj.web_root.should be == proj.web_root
   end
+  
+  it "should give the right stylesheet when a stylesheet has not been uploaded" do
+    @project = Project.new
+    @project.stylesheet.stub(:file?) { false }
+    
+    @project.css_file.should be == "norcalfreediving"
+  end
+
+  it "should give the right stylesheet when a stylesheet has been uploaded" do
+    @project = Project.new
+    @project.stylesheet.stub(:file?) { false }
+    
+    @project.css_file.should be == "norcalfreediving"
+  end
 end
 

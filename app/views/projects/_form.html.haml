@@ -35,8 +35,9 @@
     = f.label :paypal_sandbox, "Is this a sandbox account?"
     = f.check_box :paypal_sandbox
   .field
-    = f.label :description
-    = f.text_area :description
+    = f.label :stylesheet_attachment, "Stylesheet"
+    = f.file_field :stylesheet_attachment
+
   .actions
     = f.submit
     
