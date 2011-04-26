@@ -11,10 +11,12 @@
         window.open($(this).attr('href'), 'gallery', "height=200, width=200");
         return false;
       });
-     	$('a#save_now').click(function(){ saveHtml(); });
+     	$('a#save_now').click(function(){ saveHtml(); return false;});
+     	$('a#done_editing').click(function(){ saveHtml(); return true;});
     });
 
 = link_to 'Save Now', '#', :id=>'save_now'  
+= link_to 'Done', @page, :id=>'done_editing'
 #updated Not saved
 #html.article
   != raw @page.html

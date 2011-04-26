@@ -117,7 +117,6 @@ function saveHtml(){
           },
           dataType: 'json',
           });
-  return false;
 }
 
 function save(){
