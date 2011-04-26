@@ -97,16 +97,28 @@ $(document).ready(function() {
     //     $('#form').submit();
     // });
 
-    $('.resizable').resizable();
+    //  $('.resizable').resizable();
 
-	$('.article').focusout(function(){
-	    $.ajax({type: "PUT",
-	            url: FORM_ACTION + '.json',
-	            data: {html: $('#html').html()},
-	            dataType: 'json',
-	            });
-	});
+	$('.article').focusout(function(){ saveHtml(); });
 });
+
+var lastSaved = null;
+
+function saveHtml(){
+  $.ajax({type: "PUT",
+          url: FORM_ACTION + '.json',
+          data: {html: $('#html').html()},
+          success: function() {
+            lastSaved = new Date();
+            $('#updated').html('Saved at ' + lastSaved.toString());
+          },
+          error: function() {
+            $('#updated').html('Error saving.  Last successful update was ' + lastSaved.toString());
+          },
+          dataType: 'json',
+          });
+  return false;
+}
 
 function save(){
 

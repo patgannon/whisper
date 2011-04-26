@@ -4,11 +4,11 @@ Showing photos from gallery
 %h3= @gallery.name
 
 %ul#images.hoverbox
-  - for image in @gallery.images.map(&:image)
+  - for image in @gallery.images
     %li
-      %a{:href=>image.url}
-        %img{:src=>image.url(:medium)}
-        %img.preview{:src=>image.url(:medium)}
+      = link_to gallery_image_path(@gallery, image) do
+        %img{:src=>image.image.url(:medium)}
+        %img.preview{:src=>image.image.url(:medium)}
     
 = content_for :head do
   = stylesheet_link_tag 'galleries/hoverbox'

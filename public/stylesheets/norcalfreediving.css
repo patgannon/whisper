@@ -87,6 +87,9 @@ a {
   padding: 0px 20px 40px 20px;
   color: #99ccff; }
 
+#right img {
+  width: 215px; }
+
 /************ FOOTER *********** */
 #footer {
   clear: both;

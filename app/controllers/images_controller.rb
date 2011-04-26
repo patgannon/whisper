@@ -6,6 +6,10 @@ class ImagesController < ApplicationController
     @gallery = Gallery.find(params[:gallery_id])
   end
   
+  def show
+    @image = Image.find(params[:id])
+  end
+  
   def create
     @image = @gallery.images.build(params.symbolize_keys[:image])
     if @image.save

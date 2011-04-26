@@ -29,9 +29,9 @@
                 %li
                   = link_to 'Image Galleries', galleries_path
                   %ul
-                    = link_to 'New Gallery', new_gallery_path
+                    = link_to 'Create a new Image Gallery', new_gallery_path, :class => 'gallery_link'
                     - for gallery in @project.galleries
-                      %li= link_to gallery.name, gallery
+                      %li= link_to gallery.name, gallery, :class => 'gallery_link'
                 %li
                   = link_to 'Articles', articles_path
                   %ul
@@ -45,7 +45,6 @@
                     - for page in @project.pages
                       %li= link_to page.title, project_page_path(@project, page)
                 %li= link_to 'Logout', destroy_user_session_path
-
                 
     #menu
       %ul#main_menu
@@ -55,7 +54,7 @@
       #left
         = yield
       #right
-        = image_tag '/images/norcalfreediving/Divelogo4.jpg', :width => '215px'
+        = image_tag '/images/norcalfreediving/Divelogo4.jpg'
         
     #footer
       %p!= "Copyright &copy; #{DateTime.now.year} Norcal Freediving."

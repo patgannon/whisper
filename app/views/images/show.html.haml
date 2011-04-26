@@ -1,6 +1,14 @@
 %p#notice= notice
-
-
-= link_to 'Edit', edit_image_path(@image)
+= link_to 'Edit', edit_gallery_image_path(@gallery, @image)
 \|
-= link_to 'Back', images_path
+= link_to "Back to #{@gallery.name}", @gallery
+
+%table
+  %tr
+    %td= image_tag @image.image.url(:thumb)
+  %tr
+    %td= image_tag @image.image.url(:medium)
+  %tr
+    %td= image_tag @image.image.url
+
+
