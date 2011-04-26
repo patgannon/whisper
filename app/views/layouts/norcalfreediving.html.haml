@@ -6,7 +6,7 @@
     %meta{:content => "", :name => "keywords"}/
     %meta{:content => "", :name => "description"}/
     = javascript_include_tag :defaults
-    = stylesheet_link_tag "norcalfreediving"
+    = stylesheet_link_tag @project.stylesheet
     - if user_signed_in?
       = stylesheet_link_tag 'nav'
 

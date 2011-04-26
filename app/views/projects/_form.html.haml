@@ -18,7 +18,7 @@
     }
   = javascript_include_tag 'sortable_menu'
 
-= form_for @project do |f|
+= form_for @project, :html => {:multipart => true} do |f|
   -if @project.errors.any?
     #error_explanation
       %h2= "#{pluralize(@project.errors.count, "error")} prohibited this project from being saved:"
