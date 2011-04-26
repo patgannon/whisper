@@ -7,6 +7,7 @@ curl -F grant_type=client_credentials \
      https://graph.facebook.com/oauth/access_token && echo
      
 
+
 heroku addons:add custom_domains:basic --app norcalfreediving
 heroku addons:add zerigo_dns:basic --app norcalfreediving
 heroku addons:add memcache:5mb --app norcalfreediving
