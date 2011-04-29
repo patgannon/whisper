@@ -15,8 +15,8 @@ class ArticlesController < ApplicationController
     @article.body = "<h1>This is your new article</h1>#{@article.title}" unless @article.body
     if @article.save
       flash[:notice] = "Your article has been created."
-      redirect_to articles_path
     end
+    respond_with @article, :location => articles_path
   end
   
   def new
@@ -34,8 +34,8 @@ class ArticlesController < ApplicationController
   end
   
   def update
-    @article = @project.articles.find(params[:id])
-    @article.update_attributes!(:html => params[:html])
-    redirect_to @article
+    @article = Article.find(params[:id])
+    @article.update_attributes(:html => params[:html])
+    respond_with @article
   end
 end

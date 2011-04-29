@@ -5,6 +5,7 @@ describe "galleries/show.html.haml" do
     @gallery = assign(:gallery, stub_model(Gallery,
       :name => "Name"
     ))
+    stub_ability
   end
 
   it "renders attributes in <p>" do

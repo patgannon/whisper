@@ -1,9 +1,6 @@
-class GalleriesController < InheritedResources::Base
-  before_filter :load_project, :load_galleries
-  
-  def load_galleries
-    @galleries = @project.galleries
-  end
+class GalleriesController < ApplicationController
+  before_filter :load_project
+  respond_to :html
   
   def index
     @galleries = @project.galleries
@@ -18,8 +15,8 @@ class GalleriesController < InheritedResources::Base
     @gallery = @project.galleries.build(params[:gallery])
     if @gallery.save
       flash[:notice] = "Your gallery has been created."
-      redirect_to @gallery
     end
+    respond_with @gallery
   end
 
   def new
@@ -39,7 +36,11 @@ class GalleriesController < InheritedResources::Base
   
   def update
     @gallery = Gallery.find(params[:id])
-    @gallery.update_attributes!(:html => params[:html])
+    
+    if @gallery.update_attributes(params[:gallery])
+      flash[:notice] = "Updated the gallery."
+    end
     respond_with @gallery
   end
 end
+

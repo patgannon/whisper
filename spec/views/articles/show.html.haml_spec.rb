@@ -7,15 +7,12 @@ describe "articles/show.html.haml" do
       :body => "MyText",
       :published => false
     ))
+    stub_ability
   end
 
   it "renders attributes in <p>" do
     render
-    # Run the generator again with the --webrat flag if you want to use webrat matchers
-    rendered.should match(/Title/)
-    # Run the generator again with the --webrat flag if you want to use webrat matchers
-    rendered.should match(/MyText/)
-    # Run the generator again with the --webrat flag if you want to use webrat matchers
-    rendered.should match(/false/)
+    rendered.should contain("Title".to_s)
+    rendered.should contain("MyText".to_s)
   end
 end

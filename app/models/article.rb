@@ -9,6 +9,8 @@ class Article
   field :date_published, :type => Time
   belongs_to :project
   
+  validates :title, :presence => true
+  
   after_initialize :init
   before_create :set_date_created, :set_pub_date
   before_save :set_date_modified, :set_pub_date

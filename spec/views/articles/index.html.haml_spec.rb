@@ -14,15 +14,12 @@ describe "articles/index.html.haml" do
         :published => false
       )
     ])
+    stub_ability
   end
 
   it "renders a list of articles" do
     render
-    # Run the generator again with the --webrat flag if you want to use webrat matchers
-    assert_select "tr>td", :text => "Title".to_s, :count => 2
-    # Run the generator again with the --webrat flag if you want to use webrat matchers
-    assert_select "tr>td", :text => "MyText".to_s, :count => 2
-    # Run the generator again with the --webrat flag if you want to use webrat matchers
-    assert_select "tr>td", :text => false.to_s, :count => 2
+    rendered.should have_selector("h2", :content => "Title".to_s, :count => 2)
+    rendered.should have_selector("div.article", :content => "MyText".to_s, :count => 2)
   end
 end

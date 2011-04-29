@@ -17,12 +17,31 @@ RSpec.configure do |config|
     DatabaseCleaner.strategy = :truncation
     DatabaseCleaner.orm = "mongoid"
   end
-
+  
   config.after(:each) do
     DatabaseCleaner.clean
   end
 end
 
+def stub_ability
+  @ability = Object.new
+  @ability.extend(CanCan::Ability)
+  @controller.stub(:current_ability) {@ability}
+end
+
+def create_default_project
+    User.create!(:email=>'manlyphall@foobar.com', :password=>'password', :password_confirmation=>'password').
+projects.create!(:name=>'Norcal Freediving', :layout=>'norcalfreediving').tap{|project|
+  project.domain_names.create!(:domain_name=>'example.org')
+  project.domain_names.create!(:domain_name=>'www.22norcalfreediving.com')
+  project.pages.create!(:title=>'Home', :html => 'Norcal Freediving Whassup!!!')
+}
+    @project = Project.last
+    @project.pages.first.title.should == 'Home'
+    @domain_name = @project.domain_names.first
+    DomainName.stub(:where) { [@domain_name] }
+    @domain_name.stub(:project) {@project}
+end
 
 def set_current_site
   @site = mock_model(Site).as_null_object

@@ -7,8 +7,8 @@ describe ProjectsController do
       { :get => "/projects" }.should route_to(:controller => "projects", :action => "index")
     end
 
-    it "recognizes and generates #index" do
-      { :get => "/manage_menu" }.should route_to(:controller => "projects", :action => "manage_menu")
+    it "recognizes and generates #manage_menu" do
+      { :get => "/manage_main_menu" }.should route_to(:controller => "projects", :action => "manage_main_menu")
     end
 
     it "recognizes and generates #new" do

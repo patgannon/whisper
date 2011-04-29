@@ -10,6 +10,7 @@ describe "galleries/index.html.haml" do
         :name => "Name"
       )
     ])
+    stub_ability
   end
 
   it "renders a list of galleries" do

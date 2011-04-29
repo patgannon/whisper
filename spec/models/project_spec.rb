@@ -42,14 +42,15 @@ describe Project do
     @project = Project.new
     @project.stylesheet.stub(:file?) { false }
     
-    @project.css_file.should be == "norcalfreediving"
+    @project.stylesheet.should be == @project.layout
   end
 
   it "should give the right stylesheet when a stylesheet has been uploaded" do
     @project = Project.new
-    @project.stylesheet.stub(:file?) { false }
+    @project.stylesheet_attachment.stub(:file?) { true }
+    @project.stylesheet_attachment.stub(:url) { "/badass" }
     
-    @project.css_file.should be == "norcalfreediving"
+    @project.stylesheet.should be == "/badass"
   end
 end
 

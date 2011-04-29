@@ -5,6 +5,7 @@ describe "galleries/new.html.haml" do
     assign(:gallery, stub_model(Gallery,
       :name => "MyString"
     ).as_new_record)
+    stub_ability
   end
 
   it "renders new gallery form" do

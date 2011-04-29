@@ -8,9 +8,9 @@ curl -F grant_type=client_credentials \
      
 
 
-heroku addons:add custom_domains:basic --app norcalfreediving
-heroku addons:add zerigo_dns:basic --app norcalfreediving
-heroku addons:add memcache:5mb --app norcalfreediving
-heroku addons:add sendgrid:free --app norcalfreediving
-heroku addons:add mongohq:free --app norcalfreediving
+heroku addons:add custom_domains:basic --app artlesslee
+heroku addons:add zerigo_dns:basic --app artlesslee
+heroku addons:add memcache:5mb --app artlesslee
+heroku addons:add sendgrid:free --app artlesslee
+heroku addons:add mongohq:free --app artlesslee
 

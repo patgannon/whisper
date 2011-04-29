@@ -1,9 +1,5 @@
 Whisper::Application.routes.draw do
-  resources :feedbacks
-  resources :courses
   resources :articles
-
-  resource :control_panel
 
   resources :galleries do
     resources :images

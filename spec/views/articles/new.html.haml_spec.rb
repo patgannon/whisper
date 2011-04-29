@@ -7,16 +7,16 @@ describe "articles/new.html.haml" do
       :body => "MyText",
       :published => false
     ).as_new_record)
+    stub_ability
   end
 
   it "renders new article form" do
     render
 
-    # Run the generator again with the --webrat flag if you want to use webrat matchers
-    assert_select "form", :action => articles_path, :method => "post" do
-      assert_select "input#article_title", :name => "article[title]"
-      assert_select "textarea#article_body", :name => "article[body]"
-      assert_select "input#article_published", :name => "article[published]"
+    rendered.should have_selector("form", :action => articles_path, :method => "post") do |form|
+      form.should have_selector("input#article_title", :name => "article[title]")
+      form.should have_selector("textarea#html", :name => "article[body]")
+      form.should have_selector("input#article_published", :name => "article[published]")
     end
   end
 end

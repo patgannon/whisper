@@ -4,15 +4,7 @@ describe PagesController do
   render_views
   
   before :each do
-    User.create!(:email=>'manlyphall@foobar.com', :password=>'password', :password_confirmation=>'password').
-projects.create!(:name=>'Norcal Freediving', :layout=>'norcalfreediving').tap{|project|
-  project.domain_names.create!(:domain_name=>'example.org')
-  project.domain_names.create!(:domain_name=>'www.22norcalfreediving.com')
-  project.pages.create!(:title=>'Home', :html => 'Norcal Freediving Whassup!!!')
-}
-    @project = Project.last
-    @project.pages.first.title.should == 'Home'
-
+    create_default_project
   end
   
   it "shows the correct list of pages" do

@@ -1,7 +1,9 @@
 require 'spec_helper'
 
 describe BusinessesController do
+
   before :each do
+    create_default_project
     @business = Business.create! :id => 1
     #BusinessController.stub(:current_user_id).and_return("pat")
   end

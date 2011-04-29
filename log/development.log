@@ -32061,3 +32061,367 @@ MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872c
 MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([])
 Rendered pages/show.html.haml within layouts/norcalfreediving (25.0ms)
 Completed 200 OK in 35ms (Views: 30.2ms)
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-04-26 13:43:30 -0700
+  Processing by Devise::SessionsController#new as HTML
+MONGODB whisper_development['domain_names'].find({:domain_name=>"norcalfreediving1.com"})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+Rendered devise/shared/_links.haml (4.3ms)
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([])
+Rendered devise/sessions/new.html.haml within layouts/norcalfreediving (38.2ms)
+Completed 200 OK in 47ms (Views: 43.5ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-04-26 13:43:32 -0700
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ql0jpf/vE8oNLSfd+dq4V78SfRQ/bMr4gZoqxNBRHcY=", "user"=>{"email"=>"john.w.gannon@citi.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"norcalfreediving1.com"})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['users'].find({:email=>"john.w.gannon@citi.com"})
+MONGODB whisper_development['users'].update({"_id"=>BSON::ObjectId('4db20fb4872ceb0e33000009')}, {"$set"=>{"last_sign_in_at"=>2011-04-26 20:35:04 UTC, "current_sign_in_at"=>2011-04-26 20:43:33 UTC, "sign_in_count"=>5}})
+Redirected to http://norcalfreediving1.com:3000/
+Completed 302 Found in 120ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-26 13:43:33 -0700
+  Processing by PagesController#show as HTML
+  Parameters: {"root_path"=>true}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"norcalfreediving1.com"})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([])
+MONGODB whisper_development['users'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000009')})
+MONGODB whisper_development['pages'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([])
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['pages'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([])
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['galleries'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['$cmd'].find({"count"=>"articles", "query"=>{"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}, "fields"=>nil})
+MONGODB whisper_development['articles'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:date_published, :desc]])
+Rendered pages/show.html.haml within layouts/norcalfreediving (33.8ms)
+Completed 200 OK in 44ms (Views: 39.4ms)
+
+
+Started GET "/stylesheets/img/gradient.png" for 127.0.0.1 at 2011-04-26 13:43:34 -0700
+
+ActionController::RoutingError (No route matches "/stylesheets/img/gradient.png"):
+  
+
+Rendered /home/tyler/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/Home" for 127.0.0.1 at 2011-04-26 13:43:35 -0700
+  Processing by PagesController#show as HTML
+  Parameters: {"title1"=>"Home"}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"norcalfreediving1.com"})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b'), :title=>"Home"}).sort([])
+MONGODB whisper_development['users'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000009')})
+MONGODB whisper_development['pages'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([])
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['pages'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([])
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['galleries'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['$cmd'].find({"count"=>"articles", "query"=>{"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}, "fields"=>nil})
+MONGODB whisper_development['articles'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:date_published, :desc]])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([])
+Rendered pages/show.html.haml within layouts/norcalfreediving (35.2ms)
+Completed 200 OK in 46ms (Views: 40.3ms)
+
+
+Started GET "/stylesheets/img/gradient.png" for 127.0.0.1 at 2011-04-26 13:43:36 -0700
+
+ActionController::RoutingError (No route matches "/stylesheets/img/gradient.png"):
+  
+
+Rendered /home/tyler/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/projects/4db20fb4872ceb0e3300000a/pages/4db20fb4872ceb0e3300000f/edit" for 127.0.0.1 at 2011-04-26 13:43:43 -0700
+  Processing by PagesController#edit as HTML
+  Parameters: {"project_id"=>"4db20fb4872ceb0e3300000a", "id"=>"4db20fb4872ceb0e3300000f"}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"norcalfreediving1.com"})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['pages'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000f')}).sort([])
+Rendered pages/_aloha_editor.html.haml (5.2ms)
+MONGODB whisper_development['users'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000009')})
+MONGODB whisper_development['galleries'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['$cmd'].find({"count"=>"articles", "query"=>{"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}, "fields"=>nil})
+MONGODB whisper_development['articles'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:date_published, :desc]])
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([])
+Rendered pages/edit.html.haml within layouts/norcalfreediving (42.4ms)
+Completed 200 OK in 52ms (Views: 47.6ms)
+
+
+Started GET "/stylesheets/aloha/plugins/at.tapo.aloha.plugins.Image/resources/imageplugin.css" for 127.0.0.1 at 2011-04-26 13:43:44 -0700
+
+ActionController::RoutingError (No route matches "/stylesheets/aloha/plugins/at.tapo.aloha.plugins.Image/resources/imageplugin.css"):
+  
+
+Rendered /home/tyler/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/javascripts/aloha/plugins/com.gentics.aloha.plugins.Image/dep/jcrop/jquery.jcrop.js" for 127.0.0.1 at 2011-04-26 13:43:45 -0700
+
+ActionController::RoutingError (No route matches "/javascripts/aloha/plugins/com.gentics.aloha.plugins.Image/dep/jcrop/jquery.jcrop.js"):
+  
+
+Rendered /home/tyler/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/javascripts/aloha/plugins/com.gentics.aloha.plugins.Image/dep/jcrop/jquery.jcrop.js" for 127.0.0.1 at 2011-04-26 13:43:47 -0700
+
+ActionController::RoutingError (No route matches "/javascripts/aloha/plugins/com.gentics.aloha.plugins.Image/dep/jcrop/jquery.jcrop.js"):
+  
+
+Rendered /home/tyler/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/stylesheets/img/gradient.png" for 127.0.0.1 at 2011-04-26 13:43:47 -0700
+
+ActionController::RoutingError (No route matches "/stylesheets/img/gradient.png"):
+  
+
+Rendered /home/tyler/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started PUT "/projects/4db20fb4872ceb0e3300000a/pages/4db20fb4872ceb0e3300000f.json" for 127.0.0.1 at 2011-04-26 13:43:50 -0700
+  Processing by PagesController#update as JSON
+  Parameters: {"html"=>"\n          \n                    \n                              \n                                        \n                                                  \n                                                            \n                                                                      \n                                                                                Norcal Freediving Whassup!!!<br><div class=\"GENTICS_Aloha_Table_wrapper\" contenteditable=\"false\"><table class=\"GENTICS_Aloha_Table\" id=\"GENTICS_Table_4754450\" contenteditable=\"false\"><tbody><tr style=\"height: 10px;\" class=\"GENTICS_Aloha_Table_selectColumn\"><td class=\"GENTICS_Aloha_Table_leftUpperCorner\"><div class=\"GENTICS_WAI_RED\" style=\"width: 25px; height: 12px;\"></div></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td style=\"width: 10px;\" class=\"GENTICS_Aloha_Table_selectRow\">&nbsp;</td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\"><p><img alt=\"4db7105d872ceb5034000016\" src=\"http://s3.amazonaws.com/whisper_dev/images/thumb/4db7105d872ceb5034000016.JPG?1303842909\"></p>&nbsp;</div></td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\">Testte<br></div></td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\">Okay well<br></div></td></tr><tr><td style=\"width: 10px;\" class=\"GENTICS_Aloha_Table_selectRow\">&nbsp;</td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\">This is interesting<br></div></td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\"><img alt=\"4db7105d872ceb5034000016\" src=\"http://s3.amazonaws.com/whisper_dev/images/thumb/4db7105d872ceb5034000016.JPG?1303842909\"></div></td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\">&nbsp;<img alt=\"4db7105d872ceb5034000016\" src=\"http://s3.amazonaws.com/whisper_dev/images/medium/4db7105d872ceb5034000016.JPG?1303842909\"></div></td></tr></tbody></table></div><br><br>&nbsp; <a href=\"http://s3.amazonaws.com/whisper_dev/images/original/4db7105d872ceb5034000016.JPG?1303842909\"><br><br><br><br>\n                                 </a><br><br><img style=\"width: 272px; height: 365px;\" alt=\"4db70c25872ceb5034000009\" src=\"http://s3.amazonaws.com/whisper_dev/images/medium/4db70c25872ceb5034000009.jpg?1303841829\"><br><br><br><br><br>\n        ", "authenticity_token"=>"ql0jpf/vE8oNLSfd+dq4V78SfRQ/bMr4gZoqxNBRHcY=", "project_id"=>"4db20fb4872ceb0e3300000a", "id"=>"4db20fb4872ceb0e3300000f"}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"norcalfreediving1.com"})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b'), :_id=>BSON::ObjectId('4db20fb4872ceb0e3300000f')}).sort([])
+MONGODB whisper_development['pages'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([])
+MONGODB whisper_development['pages'].update({"_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000f')}, {"$set"=>{"html"=>"\n          \n                    \n                              \n                                        \n                                                  \n                                                            \n                                                                      \n                                                                                Norcal Freediving Whassup!!!<br><div class=\"GENTICS_Aloha_Table_wrapper\" contenteditable=\"false\"><table class=\"GENTICS_Aloha_Table\" id=\"GENTICS_Table_4754450\" contenteditable=\"false\"><tbody><tr style=\"height: 10px;\" class=\"GENTICS_Aloha_Table_selectColumn\"><td class=\"GENTICS_Aloha_Table_leftUpperCorner\"><div class=\"GENTICS_WAI_RED\" style=\"width: 25px; height: 12px;\"></div></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td style=\"width: 10px;\" class=\"GENTICS_Aloha_Table_selectRow\">&nbsp;</td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\"><p><img alt=\"4db7105d872ceb5034000016\" src=\"http://s3.amazonaws.com/whisper_dev/images/thumb/4db7105d872ceb5034000016.JPG?1303842909\"></p>&nbsp;</div></td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\">Testte<br></div></td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\">Okay well<br></div></td></tr><tr><td style=\"width: 10px;\" class=\"GENTICS_Aloha_Table_selectRow\">&nbsp;</td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\">This is interesting<br></div></td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\"><img alt=\"4db7105d872ceb5034000016\" src=\"http://s3.amazonaws.com/whisper_dev/images/thumb/4db7105d872ceb5034000016.JPG?1303842909\"></div></td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\">&nbsp;<img alt=\"4db7105d872ceb5034000016\" src=\"http://s3.amazonaws.com/whisper_dev/images/medium/4db7105d872ceb5034000016.JPG?1303842909\"></div></td></tr></tbody></table></div><br><br>&nbsp; <a href=\"http://s3.amazonaws.com/whisper_dev/images/original/4db7105d872ceb5034000016.JPG?1303842909\"><br><br><br><br>\n                                 </a><br><br><img style=\"width: 272px; height: 365px;\" alt=\"4db70c25872ceb5034000009\" src=\"http://s3.amazonaws.com/whisper_dev/images/medium/4db70c25872ceb5034000009.jpg?1303841829\"><br><br><br><br><br>\n        "}})
+Completed 200 OK in 13ms (Views: 1.4ms)
+
+
+Started PUT "/projects/4db20fb4872ceb0e3300000a/pages/4db20fb4872ceb0e3300000f.json" for 127.0.0.1 at 2011-04-26 13:44:08 -0700
+  Processing by PagesController#update as JSON
+  Parameters: {"html"=>"\n          \n                    \n                              \n                                        \n                                                  \n                                                            \n                                                                      \n                                                                                Norcal Freediving Whassup!!!<br><div class=\"GENTICS_Aloha_Table_wrapper\" contenteditable=\"false\"><table class=\"GENTICS_Aloha_Table\" id=\"GENTICS_Table_4754450\" contenteditable=\"false\"><tbody><tr style=\"height: 10px;\" class=\"GENTICS_Aloha_Table_selectColumn\"><td class=\"GENTICS_Aloha_Table_leftUpperCorner\"><div class=\"GENTICS_WAI_RED\" style=\"width: 25px; height: 12px;\"></div></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td style=\"width: 10px;\" class=\"GENTICS_Aloha_Table_selectRow\">&nbsp;</td><td class=\"GENTICS_Table_Cell_active\"><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\"><p><img alt=\"4db7105d872ceb5034000016\" src=\"http://s3.amazonaws.com/whisper_dev/images/thumb/4db7105d872ceb5034000016.JPG?1303842909\"></p>&nbsp;</div></td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\">Testte<br></div></td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\">Okay well<br></div></td></tr><tr><td style=\"width: 10px;\" class=\"GENTICS_Aloha_Table_selectRow\">&nbsp;</td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\">This is interesting<br></div></td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\"><img alt=\"4db7105d872ceb5034000016\" src=\"http://s3.amazonaws.com/whisper_dev/images/thumb/4db7105d872ceb5034000016.JPG?1303842909\"></div></td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\">&nbsp;<img alt=\"4db7105d872ceb5034000016\" src=\"http://s3.amazonaws.com/whisper_dev/images/medium/4db7105d872ceb5034000016.JPG?1303842909\"></div></td></tr></tbody></table></div><br><br>&nbsp; <a href=\"http://s3.amazonaws.com/whisper_dev/images/original/4db7105d872ceb5034000016.JPG?1303842909\"><br><br><br><br>\n                                 </a><br><br><img style=\"width: 272px; height: 365px;\" alt=\"4db70c25872ceb5034000009\" src=\"http://s3.amazonaws.com/whisper_dev/images/medium/4db70c25872ceb5034000009.jpg?1303841829\"><br><br><br><br><br>\n        ", "authenticity_token"=>"ql0jpf/vE8oNLSfd+dq4V78SfRQ/bMr4gZoqxNBRHcY=", "project_id"=>"4db20fb4872ceb0e3300000a", "id"=>"4db20fb4872ceb0e3300000f"}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"norcalfreediving1.com"})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b'), :_id=>BSON::ObjectId('4db20fb4872ceb0e3300000f')}).sort([])
+MONGODB whisper_development['pages'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([])
+MONGODB whisper_development['pages'].update({"_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000f')}, {"$set"=>{"html"=>"\n          \n                    \n                              \n                                        \n                                                  \n                                                            \n                                                                      \n                                                                                Norcal Freediving Whassup!!!<br><div class=\"GENTICS_Aloha_Table_wrapper\" contenteditable=\"false\"><table class=\"GENTICS_Aloha_Table\" id=\"GENTICS_Table_4754450\" contenteditable=\"false\"><tbody><tr style=\"height: 10px;\" class=\"GENTICS_Aloha_Table_selectColumn\"><td class=\"GENTICS_Aloha_Table_leftUpperCorner\"><div class=\"GENTICS_WAI_RED\" style=\"width: 25px; height: 12px;\"></div></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td style=\"width: 10px;\" class=\"GENTICS_Aloha_Table_selectRow\">&nbsp;</td><td class=\"GENTICS_Table_Cell_active\"><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\"><p><img alt=\"4db7105d872ceb5034000016\" src=\"http://s3.amazonaws.com/whisper_dev/images/thumb/4db7105d872ceb5034000016.JPG?1303842909\"></p>&nbsp;</div></td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\">Testte<br></div></td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\">Okay well<br></div></td></tr><tr><td style=\"width: 10px;\" class=\"GENTICS_Aloha_Table_selectRow\">&nbsp;</td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\">This is interesting<br></div></td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\"><img alt=\"4db7105d872ceb5034000016\" src=\"http://s3.amazonaws.com/whisper_dev/images/thumb/4db7105d872ceb5034000016.JPG?1303842909\"></div></td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\">&nbsp;<img alt=\"4db7105d872ceb5034000016\" src=\"http://s3.amazonaws.com/whisper_dev/images/medium/4db7105d872ceb5034000016.JPG?1303842909\"></div></td></tr></tbody></table></div><br><br>&nbsp; <a href=\"http://s3.amazonaws.com/whisper_dev/images/original/4db7105d872ceb5034000016.JPG?1303842909\"><br><br><br><br>\n                                 </a><br><br><img style=\"width: 272px; height: 365px;\" alt=\"4db70c25872ceb5034000009\" src=\"http://s3.amazonaws.com/whisper_dev/images/medium/4db70c25872ceb5034000009.jpg?1303841829\"><br><br><br><br><br>\n        "}})
+Completed 200 OK in 59ms (Views: 1.9ms)
+
+
+Started PUT "/projects/4db20fb4872ceb0e3300000a/pages/4db20fb4872ceb0e3300000f.json" for 127.0.0.1 at 2011-04-26 13:44:22 -0700
+  Processing by PagesController#update as JSON
+  Parameters: {"html"=>"\n          \n                    \n                              \n                                        \n                                                  \n                                                            \n                                                                      \n                                                                                Norcal Freediving Whassup!!!<br><div class=\"GENTICS_Aloha_Table_wrapper\" contenteditable=\"false\"><table class=\"GENTICS_Aloha_Table\" id=\"GENTICS_Table_4754450\" contenteditable=\"false\"><tbody><tr style=\"height: 10px;\" class=\"GENTICS_Aloha_Table_selectColumn\"><td class=\"GENTICS_Aloha_Table_leftUpperCorner\"><div class=\"GENTICS_WAI_RED\" style=\"width: 25px; height: 12px;\"></div></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td style=\"width: 10px;\" class=\"GENTICS_Aloha_Table_selectRow\">&nbsp;</td><td class=\"GENTICS_Table_Cell_active\"><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\"><p><img alt=\"4db7105d872ceb5034000016\" src=\"http://s3.amazonaws.com/whisper_dev/images/thumb/4db7105d872ceb5034000016.JPG?1303842909\"></p>&nbsp;</div></td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\">Testte<br></div></td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\">Okay well<br></div></td></tr><tr><td style=\"width: 10px;\" class=\"GENTICS_Aloha_Table_selectRow\">&nbsp;</td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\">This is interesting<br></div></td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\"><img alt=\"4db7105d872ceb5034000016\" src=\"http://s3.amazonaws.com/whisper_dev/images/thumb/4db7105d872ceb5034000016.JPG?1303842909\"></div></td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\">&nbsp;<img alt=\"4db7105d872ceb5034000016\" src=\"http://s3.amazonaws.com/whisper_dev/images/medium/4db7105d872ceb5034000016.JPG?1303842909\"></div></td></tr></tbody></table></div><br><br>&nbsp; <a href=\"http://s3.amazonaws.com/whisper_dev/images/original/4db7105d872ceb5034000016.JPG?1303842909\"><br><br><br><br>\n                                 </a><br><br><img style=\"width: 272px; height: 365px;\" alt=\"4db70c25872ceb5034000009\" src=\"http://s3.amazonaws.com/whisper_dev/images/medium/4db70c25872ceb5034000009.jpg?1303841829\"><br><br><br><br><br>\n        ", "authenticity_token"=>"ql0jpf/vE8oNLSfd+dq4V78SfRQ/bMr4gZoqxNBRHcY=", "project_id"=>"4db20fb4872ceb0e3300000a", "id"=>"4db20fb4872ceb0e3300000f"}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"norcalfreediving1.com"})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b'), :_id=>BSON::ObjectId('4db20fb4872ceb0e3300000f')}).sort([])
+MONGODB whisper_development['pages'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([])
+Completed 200 OK in 13ms (Views: 1.6ms)
+
+
+Started PUT "/projects/4db20fb4872ceb0e3300000a/pages/4db20fb4872ceb0e3300000f.json" for 127.0.0.1 at 2011-04-26 13:44:23 -0700
+  Processing by PagesController#update as JSON
+  Parameters: {"html"=>"\n          \n                    \n                              \n                                        \n                                                  \n                                                            \n                                                                      \n                                                                                Norcal Freediving Whassup!!!<br><div class=\"GENTICS_Aloha_Table_wrapper\" contenteditable=\"false\"><table class=\"GENTICS_Aloha_Table\" id=\"GENTICS_Table_4754450\" contenteditable=\"false\"><tbody><tr style=\"height: 10px;\" class=\"GENTICS_Aloha_Table_selectColumn\"><td class=\"GENTICS_Aloha_Table_leftUpperCorner\"><div class=\"GENTICS_WAI_RED\" style=\"width: 25px; height: 12px;\"></div></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td style=\"width: 10px;\" class=\"GENTICS_Aloha_Table_selectRow\">&nbsp;</td><td class=\"GENTICS_Table_Cell_active\"><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\"><p><img alt=\"4db7105d872ceb5034000016\" src=\"http://s3.amazonaws.com/whisper_dev/images/thumb/4db7105d872ceb5034000016.JPG?1303842909\"></p>&nbsp;</div></td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\">Testte<br></div></td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\">Okay well<br></div></td></tr><tr><td style=\"width: 10px;\" class=\"GENTICS_Aloha_Table_selectRow\">&nbsp;</td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\">This is interesting<br></div></td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\"><img alt=\"4db7105d872ceb5034000016\" src=\"http://s3.amazonaws.com/whisper_dev/images/thumb/4db7105d872ceb5034000016.JPG?1303842909\"></div></td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\">&nbsp;<img alt=\"4db7105d872ceb5034000016\" src=\"http://s3.amazonaws.com/whisper_dev/images/medium/4db7105d872ceb5034000016.JPG?1303842909\"></div></td></tr></tbody></table></div><br><br>&nbsp; <a href=\"http://s3.amazonaws.com/whisper_dev/images/original/4db7105d872ceb5034000016.JPG?1303842909\"><br><br><br><br>\n                                 </a><br><br><img style=\"width: 272px; height: 365px;\" alt=\"4db70c25872ceb5034000009\" src=\"http://s3.amazonaws.com/whisper_dev/images/medium/4db70c25872ceb5034000009.jpg?1303841829\"><br><br><br><br><br>\n        ", "authenticity_token"=>"ql0jpf/vE8oNLSfd+dq4V78SfRQ/bMr4gZoqxNBRHcY=", "project_id"=>"4db20fb4872ceb0e3300000a", "id"=>"4db20fb4872ceb0e3300000f"}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"norcalfreediving1.com"})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b'), :_id=>BSON::ObjectId('4db20fb4872ceb0e3300000f')}).sort([])
+MONGODB whisper_development['pages'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([])
+Completed 200 OK in 13ms (Views: 1.4ms)
+
+
+Started GET "/projects/4db20fb4872ceb0e3300000a/pages/4db20fb4872ceb0e3300000f/edit" for 127.0.0.1 at 2011-04-26 13:44:37 -0700
+  Processing by PagesController#edit as HTML
+  Parameters: {"project_id"=>"4db20fb4872ceb0e3300000a", "id"=>"4db20fb4872ceb0e3300000f"}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"norcalfreediving1.com"})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['pages'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000f')}).sort([])
+Rendered pages/_aloha_editor.html.haml (5.2ms)
+MONGODB whisper_development['users'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000009')})
+MONGODB whisper_development['galleries'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['$cmd'].find({"count"=>"articles", "query"=>{"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}, "fields"=>nil})
+MONGODB whisper_development['articles'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:date_published, :desc]])
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([])
+Rendered pages/edit.html.haml within layouts/norcalfreediving (42.6ms)
+Completed 200 OK in 52ms (Views: 48.0ms)
+
+
+Started GET "/javascripts/aloha/plugins/com.gentics.aloha.plugins.Image/dep/jcrop/jquery.jcrop.js" for 127.0.0.1 at 2011-04-26 13:44:38 -0700
+
+ActionController::RoutingError (No route matches "/javascripts/aloha/plugins/com.gentics.aloha.plugins.Image/dep/jcrop/jquery.jcrop.js"):
+  
+
+Rendered /home/tyler/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/stylesheets/aloha/plugins/at.tapo.aloha.plugins.Image/resources/imageplugin.css" for 127.0.0.1 at 2011-04-26 13:44:38 -0700
+
+ActionController::RoutingError (No route matches "/stylesheets/aloha/plugins/at.tapo.aloha.plugins.Image/resources/imageplugin.css"):
+  
+
+Rendered /home/tyler/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/javascripts/aloha/plugins/com.gentics.aloha.plugins.Image/dep/jcrop/jquery.jcrop.js" for 127.0.0.1 at 2011-04-26 13:44:39 -0700
+
+ActionController::RoutingError (No route matches "/javascripts/aloha/plugins/com.gentics.aloha.plugins.Image/dep/jcrop/jquery.jcrop.js"):
+  
+
+Rendered /home/tyler/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/stylesheets/aloha/plugins/at.tapo.aloha.plugins.Image/resources/imageplugin.css" for 127.0.0.1 at 2011-04-26 13:44:39 -0700
+
+ActionController::RoutingError (No route matches "/stylesheets/aloha/plugins/at.tapo.aloha.plugins.Image/resources/imageplugin.css"):
+  
+
+Rendered /home/tyler/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/stylesheets/img/gradient.png" for 127.0.0.1 at 2011-04-26 13:44:40 -0700
+
+ActionController::RoutingError (No route matches "/stylesheets/img/gradient.png"):
+  
+
+Rendered /home/tyler/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started PUT "/projects/4db20fb4872ceb0e3300000a/pages/4db20fb4872ceb0e3300000f.json" for 127.0.0.1 at 2011-04-26 13:45:20 -0700
+  Processing by PagesController#update as JSON
+  Parameters: {"html"=>"\n          \n                    \n                              \n                                        \n                                                  \n                                                            \n                                                                      \n                                                                                \n                                                                                          Norcal Freediving Whassup!!!<br><div class=\"GENTICS_Aloha_Table_wrapper\" contenteditable=\"false\"><table class=\"GENTICS_Aloha_Table\" id=\"GENTICS_Table_4754450\" contenteditable=\"false\"><tbody><tr style=\"height: 10px;\" class=\"GENTICS_Aloha_Table_selectColumn\"><td class=\"GENTICS_Aloha_Table_leftUpperCorner\"><div class=\"GENTICS_WAI_RED\" style=\"width: 25px; height: 12px;\"></div></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td style=\"width: 10px;\" class=\"GENTICS_Aloha_Table_selectRow\">&nbsp;</td><td class=\"GENTICS_Table_Cell_active\"><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\"><p><img alt=\"4db7105d872ceb5034000016\" src=\"http://s3.amazonaws.com/whisper_dev/images/thumb/4db7105d872ceb5034000016.JPG?1303842909\"></p>&nbsp;</div></td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\">Testte<br></div></td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\">Okay well<br></div></td></tr><tr><td style=\"width: 10px;\" class=\"GENTICS_Aloha_Table_selectRow\">&nbsp;</td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\">This is interesting<br></div></td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\"><img alt=\"4db7105d872ceb5034000016\" src=\"http://s3.amazonaws.com/whisper_dev/images/thumb/4db7105d872ceb5034000016.JPG?1303842909\"></div></td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\">&nbsp;<img alt=\"4db7105d872ceb5034000016\" src=\"http://s3.amazonaws.com/whisper_dev/images/medium/4db7105d872ceb5034000016.JPG?1303842909\"></div></td></tr></tbody></table></div><br><br>&nbsp; <a href=\"http://s3.amazonaws.com/whisper_dev/images/original/4db7105d872ceb5034000016.JPG?1303842909\"><br><br><br><br>\n                                           </a><br><br><img style=\"width: 272px; height: 365px;\" alt=\"4db70c25872ceb5034000009\" src=\"http://s3.amazonaws.com/whisper_dev/images/medium/4db70c25872ceb5034000009.jpg?1303841829\"><br><br><br><br><br>\n        ", "authenticity_token"=>"ql0jpf/vE8oNLSfd+dq4V78SfRQ/bMr4gZoqxNBRHcY=", "project_id"=>"4db20fb4872ceb0e3300000a", "id"=>"4db20fb4872ceb0e3300000f"}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"norcalfreediving1.com"})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b'), :_id=>BSON::ObjectId('4db20fb4872ceb0e3300000f')}).sort([])
+MONGODB whisper_development['pages'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([])
+MONGODB whisper_development['pages'].update({"_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000f')}, {"$set"=>{"html"=>"\n          \n                    \n                              \n                                        \n                                                  \n                                                            \n                                                                      \n                                                                                \n                                                                                          Norcal Freediving Whassup!!!<br><div class=\"GENTICS_Aloha_Table_wrapper\" contenteditable=\"false\"><table class=\"GENTICS_Aloha_Table\" id=\"GENTICS_Table_4754450\" contenteditable=\"false\"><tbody><tr style=\"height: 10px;\" class=\"GENTICS_Aloha_Table_selectColumn\"><td class=\"GENTICS_Aloha_Table_leftUpperCorner\"><div class=\"GENTICS_WAI_RED\" style=\"width: 25px; height: 12px;\"></div></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td style=\"width: 10px;\" class=\"GENTICS_Aloha_Table_selectRow\">&nbsp;</td><td class=\"GENTICS_Table_Cell_active\"><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\"><p><img alt=\"4db7105d872ceb5034000016\" src=\"http://s3.amazonaws.com/whisper_dev/images/thumb/4db7105d872ceb5034000016.JPG?1303842909\"></p>&nbsp;</div></td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\">Testte<br></div></td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\">Okay well<br></div></td></tr><tr><td style=\"width: 10px;\" class=\"GENTICS_Aloha_Table_selectRow\">&nbsp;</td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\">This is interesting<br></div></td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\"><img alt=\"4db7105d872ceb5034000016\" src=\"http://s3.amazonaws.com/whisper_dev/images/thumb/4db7105d872ceb5034000016.JPG?1303842909\"></div></td><td><div class=\"GENTICS_Table_Cell_editable\" contenteditable=\"true\">&nbsp;<img alt=\"4db7105d872ceb5034000016\" src=\"http://s3.amazonaws.com/whisper_dev/images/medium/4db7105d872ceb5034000016.JPG?1303842909\"></div></td></tr></tbody></table></div><br><br>&nbsp; <a href=\"http://s3.amazonaws.com/whisper_dev/images/original/4db7105d872ceb5034000016.JPG?1303842909\"><br><br><br><br>\n                                           </a><br><br><img style=\"width: 272px; height: 365px;\" alt=\"4db70c25872ceb5034000009\" src=\"http://s3.amazonaws.com/whisper_dev/images/medium/4db70c25872ceb5034000009.jpg?1303841829\"><br><br><br><br><br>\n        "}})
+Completed 200 OK in 14ms (Views: 1.6ms)
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB whisper_development['projects'].find({}).sort([[:_id, :desc]])
+MONGODB whisper_development['images'].find({}).sort([[:_id, :desc]])
+MONGODB whisper_development['projects'].find({}).sort([[:_id, :desc]])
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB whisper_development['projects'].find({}).sort([[:_id, :desc]])
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+
+
+Started GET "/Home" for 127.0.0.1 at 2011-04-28 22:56:10 -0700
+  Processing by PagesController#show as HTML
+  Parameters: {"title1"=>"Home"}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"norcalfreediving1.com"})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b'), :title=>"Home"}).sort([])
+MONGODB whisper_development['pages'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([])
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['pages'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([])
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([])
+Rendered pages/show.html.haml within layouts/norcalfreediving (26.7ms)
+Completed 200 OK in 37ms (Views: 31.8ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2011-04-28 22:56:21 -0700
+  Processing by ArticlesController#new as HTML
+MONGODB whisper_development['domain_names'].find({:domain_name=>"norcalfreediving1.com"})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+Rendered articles/_form.html.haml (18.3ms)
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([])
+Rendered articles/new.html.haml within layouts/norcalfreediving (42.8ms)
+Completed 200 OK in 51ms (Views: 48.0ms)
+
+
+Started GET "/javascripts/aloha/plugins/com.gentics.aloha.plugins.Image/dep/jcrop/jquery.jcrop.js" for 127.0.0.1 at 2011-04-28 22:56:21 -0700
+
+ActionController::RoutingError (No route matches "/javascripts/aloha/plugins/com.gentics.aloha.plugins.Image/dep/jcrop/jquery.jcrop.js"):
+  
+
+Rendered /home/tyler/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2011-04-28 22:56:25 -0700
+  Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3BR0u06EW4EoHTEf75has9mwnZwWipaYtp6nDeLffiQ=", "article"=>{"title"=>"", "body"=>"", "published"=>"0"}, "commit"=>"Save"}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"norcalfreediving1.com"})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+Rendered articles/_form.html.haml (16.9ms)
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([])
+Rendered articles/new.html.haml within layouts/norcalfreediving (42.0ms)
+Completed 200 OK in 59ms (Views: 46.4ms)
+
+
+Started GET "/javascripts/aloha/plugins/com.gentics.aloha.plugins.Image/dep/jcrop/jquery.jcrop.js" for 127.0.0.1 at 2011-04-28 22:56:25 -0700
+
+ActionController::RoutingError (No route matches "/javascripts/aloha/plugins/com.gentics.aloha.plugins.Image/dep/jcrop/jquery.jcrop.js"):
+  
+
+Rendered /home/tyler/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2011-04-28 22:56:43 -0700
+  Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3BR0u06EW4EoHTEf75has9mwnZwWipaYtp6nDeLffiQ=", "article"=>{"title"=>"Test-o-rama", "body"=>"", "published"=>"0"}, "commit"=>"Save"}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"norcalfreediving1.com"})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['articles'].insert([{"_id"=>BSON::ObjectId('4dba531c872ceb205d000004'), "date_created"=>2011-04-29 05:56:44 UTC, "date_modified"=>2011-04-29 05:56:44 UTC, "title"=>"Test-o-rama", "body"=>"", "published"=>false, "project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}])
+Redirected to http://norcalfreediving1.com:3000/articles
+Completed 302 Found in 11ms
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-04-28 22:56:44 -0700
+  Processing by ArticlesController#index as HTML
+MONGODB whisper_development['domain_names'].find({:domain_name=>"norcalfreediving1.com"})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['articles'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:date_published, :desc]])
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([])
+Rendered articles/index.html.haml within layouts/norcalfreediving (26.4ms)
+Completed 200 OK in 35ms (Views: 31.4ms)

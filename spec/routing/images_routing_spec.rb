@@ -4,31 +4,31 @@ describe ImagesController do
   describe "routing" do
 
     it "recognizes and generates #index" do
-      { :get => "/images" }.should route_to(:controller => "images", :action => "index")
+      { :get => "/galleries/2345234/images" }.should route_to(:controller => "images", :gallery_id => "2345234", :action => "index")
     end
 
     it "recognizes and generates #new" do
-      { :get => "/images/new" }.should route_to(:controller => "images", :action => "new")
+      { :get => "/galleries/2345234/images/new" }.should route_to(:controller => "images", :gallery_id => "2345234", :action => "new")
     end
 
     it "recognizes and generates #show" do
-      { :get => "/images/1" }.should route_to(:controller => "images", :action => "show", :id => "1")
+      { :get => "/galleries/2345234/images/1" }.should route_to(:controller => "images", :gallery_id => "2345234", :action => "show", :id => "1")
     end
 
     it "recognizes and generates #edit" do
-      { :get => "/images/1/edit" }.should route_to(:controller => "images", :action => "edit", :id => "1")
+      { :get => "/galleries/2345234/images/1/edit" }.should route_to(:controller => "images", :gallery_id => "2345234", :action => "edit", :id => "1")
     end
 
     it "recognizes and generates #create" do
-      { :post => "/images" }.should route_to(:controller => "images", :action => "create")
+      { :post => "/galleries/2345234/images" }.should route_to(:controller => "images", :gallery_id => "2345234", :action => "create")
     end
 
     it "recognizes and generates #update" do
-      { :put => "/images/1" }.should route_to(:controller => "images", :action => "update", :id => "1")
+      { :put => "/galleries/2345234/images/1" }.should route_to(:controller => "images", :gallery_id => "2345234", :action => "update", :id => "1")
     end
 
     it "recognizes and generates #destroy" do
-      { :delete => "/images/1" }.should route_to(:controller => "images", :action => "destroy", :id => "1")
+      { :delete => "/galleries/2345234/images/1" }.should route_to(:controller => "images", :gallery_id => "2345234", :action => "destroy", :id => "1")
     end
 
   end

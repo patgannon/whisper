@@ -5,6 +5,8 @@ describe "galleries/edit.html.haml" do
     @gallery = assign(:gallery, stub_model(Gallery,
       :name => "MyString"
     ))
+    stub_ability
+
   end
 
   it "renders the edit gallery form" do
