@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   def load_project
     domain_name = DomainName.where(:domain_name=>request.env["SERVER_NAME"]).first
     unless domain_name
-      raise "Domain name not found '#{request.env["SERVER_NAME"]}'"
+      @project = Project.default
     else
       @project = domain_name.project
     end

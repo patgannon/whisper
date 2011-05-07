@@ -12,6 +12,7 @@ gem 'aws-s3', :require => 'aws/s3'
 gem 'devise'
 gem 'oa-oauth', '0.2.0', :require => 'omniauth/oauth'
 gem 'cancan'
+gem 'kaminari'
 
 gem 'haml'
 gem 'jquery-rails'

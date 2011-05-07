@@ -1,0 +1,19 @@
+%h1 Listing products
+
+= paginate @products
+
+
+- for product in @products
+  .product
+    %h2= product.name
+    %table
+      %tr
+        %td= product.price
+        %td= link_to 'Purchase', product.buy_now_url('/')
+        - if can? :manage, product
+          %td= link_to 'Edit', edit_product_path(product)
+          %td= link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Product', new_product_path if can? :manage, @project

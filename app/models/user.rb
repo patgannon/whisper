@@ -44,11 +44,18 @@ class User
     can :read, User
     can :edit, User, :id => self.id
     can :manage, Project, :owner_id => self.id
+    
     can :manage, Page do |page|
-      can? :manage, page.root.project
+      can? :manage, page.root.project    
     end
-    can :manage, Gallery do |gallery|
-      can? :manage, gallery.project
+    [ Gallery, Product, Article ].each do |klass|
+      can :manage, klass do |obj|
+        can? :manage, obj.project
+      end
+    end
+    
+    can? :manage, Image do |image|
+      can? :manage, image.gallery
     end
   end
   

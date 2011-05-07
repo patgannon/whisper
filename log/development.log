@@ -32425,3 +32425,805 @@ MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb
 MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([])
 Rendered articles/index.html.haml within layouts/norcalfreediving (26.4ms)
 Completed 200 OK in 35ms (Views: 31.4ms)
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-07 12:01:58 -0700
+  Processing by PagesController#show as HTML
+  Parameters: {"root_path"=>true}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"norcalfreediving1.com"})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([[:position, :asc]])
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['pages'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([[:position, :asc]])
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+Rendered pages/show.html.haml within layouts/norcalfreediving (25.9ms)
+Completed 200 OK in 98ms (Views: 32.6ms)
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB whisper_development['projects'].find({})
+MONGODB whisper_development['projects'].find({}).sort([[:_id, :desc]])
+MONGODB whisper_development['projects'].find({}).sort([[:_id, :desc]])
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB whisper_development['projects'].find({}).sort([[:_id, :desc]])
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB whisper_development['projects'].find({}).sort([[:_id, :desc]])
+MONGODB whisper_development['users'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000009')})
+MONGODB whisper_development['projects'].update({"_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}, {"$set"=>{"default_project"=>true}})
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({:parent_id=>nil, :_id=>{"$ne"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}}, {:_id=>1})
+MONGODB whisper_development['pages'].find({:parent_id=>nil, :_id=>{"$ne"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].update({"_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}, {"$set"=>{"position"=>0}})
+[paperclip] Saving attachments.
+MONGODB whisper_development['projects'].find({:default_project=>true})
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-07 12:10:10 -0700
+  Processing by PagesController#show as HTML
+  Parameters: {"root_path"=>true}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000002')})
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e33000002')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e33000003')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000003')}).sort([[:position, :asc]])
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000002')})
+MONGODB whisper_development['pages'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000003')}).sort([[:position, :asc]])
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000002')})
+Rendered pages/show.html.haml (6.9ms)
+Completed 200 OK in 17ms (Views: 11.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-07 12:10:11 -0700
+  Processing by PagesController#show as HTML
+  Parameters: {"root_path"=>true}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000002')})
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e33000002')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e33000003')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000003')}).sort([[:position, :asc]])
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000002')})
+MONGODB whisper_development['pages'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000003')}).sort([[:position, :asc]])
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000002')})
+Rendered pages/show.html.haml (6.8ms)
+Completed 200 OK in 17ms (Views: 11.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-07 12:10:15 -0700
+  Processing by PagesController#show as HTML
+  Parameters: {"root_path"=>true}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000002')})
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e33000002')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e33000003')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000003')}).sort([[:position, :asc]])
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000002')})
+MONGODB whisper_development['pages'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000003')}).sort([[:position, :asc]])
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000002')})
+Rendered pages/show.html.haml (7.0ms)
+Completed 200 OK in 17ms (Views: 12.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-07 12:10:22 -0700
+  Processing by PagesController#show as HTML
+  Parameters: {"root_path"=>true}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000002')})
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e33000002')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e33000003')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000003')}).sort([[:position, :asc]])
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000002')})
+MONGODB whisper_development['pages'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000003')}).sort([[:position, :asc]])
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000002')})
+Rendered pages/show.html.haml (6.7ms)
+Completed 200 OK in 16ms (Views: 11.8ms)
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-07 12:11:12 -0700
+  Processing by PagesController#show as HTML
+  Parameters: {"root_path"=>true}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000002')})
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e33000002')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e33000003')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000003')}).sort([[:position, :asc]])
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000002')})
+MONGODB whisper_development['pages'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000003')}).sort([[:position, :asc]])
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000002')})
+Rendered pages/show.html.haml (8.5ms)
+Completed 200 OK in 19ms (Views: 13.8ms)
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['domain_names'].remove({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000006')})
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-07 12:11:48 -0700
+  Processing by PagesController#show as HTML
+  Parameters: {"root_path"=>true}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([[:position, :asc]])
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['pages'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([[:position, :asc]])
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+Rendered pages/show.html.haml within layouts/norcalfreediving (26.5ms)
+Completed 200 OK in 37ms (Views: 32.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-07 12:11:58 -0700
+  Processing by ProjectsController#index as HTML
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+Completed   in 2ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-05-07 12:11:58 -0700
+  Processing by Devise::SessionsController#new as HTML
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+Rendered devise/shared/_links.haml (4.4ms)
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([[:position, :asc]])
+Rendered devise/sessions/new.html.haml within layouts/norcalfreediving (38.6ms)
+Completed 200 OK in 60ms (Views: 57.7ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-05-07 12:12:02 -0700
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MoNYHjicn54p/a1stJmYqcTnfuw/Qsy0XPI/6r2mMfk=", "user"=>{"email"=>"tgannon@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+MONGODB whisper_development['users'].find({:email=>"tgannon@gmail.com"})
+MONGODB whisper_development['users'].update({"_id"=>BSON::ObjectId('4db20fb4872ceb0e33000001')}, {"$set"=>{"last_sign_in_at"=>2011-05-07 19:12:03 UTC, "current_sign_in_at"=>2011-05-07 19:12:03 UTC, "last_sign_in_ip"=>"127.0.0.1", "current_sign_in_ip"=>"127.0.0.1", "sign_in_count"=>1}})
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 138ms
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-07 12:12:03 -0700
+  Processing by ProjectsController#index as HTML
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+MONGODB whisper_development['users'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000001')})
+MONGODB whisper_development['projects'].find({"owner_id"=>BSON::ObjectId('4db20fb4872ceb0e33000001')})
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([[:position, :asc]])
+Rendered projects/index.html.haml within layouts/norcalfreediving (31.5ms)
+Completed 200 OK in 42ms (Views: 37.8ms)
+
+
+Started GET "/stylesheets/img/gradient.png" for 127.0.0.1 at 2011-05-07 12:12:03 -0700
+
+ActionController::RoutingError (No route matches "/stylesheets/img/gradient.png"):
+  
+
+Rendered /home/tyler/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2011-05-07 12:12:10 -0700
+  Processing by Devise::SessionsController#destroy as HTML
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+MONGODB whisper_development['users'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000001')})
+Redirected to http://localhost:3000/
+Completed 302 Found in 107ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-07 12:12:11 -0700
+  Processing by PagesController#show as HTML
+  Parameters: {"root_path"=>true}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([[:position, :asc]])
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['pages'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([[:position, :asc]])
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+Rendered pages/show.html.haml within layouts/norcalfreediving (26.1ms)
+Completed 200 OK in 37ms (Views: 32.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-05-07 12:12:16 -0700
+  Processing by ProductsController#index as HTML
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+MONGODB whisper_development['$cmd'].find({"count"=>"products", "query"=>{}, "fields"=>nil})
+MONGODB whisper_development['products'].find({}).limit(25)
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([[:position, :asc]])
+Rendered products/index.html.haml within layouts/norcalfreediving (75.7ms)
+Completed 200 OK in 85ms (Views: 82.3ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-05-07 12:12:21 -0700
+  Processing by ProductsController#new as HTML
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+Rendered products/_form.html.haml (8.6ms)
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([[:position, :asc]])
+Rendered products/new.html.haml within layouts/norcalfreediving (33.1ms)
+Completed 200 OK in 42ms (Views: 39.1ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2011-05-07 12:12:52 -0700
+  Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V1yokCfVLq+aU2zSQJDiv685TjhOkU9NgtM7BI2dSsA=", "product"=>{"name"=>"Freediving Class", "price"=>"245.00"}, "commit"=>"Save"}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+MONGODB whisper_development['products'].insert([{"name"=>"Freediving Class", "price"=>"245.00", "_id"=>BSON::ObjectId('4dc599b4872ceb454b000006')}])
+Redirected to http://localhost:3000/products/4dc599b4872ceb454b000006
+Completed 302 Found in 4ms
+
+
+Started GET "/products/4dc599b4872ceb454b000006" for 127.0.0.1 at 2011-05-07 12:12:52 -0700
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"4dc599b4872ceb454b000006"}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+MONGODB whisper_development['products'].find({:_id=>BSON::ObjectId('4dc599b4872ceb454b000006')})
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([[:position, :asc]])
+Rendered products/show.html.haml within layouts/norcalfreediving (25.5ms)
+Completed 200 OK in 35ms (Views: 31.8ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-05-07 12:12:57 -0700
+  Processing by ProductsController#index as HTML
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+MONGODB whisper_development['$cmd'].find({"count"=>"products", "query"=>{}, "fields"=>nil})
+MONGODB whisper_development['products'].find({}).limit(25)
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([[:position, :asc]])
+Rendered products/index.html.haml within layouts/norcalfreediving (83.2ms)
+Completed 200 OK in 92ms (Views: 89.2ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-05-07 12:13:00 -0700
+  Processing by ProductsController#new as HTML
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+Rendered products/_form.html.haml (8.8ms)
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([[:position, :asc]])
+Rendered products/new.html.haml within layouts/norcalfreediving (34.1ms)
+Completed 200 OK in 43ms (Views: 40.5ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2011-05-07 12:13:22 -0700
+  Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V1yokCfVLq+aU2zSQJDiv685TjhOkU9NgtM7BI2dSsA=", "product"=>{"name"=>"Deposit for freediving class", "price"=>"122.50"}, "commit"=>"Save"}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+MONGODB whisper_development['products'].insert([{"name"=>"Deposit for freediving class", "price"=>"122.50", "_id"=>BSON::ObjectId('4dc599d3872ceb454b000008')}])
+Redirected to http://localhost:3000/products/4dc599d3872ceb454b000008
+Completed 302 Found in 5ms
+
+
+Started GET "/products/4dc599d3872ceb454b000008" for 127.0.0.1 at 2011-05-07 12:13:23 -0700
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"4dc599d3872ceb454b000008"}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+MONGODB whisper_development['products'].find({:_id=>BSON::ObjectId('4dc599d3872ceb454b000008')})
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([[:position, :asc]])
+Rendered products/show.html.haml within layouts/norcalfreediving (25.2ms)
+Completed 200 OK in 35ms (Views: 31.5ms)
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+
+
+Started GET "/products" for 127.0.0.1 at 2011-05-07 14:16:00 -0700
+  Processing by ProductsController#index as HTML
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+MONGODB whisper_development['$cmd'].find({"count"=>"products", "query"=>{"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}, "fields"=>nil})
+MONGODB whisper_development['products'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).limit(25).sort([[:name, :asc]])
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([[:position, :asc]])
+Rendered products/index.html.haml within layouts/norcalfreediving (33.7ms)
+Completed 200 OK in 45ms (Views: 41.4ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-05-07 14:16:04 -0700
+  Processing by ProductsController#new as HTML
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+Rendered products/_form.html.haml (12.2ms)
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([[:position, :asc]])
+Rendered products/new.html.haml within layouts/norcalfreediving (37.3ms)
+Completed 200 OK in 46ms (Views: 43.6ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2011-05-07 14:16:50 -0700
+  Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V1yokCfVLq+aU2zSQJDiv685TjhOkU9NgtM7BI2dSsA=", "product"=>{"name"=>"", "price"=>""}, "commit"=>"Save"}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+Rendered products/_form.html.haml (16.9ms)
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([[:position, :asc]])
+Rendered products/new.html.haml within layouts/norcalfreediving (46.9ms)
+Completed 200 OK in 75ms (Views: 54.3ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2011-05-07 14:18:52 -0700
+  Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V1yokCfVLq+aU2zSQJDiv685TjhOkU9NgtM7BI2dSsA=", "product"=>{"name"=>"", "price"=>""}, "commit"=>"Save"}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+Rendered products/_form.html.haml (13.4ms)
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([[:position, :asc]])
+Rendered products/new.html.haml within layouts/norcalfreediving (38.2ms)
+Completed 200 OK in 60ms (Views: 43.8ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2011-05-07 14:19:06 -0700
+  Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V1yokCfVLq+aU2zSQJDiv685TjhOkU9NgtM7BI2dSsA=", "product"=>{"name"=>"Test Product", "price"=>"123.45"}, "commit"=>"Save"}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+MONGODB whisper_development['products'].insert([{"name"=>"Test Product", "price"=>"123.45", "_id"=>BSON::ObjectId('4dc5b74b872ceb4ab2000004'), "project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}])
+Redirected to http://localhost:3000/products/4dc5b74b872ceb4ab2000004
+Completed 302 Found in 61ms
+
+
+Started GET "/products/4dc5b74b872ceb4ab2000004" for 127.0.0.1 at 2011-05-07 14:19:07 -0700
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"4dc5b74b872ceb4ab2000004"}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+MONGODB whisper_development['products'].find({:_id=>BSON::ObjectId('4dc5b74b872ceb4ab2000004')})
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([[:position, :asc]])
+Rendered products/show.html.haml within layouts/norcalfreediving (73.4ms)
+Completed 200 OK in 82ms (Views: 79.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-05-07 14:19:09 -0700
+  Processing by ProductsController#index as HTML
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+MONGODB whisper_development['$cmd'].find({"count"=>"products", "query"=>{"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}, "fields"=>nil})
+MONGODB whisper_development['products'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).limit(25).sort([[:name, :asc]])
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([[:position, :asc]])
+Rendered products/index.html.haml within layouts/norcalfreediving (34.5ms)
+Completed 200 OK in 44ms (Views: 40.7ms)
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+
+
+Started GET "/products" for 127.0.0.1 at 2011-05-07 14:59:39 -0700
+  Processing by ProductsController#index as HTML
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+MONGODB whisper_development['$cmd'].find({"count"=>"products", "query"=>{"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}, "fields"=>nil})
+MONGODB whisper_development['products'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).limit(25).sort([[:name, :asc]])
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([[:position, :asc]])
+Rendered products/index.html.haml within layouts/norcalfreediving (33.9ms)
+Completed 200 OK in 44ms (Views: 40.1ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-05-07 15:00:05 -0700
+  Processing by Devise::SessionsController#new as HTML
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+Rendered devise/shared/_links.haml (4.4ms)
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([[:position, :asc]])
+Rendered devise/sessions/new.html.haml within layouts/norcalfreediving (36.0ms)
+Completed 200 OK in 45ms (Views: 42.1ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-05-07 15:00:14 -0700
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V1yokCfVLq+aU2zSQJDiv685TjhOkU9NgtM7BI2dSsA=", "user"=>{"email"=>"john.w.gannon@citi.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+MONGODB whisper_development['users'].find({:email=>"john.w.gannon@citi.com"})
+MONGODB whisper_development['users'].update({"_id"=>BSON::ObjectId('4db20fb4872ceb0e33000009')}, {"$set"=>{"last_sign_in_at"=>2011-05-05 01:20:06 UTC, "current_sign_in_at"=>2011-05-07 22:00:15 UTC, "sign_in_count"=>7}})
+Redirected to http://localhost:3000/
+Completed 302 Found in 120ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-07 15:00:15 -0700
+  Processing by PagesController#show as HTML
+  Parameters: {"root_path"=>true}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([[:position, :asc]])
+MONGODB whisper_development['users'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000009')})
+MONGODB whisper_development['galleries'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['$cmd'].find({"count"=>"articles", "query"=>{"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}, "fields"=>nil})
+MONGODB whisper_development['articles'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:date_published, :desc]])
+Rendered pages/show.html.haml within layouts/norcalfreediving (77.4ms)
+Completed 200 OK in 88ms (Views: 83.4ms)
+
+
+Started GET "/stylesheets/img/gradient.png" for 127.0.0.1 at 2011-05-07 15:00:16 -0700
+
+ActionController::RoutingError (No route matches "/stylesheets/img/gradient.png"):
+  
+
+Rendered /home/tyler/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/stylesheets/img/gradient.png" for 127.0.0.1 at 2011-05-07 15:00:17 -0700
+
+ActionController::RoutingError (No route matches "/stylesheets/img/gradient.png"):
+  
+
+Rendered /home/tyler/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-05-07 15:00:22 -0700
+  Processing by ProductsController#index as HTML
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+MONGODB whisper_development['$cmd'].find({"count"=>"products", "query"=>{"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}, "fields"=>nil})
+MONGODB whisper_development['products'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).limit(25).sort([[:name, :asc]])
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['users'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000009')})
+MONGODB whisper_development['galleries'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['$cmd'].find({"count"=>"articles", "query"=>{"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}, "fields"=>nil})
+MONGODB whisper_development['articles'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:date_published, :desc]])
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([[:position, :asc]])
+Rendered products/index.html.haml within layouts/norcalfreediving (44.6ms)
+Completed 200 OK in 54ms (Views: 50.9ms)
+
+
+Started GET "/stylesheets/img/gradient.png" for 127.0.0.1 at 2011-05-07 15:00:23 -0700
+
+ActionController::RoutingError (No route matches "/stylesheets/img/gradient.png"):
+  
+
+Rendered /home/tyler/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/stylesheets/img/gradient.png" for 127.0.0.1 at 2011-05-07 15:00:31 -0700
+
+ActionController::RoutingError (No route matches "/stylesheets/img/gradient.png"):
+  
+
+Rendered /home/tyler/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/projects/4db20fb4872ceb0e3300000a/pages/4db20fb4872ceb0e3300000f" for 127.0.0.1 at 2011-05-07 15:00:36 -0700
+  Processing by PagesController#show as HTML
+  Parameters: {"project_id"=>"4db20fb4872ceb0e3300000a", "id"=>"4db20fb4872ceb0e3300000f"}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['pages'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000f')}).sort([[:position, :asc]])
+MONGODB whisper_development['users'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000009')})
+MONGODB whisper_development['galleries'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['$cmd'].find({"count"=>"articles", "query"=>{"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}, "fields"=>nil})
+MONGODB whisper_development['articles'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:date_published, :desc]])
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([[:position, :asc]])
+Rendered pages/show.html.haml within layouts/norcalfreediving (34.7ms)
+Completed 200 OK in 45ms (Views: 40.9ms)
+
+
+Started GET "/stylesheets/img/gradient.png" for 127.0.0.1 at 2011-05-07 15:00:37 -0700
+
+ActionController::RoutingError (No route matches "/stylesheets/img/gradient.png"):
+  
+
+Rendered /home/tyler/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/stylesheets/img/gradient.png" for 127.0.0.1 at 2011-05-07 15:00:46 -0700
+
+ActionController::RoutingError (No route matches "/stylesheets/img/gradient.png"):
+  
+
+Rendered /home/tyler/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/stylesheets/img/gradient.png" for 127.0.0.1 at 2011-05-07 15:00:48 -0700
+
+ActionController::RoutingError (No route matches "/stylesheets/img/gradient.png"):
+  
+
+Rendered /home/tyler/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-05-07 15:05:50 -0700
+  Processing by ProductsController#index as HTML
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+MONGODB whisper_development['$cmd'].find({"count"=>"products", "query"=>{"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}, "fields"=>nil})
+MONGODB whisper_development['products'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).limit(25).sort([[:name, :asc]])
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['users'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000009')})
+MONGODB whisper_development['galleries'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['$cmd'].find({"count"=>"articles", "query"=>{"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}, "fields"=>nil})
+MONGODB whisper_development['articles'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:date_published, :desc]])
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([[:position, :asc]])
+Rendered products/index.html.haml within layouts/norcalfreediving (44.4ms)
+Completed 200 OK in 54ms (Views: 50.7ms)
+
+
+Started GET "/stylesheets/img/gradient.png" for 127.0.0.1 at 2011-05-07 15:05:50 -0700
+
+ActionController::RoutingError (No route matches "/stylesheets/img/gradient.png"):
+  
+
+Rendered /home/tyler/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/stylesheets/img/gradient.png" for 127.0.0.1 at 2011-05-07 15:28:12 -0700
+
+ActionController::RoutingError (No route matches "/stylesheets/img/gradient.png"):
+  
+
+Rendered /home/tyler/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-05-07 15:54:28 -0700
+  Processing by ProductsController#index as HTML
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+MONGODB whisper_development['$cmd'].find({"count"=>"products", "query"=>{"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}, "fields"=>nil})
+MONGODB whisper_development['products'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).limit(25).sort([[:name, :asc]])
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['users'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000009')})
+Rendered products/index.html.haml within layouts/norcalfreediving (113.7ms)
+Completed   in 124ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-05-07 15:54:29 -0700
+  Processing by Devise::SessionsController#new as HTML
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+Rendered devise/shared/_links.haml (4.6ms)
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([[:position, :asc]])
+Rendered devise/sessions/new.html.haml within layouts/norcalfreediving (87.2ms)
+Completed 200 OK in 96ms (Views: 93.3ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-05-07 15:54:33 -0700
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V1yokCfVLq+aU2zSQJDiv685TjhOkU9NgtM7BI2dSsA=", "user"=>{"email"=>"john.w.gannon@citi.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+MONGODB whisper_development['users'].find({:email=>"john.w.gannon@citi.com"})
+MONGODB whisper_development['users'].update({"_id"=>BSON::ObjectId('4db20fb4872ceb0e33000009')}, {"$set"=>{"last_sign_in_at"=>2011-05-07 22:00:15 UTC, "current_sign_in_at"=>2011-05-07 22:54:33 UTC, "sign_in_count"=>8}})
+Redirected to http://localhost:3000/products
+Completed 302 Found in 122ms
+
+
+Started GET "/products" for 127.0.0.1 at 2011-05-07 15:54:33 -0700
+  Processing by ProductsController#index as HTML
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+MONGODB whisper_development['$cmd'].find({"count"=>"products", "query"=>{"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}, "fields"=>nil})
+MONGODB whisper_development['products'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).limit(25).sort([[:name, :asc]])
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['users'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000009')})
+MONGODB whisper_development['galleries'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['$cmd'].find({"count"=>"articles", "query"=>{"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}, "fields"=>nil})
+MONGODB whisper_development['articles'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:date_published, :desc]])
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([[:position, :asc]])
+Rendered products/index.html.haml within layouts/norcalfreediving (45.9ms)
+Completed 200 OK in 56ms (Views: 52.5ms)
+
+
+Started GET "/stylesheets/img/gradient.png" for 127.0.0.1 at 2011-05-07 15:54:34 -0700
+
+ActionController::RoutingError (No route matches "/stylesheets/img/gradient.png"):
+  
+
+Rendered /home/tyler/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/products/4dc5b74b872ceb4ab2000004/edit" for 127.0.0.1 at 2011-05-07 15:55:45 -0700
+  Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"4dc5b74b872ceb4ab2000004"}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+MONGODB whisper_development['products'].find({:_id=>BSON::ObjectId('4dc5b74b872ceb4ab2000004')})
+Rendered products/_form.html.haml (9.2ms)
+MONGODB whisper_development['users'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000009')})
+MONGODB whisper_development['galleries'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['$cmd'].find({"count"=>"articles", "query"=>{"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}, "fields"=>nil})
+MONGODB whisper_development['articles'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:date_published, :desc]])
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([[:position, :asc]])
+Rendered products/edit.html.haml within layouts/norcalfreediving (44.4ms)
+Completed 200 OK in 54ms (Views: 50.6ms)
+
+
+Started GET "/stylesheets/img/gradient.png" for 127.0.0.1 at 2011-05-07 15:55:46 -0700
+
+ActionController::RoutingError (No route matches "/stylesheets/img/gradient.png"):
+  
+
+Rendered /home/tyler/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started POST "/products/4dc5b74b872ceb4ab2000004" for 127.0.0.1 at 2011-05-07 15:55:53 -0700
+  Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V1yokCfVLq+aU2zSQJDiv685TjhOkU9NgtM7BI2dSsA=", "product"=>{"name"=>"Freediving class", "price"=>"123.45"}, "commit"=>"Save", "id"=>"4dc5b74b872ceb4ab2000004"}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+MONGODB whisper_development['products'].find({:_id=>BSON::ObjectId('4dc5b74b872ceb4ab2000004')})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['products'].update({"_id"=>BSON::ObjectId('4dc5b74b872ceb4ab2000004')}, {"$set"=>{"name"=>"Freediving class"}})
+Redirected to http://localhost:3000/products/4dc5b74b872ceb4ab2000004
+Completed 302 Found in 13ms
+
+
+Started GET "/products/4dc5b74b872ceb4ab2000004" for 127.0.0.1 at 2011-05-07 15:55:54 -0700
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"4dc5b74b872ceb4ab2000004"}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+MONGODB whisper_development['products'].find({:_id=>BSON::ObjectId('4dc5b74b872ceb4ab2000004')})
+MONGODB whisper_development['users'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000009')})
+MONGODB whisper_development['galleries'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['$cmd'].find({"count"=>"articles", "query"=>{"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}, "fields"=>nil})
+MONGODB whisper_development['articles'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:date_published, :desc]])
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([[:position, :asc]])
+Rendered products/show.html.haml within layouts/norcalfreediving (35.0ms)
+Completed 200 OK in 45ms (Views: 41.3ms)
+
+
+Started GET "/stylesheets/img/gradient.png" for 127.0.0.1 at 2011-05-07 15:55:55 -0700
+
+ActionController::RoutingError (No route matches "/stylesheets/img/gradient.png"):
+  
+
+Rendered /home/tyler/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-05-07 15:55:57 -0700
+  Processing by ProductsController#index as HTML
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+MONGODB whisper_development['$cmd'].find({"count"=>"products", "query"=>{"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}, "fields"=>nil})
+MONGODB whisper_development['products'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).limit(25).sort([[:name, :asc]])
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['users'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000009')})
+MONGODB whisper_development['galleries'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['$cmd'].find({"count"=>"articles", "query"=>{"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}, "fields"=>nil})
+MONGODB whisper_development['articles'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:date_published, :desc]])
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([[:position, :asc]])
+Rendered products/index.html.haml within layouts/norcalfreediving (43.7ms)
+Completed 200 OK in 53ms (Views: 49.8ms)
+
+
+Started GET "/stylesheets/img/gradient.png" for 127.0.0.1 at 2011-05-07 15:55:58 -0700
+
+ActionController::RoutingError (No route matches "/stylesheets/img/gradient.png"):
+  
+
+Rendered /home/tyler/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/products/4dc5b74b872ceb4ab2000004/edit" for 127.0.0.1 at 2011-05-07 15:56:01 -0700
+  Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"4dc5b74b872ceb4ab2000004"}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+MONGODB whisper_development['products'].find({:_id=>BSON::ObjectId('4dc5b74b872ceb4ab2000004')})
+Rendered products/_form.html.haml (9.1ms)
+MONGODB whisper_development['users'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000009')})
+MONGODB whisper_development['galleries'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['$cmd'].find({"count"=>"articles", "query"=>{"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}, "fields"=>nil})
+MONGODB whisper_development['articles'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:date_published, :desc]])
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([[:position, :asc]])
+Rendered products/edit.html.haml within layouts/norcalfreediving (45.2ms)
+Completed 200 OK in 54ms (Views: 51.5ms)
+
+
+Started GET "/stylesheets/img/gradient.png" for 127.0.0.1 at 2011-05-07 15:56:01 -0700
+
+ActionController::RoutingError (No route matches "/stylesheets/img/gradient.png"):
+  
+
+Rendered /home/tyler/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started POST "/products/4dc5b74b872ceb4ab2000004" for 127.0.0.1 at 2011-05-07 15:56:05 -0700
+  Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V1yokCfVLq+aU2zSQJDiv685TjhOkU9NgtM7BI2dSsA=", "product"=>{"name"=>"Freediving class", "price"=>"$123.45"}, "commit"=>"Save", "id"=>"4dc5b74b872ceb4ab2000004"}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+MONGODB whisper_development['products'].find({:_id=>BSON::ObjectId('4dc5b74b872ceb4ab2000004')})
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['products'].update({"_id"=>BSON::ObjectId('4dc5b74b872ceb4ab2000004')}, {"$set"=>{"price"=>"$123.45"}})
+Redirected to http://localhost:3000/products/4dc5b74b872ceb4ab2000004
+Completed 302 Found in 14ms
+
+
+Started GET "/products/4dc5b74b872ceb4ab2000004" for 127.0.0.1 at 2011-05-07 15:56:06 -0700
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"4dc5b74b872ceb4ab2000004"}
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+MONGODB whisper_development['products'].find({:_id=>BSON::ObjectId('4dc5b74b872ceb4ab2000004')})
+MONGODB whisper_development['users'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000009')})
+MONGODB whisper_development['galleries'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['$cmd'].find({"count"=>"articles", "query"=>{"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}, "fields"=>nil})
+MONGODB whisper_development['articles'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:date_published, :desc]])
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([[:position, :asc]])
+Rendered products/show.html.haml within layouts/norcalfreediving (36.1ms)
+Completed 200 OK in 46ms (Views: 42.6ms)
+
+
+Started GET "/stylesheets/img/gradient.png" for 127.0.0.1 at 2011-05-07 15:56:06 -0700
+
+ActionController::RoutingError (No route matches "/stylesheets/img/gradient.png"):
+  
+
+Rendered /home/tyler/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-05-07 15:56:08 -0700
+  Processing by ProductsController#index as HTML
+MONGODB whisper_development['domain_names'].find({:domain_name=>"localhost"})
+MONGODB whisper_development['projects'].find({:default_project=>true})
+MONGODB whisper_development['$cmd'].find({"count"=>"products", "query"=>{"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}, "fields"=>nil})
+MONGODB whisper_development['products'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).limit(25).sort([[:name, :asc]])
+MONGODB whisper_development['projects'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['users'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0e33000009')})
+MONGODB whisper_development['galleries'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')})
+MONGODB whisper_development['$cmd'].find({"count"=>"articles", "query"=>{"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}, "fields"=>nil})
+MONGODB whisper_development['articles'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:date_published, :desc]])
+MONGODB whisper_development['pages'].find({"project_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000a')}).sort([[:position, :asc]])
+MONGODB whisper_development['pages'].find({"parent_id"=>BSON::ObjectId('4db20fb4872ceb0e3300000b')}).sort([[:position, :asc]])
+Rendered products/index.html.haml within layouts/norcalfreediving (44.9ms)
+Completed 200 OK in 55ms (Views: 51.1ms)
+
+
+Started GET "/stylesheets/img/gradient.png" for 127.0.0.1 at 2011-05-07 15:56:08 -0700
+
+ActionController::RoutingError (No route matches "/stylesheets/img/gradient.png"):
+  
+
+Rendered /home/tyler/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)

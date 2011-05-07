@@ -25,6 +25,16 @@ describe User do
       @user.should be_able_to(:create, @page)
     end
 
+    it "should be able to create galleries in its own projects" do
+      @gallery = @user.projects.create!(:name=>'project1').galleries.build
+      @user.should be_able_to(:create, @gallery)
+    end
+
+    it "should be able to create products in its own projects" do
+      @product = @user.projects.create!(:name=>'project1').products.build
+      @user.should be_able_to(:create, @product)
+    end
+
     it "should not be able to create pages in someone else's projects" do
       @another_project = user('someone@yourbusiness.com').projects.create!(
          :name=>'project1')

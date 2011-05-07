@@ -67,10 +67,32 @@ def build_project
   some_new_user.projects.build(:name => rand.to_s)
 end
 
+def pageable(*objects)
+  objects.stub(:current_page){1}
+  objects.stub(:num_pages){1}
+  objects.stub(:limit_value){20}
+  objects.stub_chain(:order_by, :page) {objects}
+  objects
+end
+
 def some_new_project
   User.create!(:email=>'email54@car.com', :password=>'coms3dt.df', \
                       :password_combination=>'coms3dt.df'
   ).projects.create!(:name => 'My new project')
 end
 
+def mock_project(stubs={})
+  @mock_project ||= mock_model(Project, 
+    {:layout => 'norcalfreediving'}.merge(stubs)).as_null_object
+end
 
+def save_should_fail(errors={ :anything => "any value (even nil)" })
+  { :save => false, 
+    :errors => errors
+  }
+end
+def update_should_fail(errors={ :anything => "any value (even nil)" })
+  { :update_attributes => false, 
+    :errors => errors
+  }
+end

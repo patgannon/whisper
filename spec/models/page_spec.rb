@@ -13,5 +13,6 @@ describe Page do
     
     c.position.should be == 1 
   end
+  
 end
 
