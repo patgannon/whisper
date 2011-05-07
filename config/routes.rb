@@ -1,4 +1,12 @@
 Whisper::Application.routes.draw do
+  get "text_areas/create"
+
+  get "text_areas/update"
+
+  get "text_areas/sort"
+
+  get "text_areas/destroy"
+
   resources :articles
 
   resources :galleries do

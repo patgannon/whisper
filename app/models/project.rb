@@ -48,9 +48,5 @@ class Project
     build_web_root(:title=>'Web Root') unless web_root
     web_root.save
   end
-  
-  def add_main_menu_items
-    
-  end
 end
 

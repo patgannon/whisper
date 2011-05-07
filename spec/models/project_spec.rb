@@ -24,6 +24,7 @@ describe Project do
   end
   
   it "should create a main menu before creation." do
+    pending "This is next."
     proj = build_project
     proj.main_menu.should_not be_nil
     proj.main_menu.items.count.should be_greater_than(2)

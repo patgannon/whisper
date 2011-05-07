@@ -2,7 +2,7 @@
 body {
   margin: 0px;
   padding: 0px;
-  background: #666666 url(/images/norcalfreediving/back.png) repeat-y center top;
+  background: #666666 url(/whisper_project/images/original/4db74ba722168d5274000008.png) repeat-y center top;
   text-align: justify;
   font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: 13px;
@@ -26,7 +26,7 @@ a {
   height: 120px;
   margin: 0px auto;
   padding: 10px 0px;
-  background: #fffbfd url(/images/norcalfreediving/header.jpg); }
+  background: #fffbfd url(/whisper_project/images/original/4db74b5122168d5274000005.jpg); }
   #header h1 {
     margin: 0px;
     padding: 0px 0px 0px 10px;
@@ -75,14 +75,14 @@ a {
     line-height: 150%; }
 
 #left {
+  float: left;
   width: 480px;
   padding: 0px 20px 40px 20px;
   height: 700px; }
 
 #right {
-  height: 100%;
-  vertical-align: top;
-  horizontal-align: middle;
+  float: right;
+  height: 500px;
   width: 210px;
   padding: 0px 20px 40px 20px;
   color: #99ccff; }
@@ -96,7 +96,7 @@ a {
   width: 771px;
   margin: 0px auto;
   border-top: 1px solid #666666;
-  background: url(/images/norcalfreediving/back-footer.png) repeat-y center top;
+  background: url(/whisper_project/images/original/4db74bf022168d527400000b.png) repeat-y center top;
   font-size: 9px;
   text-align: center;
   padding: 2px;

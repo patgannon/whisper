@@ -38,7 +38,7 @@ class PagesController < ApplicationController
     puts params[:menu_page].inspect
     ids.each_with_index{|x, i|
       page = Page.find(x)
-      puts "saving page #{page.id} with position #{i}"
+      puts "saving page #{page.id} #{page.title} with position #{i}"
       page.update_attributes!(:position => i)
     }
     render :nothing => true

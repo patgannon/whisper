@@ -8,7 +8,6 @@ describe PagesController do
   end
   
   it "shows the correct list of pages" do
-    
     get :new, :project_id => @project.id
     
     assigns(:project).should == @project
@@ -23,10 +22,11 @@ describe PagesController do
   
   it "sorts pages correctly" do
     @project.pages.create! :title => 'dance'
+    @id = @project.pages.last.id
     post :sort, :project_id => @project.id, :menu_page => @project.pages.reverse.map(&:id)
     
     @same_project = Project.find(@project.id)
-    @same_project.pages.order_by(:position).first.id.should == @project.pages.last.id
+    @same_project.pages.first.id.should == @id
   end
 end
 

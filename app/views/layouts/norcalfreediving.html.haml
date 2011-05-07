@@ -50,11 +50,12 @@
       %ul#main_menu
         - for page in @project.pages.sort{|x,y| x.position <=> y.position}
           %li[page, :menu]= link_to page.title, "/#{page.title}"
-    #content
-      #left
-        = yield
-      #right
-        = image_tag '/images/norcalfreediving/Divelogo4.jpg'
+    %table#content
+      %tr
+        %td#left
+          = yield
+        %td#right
+          = image_tag '/images/norcalfreediving/Divelogo4.jpg'
         
     #footer
       %p!= "Copyright &copy; #{DateTime.now.year} Norcal Freediving."
