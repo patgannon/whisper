@@ -18,10 +18,10 @@ class Project
   references_many :domain_names
   has_many :articles
 
-  before_create :add_main_menu_items
+#  before_create :add_main_menu_items
   after_save :save_web_root
   has_many :galleries
-  has_many :main_menu_items, :class_name => 'MenuItem'
+#  has_many :main_menu_items, :class_name => 'MenuItem'
 
   has_mongoid_attached_file :stylesheet_attachment,
     :path => "projects/:project_id/stylesheet.css",
