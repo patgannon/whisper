@@ -22,7 +22,7 @@
       %ul#main_menu
         - for page in @project.pages.sort{|x,y| x.position <=> y.position}
           %li[page, :menu]= link_to page.title, "/#{page.title}"
-        %li= link_to "Contact Us", ask_a_question_path
+        %li= link_to "Contact", ask_a_question_path
         %li= link_to "Sign Up", courses_path
     %table#content
       %tr
