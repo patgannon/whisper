@@ -1,0 +1,19 @@
+
+%html
+  %body
+    %h2 You received an inquiry at #{@project.name}
+    %table
+      %tr
+        %td From:
+        %td= @inquiry.name
+      %tr
+        %td Email:
+        %td= @inquiry.email
+      %tr
+        %td Subject
+        %td= @inquiry.subject
+      %tr
+        %td Message
+        %td= @inquiry.message
+
+

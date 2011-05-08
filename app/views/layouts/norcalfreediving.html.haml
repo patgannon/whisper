@@ -53,6 +53,11 @@
     %table#content
       %tr
         %td#left
+          #flash
+            - if flash[:notice]
+              .flash= flash[:notice]
+            - if flash[:error]
+              .flash_error= flash[:error]
           = yield
         %td#right
           = image_tag '/images/norcalfreediving/Divelogo4.jpg'

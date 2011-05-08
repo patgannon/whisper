@@ -1,4 +1,6 @@
 Whisper::Application.routes.draw do
+  resources :inquiries
+
   resources :products
   resources :articles
 

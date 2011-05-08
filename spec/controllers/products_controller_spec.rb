@@ -7,7 +7,6 @@ require 'spec_helper'
 describe ProductsController do
   before :each do
     Project.stub(:default) { mock_project(:products => mock_products) }
-
   end
   
   def mock_products

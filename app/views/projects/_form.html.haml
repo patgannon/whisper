@@ -29,6 +29,9 @@
     = f.label :name
     = f.text_field :name
   .field
+    = f.label :send_inquiries_to, "Send inquiries to:"
+    = f.text_field :send_inquiries_to
+  .field
     = f.label :paypal_email_address, "Paypal Email Address"
     = f.text_field :paypal_email_address
   .field
@@ -37,6 +40,8 @@
   .field
     = f.label :stylesheet_attachment, "Stylesheet"
     = f.file_field :stylesheet_attachment
+
+
 
   .actions
     = f.submit

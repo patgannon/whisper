@@ -3,13 +3,14 @@ class Project
   include Mongoid::Paperclip  
   field :name, :type => String
   field :description, :type => String
-  field :app_id
-  field :api_key
-  field :app_secret
-  field :layout
+  field :app_id, :type => String
+  field :api_key, :type => String
+  field :app_secret, :type => String
+  field :layout, :type => String
   
-  field :paypal_email_address
+  field :paypal_email_address, :type => String
   field :paypal_sandbox, :default => false
+  field :send_inquiries_to, :type => String
   
   referenced_in :owner, :class_name => 'User'
   validates :owner, :presence => true
@@ -18,19 +19,16 @@ class Project
   references_many :domain_names
   has_many :articles
   has_many :products
+  has_many :inquiries
 
-#  before_create :add_main_menu_items
   after_save :save_web_root
   has_many :galleries
-#  has_many :main_menu_items, :class_name => 'MenuItem'
-
 
   field :default_project, :type => Boolean
   
   def self.default
     Project.where(:default_project => true).first
   end
-
 
   has_mongoid_attached_file :stylesheet_attachment,
     :path => "projects/:project_id/stylesheet.css",
