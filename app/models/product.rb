@@ -18,7 +18,7 @@ class Product
       "item_name_1" => self.name,  
       "quantity_1" => 1
     }
-    "https://www.#{'sandbox.' if @project.paypal_sandbox}paypal.com/cgi-bin/webscr?" + values.to_query  
+    "https://www.paypal.com/cgi-bin/webscr?" + values.to_query  
       
 #    line_items.each_with_index do |item, index|  
 #      values.merge!({  
