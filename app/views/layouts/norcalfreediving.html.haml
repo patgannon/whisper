@@ -17,7 +17,7 @@
     #header
       %h1= @project.name
       - if user_signed_in?
-        = render :partial => "nav"                
+        = render :partial => "layouts/nav"                
     #menu
       %ul#main_menu
         - for page in @project.pages.sort{|x,y| x.position <=> y.position}
