@@ -27,6 +27,8 @@ Whisper::Application.routes.draw do
   end
   
   match '/manage_main_menu' => 'projects#manage_main_menu', :as => :manage_main_menu
+  match '/ask_a_question' => 'inquiries#new', :as => :ask_a_question
+  match '/courses' => 'products#index', :as => :courses
   match '/:title1(/:title2)' => 'pages#show', :via => :get
   
   root :to => 'pages#show', :root_path => true

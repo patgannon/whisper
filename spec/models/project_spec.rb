@@ -14,8 +14,11 @@ describe Project do
   it {should have_many(:articles)}
   it {should have_many(:products)}
   it {should have_many(:inquiries)}
+  it {should have_field(:send_inquiries_to)}
+  it {should have_field(:email_from)}
   it {should have_field(:paypal_email_address)}
-  it {should have_field(:paypal_sandbox)}
+  it {should have_field(:paypal_sandbox).of_type(Boolean)}
+  it {should have_field(:phone)}
   
   it "should build the web_root on creation" do
     some_new_project.web_root.should_not be_nil

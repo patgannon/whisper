@@ -11,6 +11,7 @@ class Project
   field :paypal_email_address, :type => String
   field :paypal_sandbox, :default => false
   field :send_inquiries_to, :type => String
+  field :email_from, :type => String
   
   referenced_in :owner, :class_name => 'User'
   validates :owner, :presence => true
@@ -23,6 +24,8 @@ class Project
 
   after_save :save_web_root
   has_many :galleries
+  
+  field :contact_phone, :type => String
 
   field :default_project, :type => Boolean
   

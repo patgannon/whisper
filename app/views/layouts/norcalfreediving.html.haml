@@ -17,39 +17,13 @@
     #header
       %h1= @project.name
       - if user_signed_in?
-        %ul#nav
-          %li 
-            = link_to "Manage"
-            %ul
-              - if can? :manage, @project
-                %li
-                  = link_to 'Web Site Settings', edit_project_path(@project)
-                  %ul
-                    %li= link_to 'Edit Menus', manage_main_menu_path
-                %li
-                  = link_to 'Image Galleries', galleries_path
-                  %ul
-                    = link_to 'Create a new Image Gallery', new_gallery_path, :class => 'gallery_link'
-                    - for gallery in @project.galleries
-                      %li= link_to gallery.name, gallery, :class => 'gallery_link'
-                %li
-                  = link_to 'Articles', articles_path
-                  %ul
-                    = link_to 'New Article', new_article_path
-                    - for article in @project.articles.order_by([[:date_published, :desc]]).paginate
-                      = link_to article.title, article
-                %li
-                  = link_to 'Pages', project_pages_path(@project)
-                  %ul
-                    = link_to 'New Web Page', new_project_page_path(@project)
-                    - for page in @project.pages
-                      %li= link_to page.title, project_page_path(@project, page)
-                %li= link_to 'Logout', destroy_user_session_path
-                
+        = render :partial => "nav"                
     #menu
       %ul#main_menu
         - for page in @project.pages.sort{|x,y| x.position <=> y.position}
           %li[page, :menu]= link_to page.title, "/#{page.title}"
+        %li= link_to "Contact Us", ask_a_question_path
+        %li= link_to "Sign Up", courses_path
     %table#content
       %tr
         %td#left
