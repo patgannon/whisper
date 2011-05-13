@@ -13,7 +13,6 @@ gem 'mongoid'
 gem 'mongoid-paperclip', :require => "mongoid_paperclip"
 gem 'mongoid-tree', :require => 'mongoid/tree'  # Not actually in use.
 gem 'oa-oauth', :require => 'omniauth/oauth'
-gem 'sass'
 gem 'yajl-ruby'
 
 
@@ -26,6 +25,7 @@ group :development, :test do
   gem 'hpricot'
   gem 'mongoid-rspec'
   gem 'rspec-rails'
+  gem 'sass'
   gem 'webrat'
 end
 
