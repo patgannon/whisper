@@ -2,35 +2,31 @@ source 'http://rubygems.org'
 
 gem 'rails'
 
-gem 'bson_ext'
-gem 'mongoid', '2.0.1'
-gem 'mongoid-tree', :require => 'mongoid/tree'  # Not actually in use.
-
-gem 'mongoid-paperclip', :require => "mongoid_paperclip"
 gem 'aws-s3', :require => 'aws/s3'
-
-gem 'devise'
-gem 'oa-oauth', '0.2.0', :require => 'omniauth/oauth'
+gem 'bson_ext'
 gem 'cancan'
-gem 'kaminari'
-
+gem 'devise'
 gem 'haml'
 gem 'jquery-rails'
+gem 'kaminari'
+gem 'mongoid'
+gem 'mongoid-paperclip', :require => "mongoid_paperclip"
+gem 'mongoid-tree', :require => 'mongoid/tree'  # Not actually in use.
+gem 'oa-oauth', :require => 'omniauth/oauth'
+gem 'sass'
+gem 'yajl-ruby'
+
 
 group :development, :test do
   gem 'accept_values_for'
-  gem 'hpricot'
-
-    #  Actual test frameworks
+  gem 'capybara'
+  gem 'cucumber-rails'
   gem 'gherkin'
+  gem 'haml-rails'
+  gem 'hpricot'
   gem 'mongoid-rspec'
   gem 'rspec-rails'
-  gem 'capybara'
   gem 'webrat'
-
-    # The following are just generators.  
-  gem 'cucumber-rails'
-  gem 'haml-rails'
 end
 
 group :test do

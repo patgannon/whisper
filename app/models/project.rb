@@ -9,9 +9,10 @@ class Project
   field :layout, :type => String
   
   field :paypal_email_address, :type => String
-  field :paypal_sandbox, :default => false
+  field :paypal_sandbox, :type => Boolean, :default => false
   field :send_inquiries_to, :type => String
   field :email_from, :type => String
+  field :phone, :type => String
   
   referenced_in :owner, :class_name => 'User'
   validates :owner, :presence => true
@@ -31,6 +32,13 @@ class Project
   
   def self.default
     Project.where(:default_project => true).first
+  end
+  
+  def self.default=(project)
+    Project.where(:default_project => true).each do |p|
+      p.update_attributes :default_project => false unless p==project
+    end
+    project.update_attributes :default_project => true unless project.default_project
   end
 
   has_mongoid_attached_file :stylesheet_attachment,

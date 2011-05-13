@@ -12,7 +12,7 @@
   :javascript
     function postSortData(event, ui){
       $.post(
-        '#{sort_project_pages_path(@project, :format => :js)}', 
+        '#{sort_pages_path(:format => :js)}', 
         $('#main_menu').sortable('serialize')
       );
     }

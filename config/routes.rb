@@ -8,16 +8,24 @@ Whisper::Application.routes.draw do
     resources :images
   end
 
-  resources :projects do
-    resources :domain_names
-    resources :pages do
-      collection do
-        post :sort
-      end
+  resources :domain_names
+  resources :pages do
+    collection do
+      post :sort
     end
   end
 
+  resources :projects
+
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }  
+
+  resources :users do
+    member do
+      get :verify
+      get :change_password
+    end
+  end
+
   
   resources :businesses do
     member do

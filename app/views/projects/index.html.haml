@@ -12,7 +12,7 @@
           %span.field_value= project.description
       = link_to 'Show', project
       = link_to 'Edit', edit_project_path(project) if can? :edit, project
-      = link_to 'Manage Web', project_pages_path(project) if can? :edit, project
+      = link_to 'Manage Web', pages_path if can? :edit, project
       = link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete if can? :destroy, project
 %br
 

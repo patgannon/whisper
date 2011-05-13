@@ -2,8 +2,8 @@
 
 = render 'form'
 
-= link_to 'Manage Web', project_pages_path(@project) if can? :edit, @project
-= link_to 'Add domain name', new_project_domain_name_path(@project) if can? :manage, @project
+= link_to 'Manage Web', pages_path if can? :edit, @project
+= link_to 'Add domain name', new_domain_name_path if can? :manage, @project
 = link_to 'Show', @project
 \|
 = link_to 'Back', projects_path

@@ -20,10 +20,14 @@
             - for article in @project.articles.order_by([[:date_published, :desc]]).paginate
               = link_to article.title, article
         %li
-          = link_to 'Pages', project_pages_path(@project)
+          = link_to 'Pages', pages_path
           %ul
-            = link_to 'New Web Page', new_project_page_path(@project)
+            = link_to 'New Web Page', new_page_path
             - for page in @project.pages
-              %li= link_to page.title, project_page_path(@project, page)
-        %li= link_to 'Logout', destroy_user_session_path
+              %li= link_to page.title, page_path(page)
+        %li
+          = link_to 'My Account', '#'
+          %ul
+            %li= link_to 'Logout', destroy_user_session_path
+            %li= link_to 'Change Password', edit_user_password_path
 

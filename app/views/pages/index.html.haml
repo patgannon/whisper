@@ -1,6 +1,6 @@
 %h1 Managing Web Pages for project #{@project.name}
 
-= link_to 'Make a web page', new_project_page_path(@project) if can? :manage, @project
+= link_to 'Make a web page', new_page_path if can? :manage, @project
 
 %ul#pages.items
   - @pages.each do |page|
@@ -9,9 +9,9 @@
         %li.field.title
           %span.field_name Title
           %span.field_value= page.title
-      = link_to 'Show', project_page_path(@project, page)
-      = link_to 'Edit', edit_project_page_path(@project, page) if can? :edit, page
-      = link_to 'Destroy', project_page_path(@project, page), :confirm => 'Are you sure?', :method => :delete if can? :destroy, page
+      = link_to 'Show', page_path(page)
+      = link_to 'Edit', edit_page_path(page) if can? :edit, page
+      = link_to 'Destroy', page_path(page), :confirm => 'Are you sure?', :method => :delete if can? :destroy, page
 
 %br
 

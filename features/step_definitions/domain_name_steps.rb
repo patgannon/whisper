@@ -13,7 +13,6 @@ end
 #   ).projects.create!(:name => 'My new project')
 # end
 
-
 Given /^I have created the domain name "([^"]*)" for project "([^"]*)"$/ do |domain_name, project_name|
   project = Project.where(:name=>project_name).
                     sort{|x,y| y.date_created <=> x.date_created}.first
@@ -26,6 +25,7 @@ end
 Then /^using "([^"]*)" I browse:$/ do |host, pages|
   begin
     old_host = Capybara.app_host
+    raise "Host: #{old_host}!"
     Capybara.app_host = host
 
     pages.hashes.each do |page|

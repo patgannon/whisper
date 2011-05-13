@@ -18,7 +18,7 @@ class Product
       "item_name_1" => self.name,  
       "quantity_1" => 1
     }
-    "https://www.paypal.com/cgi-bin/webscr?" + values.to_query  
+    "https://#{paypal_host}/cgi-bin/webscr?" + values.to_query  
       
 #    line_items.each_with_index do |item, index|  
 #      values.merge!({  
@@ -28,7 +28,12 @@ class Product
 #        "quantity_#{index + 1}" => item.quantity  
 #      })  
 #    end  
-  end    
+  end
   
+  private
   
+  def paypal_host
+    self.project.paypal_sandbox ? 
+      "www.sandbox.paypal.com" : "www.paypal.com"
+  end
 end
