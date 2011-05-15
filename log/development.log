@@ -34991,3 +34991,6 @@ MONGODB whisper_development['users'].find({:_id=>BSON::ObjectId('4db20fb4872ceb0
 Rendered projects/_form.html.haml (18.9ms)
 Rendered projects/new.html.haml (22.4ms)
 Completed 200 OK in 34ms (Views: 29.0ms)
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})

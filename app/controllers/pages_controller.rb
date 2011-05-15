@@ -35,10 +35,8 @@ class PagesController < ApplicationController
   
   def sort
     ids = params[:menu_page]
-    puts params[:menu_page].inspect
     ids.each_with_index{|x, i|
       page = Page.find(x)
-      puts "saving page #{page.id} #{page.title} with position #{i}"
       page.update_attributes!(:position => i)
     }
     render :nothing => true

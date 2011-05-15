@@ -46,7 +46,7 @@ describe Project do
   
   it "should give the right stylesheet when a stylesheet has not been uploaded" do
     @project = Project.new
-    @project.stylesheet.stub(:file?) { false }
+    @project.stylesheet_attachment.stub(:file?) { false }
     
     @project.stylesheet.should be == @project.layout
   end

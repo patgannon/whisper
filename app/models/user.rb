@@ -60,7 +60,7 @@ class User
   end
   
   def loading_can?(*args)
-    unless !rules.empty?
+    if rules.empty?
       set_abilities
     end
     nonloading_can? *args

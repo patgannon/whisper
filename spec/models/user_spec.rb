@@ -7,10 +7,6 @@ describe User do
     @user.errors.should be_empty
   end
   
-  after :each do
-    DatabaseCleaner.clean
-  end
-  
   describe "default permissions" do
     it "Should let anyone read users" do
       @user.should be_able_to(:read, User.new)
