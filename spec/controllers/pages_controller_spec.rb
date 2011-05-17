@@ -28,5 +28,12 @@ describe PagesController do
     @same_project = Project.find(@project.id)
     @same_project.pages.first.id.should == @id
   end
+  
+  it "allows me to edit pages" do
+    @page = @project.pages.create! :title => 'dance', :html => 'This is a test'
+    get :edit, :id => @page.id
+    response.body.should =~ /This is a test/m
+    
+  end
 end
 

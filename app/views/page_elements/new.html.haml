@@ -17,8 +17,9 @@
 
 = link_to 'Save Now', '#', :id=>'save_now'  
 = link_to 'Done', page_path(@page), :id=>'done_editing'
-#updated Not saved
-#html.article
-  != raw @page.html
 
+= render :partial => 
+#updated Not saved
+
+= render :partial => 'edit_text_area', :locals => {:text_area => @page_element}
 

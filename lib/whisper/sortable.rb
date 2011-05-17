@@ -4,6 +4,7 @@ module Whisper
     
     included do
       field :position, :type => Integer
+      default_scope order_by([[:position, :asc]])
     end
     
     module ClassMethods

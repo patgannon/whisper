@@ -58,6 +58,14 @@ Spork.prefork do
     Site.stub(:find).with(anything()) {@site}
   end
 
+  RSpec::Matchers.define :include_module do |expected|
+    match do |actual|
+      actual.class == Class ?
+        actual.include?(expected) :
+        actual.class.include?(expected)
+    end
+  end
+
   def new_can_can_rule(base_behavior, action, subject, conditions=nil)
     CanCan::Rule.new base_behavior, action, subject, conditions, nil
   end
@@ -84,11 +92,15 @@ Spork.prefork do
     objects.stub_chain(:order_by, :page) {objects}
     objects
   end
+  
+  def some_user
+    User.create!(:email=>"#{rand}@cool.com", :password=>'coms3dt.df', \
+                        :password_combination=>'coms3dt.df'
+    )
+  end
 
   def some_new_project
-    User.create!(:email=>'email54@car.com', :password=>'coms3dt.df', \
-                        :password_combination=>'coms3dt.df'
-    ).projects.create!(:name => 'My new project')
+    some_user.projects.create!(:name => "#{rand}")
   end
 
   def mock_project(stubs={})

@@ -4,16 +4,16 @@ class Page
   include Mongoid::Tree::Ordering
   field :title, :type => String
   field :html, :type => String
-#  field :position, :type => Integer
+
   belongs_to :project
   default_scope order_by(:position, :asc)
   
-  has_many :text_areas
+  has_many :elements, :class_name => 'PageElement'
   
   before_save :set_position
   
   def set_position
-    self.position = parent.children.count unless self.position || parent.nil?
+    self.position = (self.position || parent.nil?) ? 0:parent.children.count
   end
 end
 
