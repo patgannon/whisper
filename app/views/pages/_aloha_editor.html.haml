@@ -1,19 +1,52 @@
-= stylesheet_link_tag 'aloha'
 
-- ["aloha/aloha.js", |
-  "aloha/plugins/com.gentics.aloha.plugins.Format/plugin.js", |
-  "aloha/plugins/com.gentics.aloha.plugins.Table/plugin.js", |
-  "aloha/plugins/com.gentics.aloha.plugins.List/plugin.js", |
-  "aloha/plugins/com.gentics.aloha.plugins.Link/plugin.js", |
+- @aloha_base = '/Aloha-Editor/WebContent/'
+
+:javascript
+  GENTICS_Aloha_base='#{@aloha_base}';
+
+- ["core/include.js", |
+  "plugins/com.gentics.aloha.plugins.Format/plugin.js", |
+  "plugins/com.gentics.aloha.plugins.Table/plugin.js", |
+  "plugins/com.gentics.aloha.plugins.List/plugin.js", |
+  "plugins/com.gentics.aloha.plugins.Link/plugin.js"].each do |script|
+  = javascript_include_tag "#{@aloha_base}#{script}"
+
+:javascript
+  GENTICS.Aloha.settings = {
+    logLevels: {'error': true, 'warn': true, 'info': true, 'debug': true},
+    errorhandling : false,
+    ribbon: true,  
+    "i18n": {
+      "acceptLanguage": '#{request.env['HTTP_ACCEPT_LANGUAGE']}'
+    },
+    "plugins": {
+       "com.gentics.aloha.plugins.Link": {
+          // all links that match the targetregex will get set the target
+         // e.g. ^(?!.*aloha-editor.com).* matches all href except aloha-editor.com
+          targetregex : '^(?!.*aloha-editor.com).*',
+          // this target is set when either targetregex matches or not set
+          // e.g. _blank opens all links in new window
+          target : '_blank',
+          // the same for css class as for target
+          cssclassregex : '^(?!.*aloha-editor.com).*',
+          cssclass : 'external'
+      },
+      "com.gentics.aloha.plugins.Table": {
+        config: ['table']
+      }
+    }
+  };
+
+= javascript_include_tag 'aloha'
+
+
+-#
+  , |
   "aloha/plugins/com.gentics.aloha.plugins.HighlightEditables/plugin.js", |
   "aloha/plugins/com.gentics.aloha.plugins.TOC/plugin.js", |
   "aloha/plugins/com.gentics.aloha.plugins.Link/delicious.js", |
   "aloha/plugins/com.gentics.aloha.plugins.Link/LinkList.js", |
   "aloha/plugins/com.gentics.aloha.plugins.Paste/plugin.js", |
   "aloha/plugins/at.tapo.aloha.plugins.Image/plugin.js", |
-  "aloha/plugins/com.gentics.aloha.plugins.Paste/wordpastehandler.js"].each do |script|
-  = javascript_include_tag script
-= stylesheet_link_tag "/javascripts/aloha/plugins/at.tapo.aloha.plugins.Image/resources/imageplugin.css"
-
-= javascript_include_tag 'aloha'
-
+  "aloha/plugins/com.gentics.aloha.plugins.Paste/wordpastehandler.js"
+  = stylesheet_link_tag "/javascripts/aloha/plugins/at.tapo.aloha.plugins.Image/resources/imageplugin.css"

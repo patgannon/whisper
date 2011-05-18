@@ -5,8 +5,9 @@
 
 #page_elements
   - for element in @page.elements
-    %div[element]{:element=>"element_#{element.id}"}
-      .handle Drag
+    %div[element]{:element=>"element_#{element.id}", :class => 'page_element'}
+      .dragHandle Drag
+      .resizeButton Resize
       = render :partial => element.partial(:edit), :locals => {element.name.to_sym => element}
 
 = content_for :head do
@@ -26,10 +27,28 @@
 
       $('#page_elements').sortable({
         containment: 'parent',
-        handle:      '.handle',
+        handle:      '.dragHandle',
         update:      postSortData
       });
       
+      $('.page_element').resizable({handles: 'all', ghost: true});
+      $('.resizeButton').toggle(
+        function(){
+          $(this).html('Done');
+          $el = $(this).parent();
+          $el.addClass('ui-widget-content');
+          $el.resizable({
+            stop: function(event, ui) {
+              console.log(this);
+            }
+          });
+        },
+        function() {
+          $(this).html('Resize');
+          $el.removeClass('ui-widget-content');
+          $el.resizable('destroy');
+        }
+      );
     });
 
     function postSortData(event, ui){
