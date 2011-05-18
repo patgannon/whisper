@@ -1,4 +1,27 @@
-- for element in @page_elements
-  = render :partial => 'text_area', :locals => {:text_area => element}
+= content_for :head do
+  = stylesheet_link_tag 'ui-lightness/jquery-ui-1.8.9.custom.css'
+  = javascript_include_tag 'jquery-ui-1.8.9.custom.min.js'
+  :javascript
+    $(document).ready(function() {
+      $('#page_elements').sortable({
+        containment: 'parent',
+        update: postSortData
+      });
+    });
+    function postSortData(event, ui){
+      $.post(
+        '#{sort_page_elements_path(@page, :format => :js)}', 
+        $('#page_elements').sortable('serialize', {attribute: 'element'})
+      );
+    }
+
+
+
+#page_elements
+  - for element in @page_elements
+    %div[element]{:element=>"element_#{element.id}"}= render :partial => element.name, :locals => {element.name.to_sym => element}
+
+
+= link_to 'New Element', new_page_element_path(@page)
 
 

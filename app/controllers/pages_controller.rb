@@ -34,11 +34,7 @@ class PagesController < ApplicationController
   end
   
   def sort
-    ids = params[:menu_page]
-    ids.each_with_index{|x, i|
-      page = Page.find(x)
-      page.update_attributes!(:position => i)
-    }
+    Page.sort(params[:menu_page])
     render :nothing => true
   end
   
@@ -57,8 +53,13 @@ class PagesController < ApplicationController
   end
   
   def update
-    @page = @project.pages.find(params[:id])
-    @page.update_attributes!(:html => params[:html])
+    @page = Page.find(params[:id])
+    params[:page_elements].try(:each) do |index, attr|
+      klass = attr["type"].camelize.constantize
+      obj = klass.find attr["id"]
+      obj.update_attributes attr["data"]
+    end
+
     respond_with @page
   end
   

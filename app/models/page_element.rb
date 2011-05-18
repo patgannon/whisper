@@ -4,8 +4,13 @@ class PageElement
   
   belongs_to :page, :inverse_of => :elements
   
-  def partial
-    raise NotImplementedError
+  def name
+    self.class.name.underscore
+  end
+  
+  def partial(action=:show)
+    act_str = action == :show ? '' : "#{action}_"
+    "page_elements/#{act_str}#{name}"
   end
 end
 

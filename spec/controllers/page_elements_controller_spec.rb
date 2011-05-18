@@ -10,7 +10,15 @@ describe PageElementsController do
   def mock_page_elements
     @mock_page_elements ||= pageable(any_old(PageElement))
   end
-
+  
+  describe "POST sort" do
+    it "sorts pages correctly" do
+      ids = ['1234', '5425', '647ag']
+      PageElement.should_receive(:sort).with(ids)
+      post :sort, :page_id => any_old(Page).id, :element => ids
+    end
+  end
+  
   describe "GET index" do
     it "assigns all page_elements as @page_elements" do
       get :index, :page_id => any_old(Page).id

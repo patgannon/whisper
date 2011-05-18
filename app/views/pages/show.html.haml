@@ -1,4 +1,6 @@
-.fieldValue!= @page.html
+#page_elements
+  - for element in @page.elements
+    %div[element]{:element=>"element_#{element.id}"}= render :partial => element.partial, :locals => {element.name.to_sym => element}
 
 = link_to 'Edit', edit_page_path(@page) if can? :edit, @page
 = link_to 'Delete', page_path(@page), :method=>:delete, :confirm_with => "Are you for sure?" if can? :destroy, @page
