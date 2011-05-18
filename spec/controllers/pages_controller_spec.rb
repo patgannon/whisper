@@ -21,12 +21,27 @@ describe PagesController do
   end
   
   it "sorts pages correctly" do
-    @project.pages.create! :title => 'dance'
-    @id = @project.pages.last.id
-    post :sort, :project_id => @project.id, :menu_page => @project.pages.reverse.map(&:id)
-    
-    @same_project = Project.find(@project.id)
-    @same_project.pages.first.id.should == @id
+    ids = ['1234', '5425', '647ag']
+    Page.should_receive(:sort).with(ids)
+    post :sort, :menu_page => ids
   end
+  
+  it "allows me to edit pages" do
+    Page.should_receive(:find).with(any_old(Page).id) {any_old(Page)}
+    @element = PageElement.new
+    any_old(Page).stub(:elements) { [ @element ] }
+    get :edit, :id => any_old(Page).id
+    response.body.should =~ Regexp.new(@element.id.to_s, "m")
+  end
+  
+  it "Saves stuff when pages are updated" do
+    TextArea.should_receive(:find).with("4dd2f7e5872ceb7c39000008") {any_old(TextArea)}
+    Page.should_receive(:find).with("234") {any_old(Page)}
+    any_old(TextArea).should_receive(:update_attributes).with("html"=>"This is a stupid test.") {true}
+    
+    post :update, "id" => "234", "page_elements"=>{"0"=>{"type"=>"text_area", "id"=>"4dd2f7e5872ceb7c39000008", "data"=>{"html"=>"This is a stupid test."}}}
+  
+  end
+  
 end
 

@@ -6,6 +6,8 @@ describe Page do
   it { should have_field(:position).of_type(Integer) }
   it { should be_referenced_in(:project) }
   
+  it { should have_many(:elements).of_type(PageElement) }
+  
   it "should have its position set properly." do
     a = Page.create! :title => "Niceface"
     b = a.children.create! :title => "Dorkbag"

@@ -63,7 +63,7 @@ class Project
   end
   
   def save_web_root
-    build_web_root(:title=>'Web Root') unless web_root
+    build_web_root(:title=>'Web Root', :position => 0) unless web_root
     web_root.save
   end
 end

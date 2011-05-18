@@ -10,9 +10,10 @@ Whisper::Application.routes.draw do
 
   resources :domain_names
   resources :pages do
-    collection do
-      post :sort
+    resources :elements, :controller => :page_elements do
+      post :sort, :on => :collection
     end
+    post :sort, :on => :collection
   end
 
   resources :projects

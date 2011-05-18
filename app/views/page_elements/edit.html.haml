@@ -1,0 +1,25 @@
+= content_for :head do
+  = stylesheet_link_tag 'ui-lightness/jquery-ui-1.8.9.custom.css'
+  = javascript_include_tag 'jquery-ui-1.8.9.custom.min.js'
+  = javascript_include_tag 'jquery.plugins/jquery.easydate-0.2.4.min.js'
+  = render :partial => "aloha_editor"
+  :javascript
+    const FORM_ACTION = '#{page_path(@page)}';
+
+    $(document).ready(function() {
+      $('.gallery_link').click(function(){
+        window.open($(this).attr('href'), 'gallery', "height=200, width=200");
+        return false;
+      });
+     	$('a#save_now').click(function(){ saveHtml(); return false;});
+     	$('a#done_editing').click(function(){ saveHtml(); return true;});
+    });
+
+= link_to 'Save Now', '#', :id=>'save_now'  
+= link_to 'Done', page_path(@page), :id=>'done_editing'
+
+= render :partial => 
+#updated Not saved
+
+= render :partial => 'edit_text_area', :locals => {:text_area => @page_element}
+

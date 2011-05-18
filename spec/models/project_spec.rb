@@ -4,7 +4,7 @@ describe Project do
   it { should have_field(:name).of_type(String) }
   it { should have_field(:description).of_type(String) }
   it { should be_referenced_in(:owner) }
-  subject {Project.new(:title=>"Foobar")}
+  subject {Project.new(:name=>"Foobar")}
   it {should_not accept_values_for(:name, nil)}
   it {should_not accept_values_for(:owner, nil)}
   it {should accept_values_for(:owner, user('othertg@gmail.com'))}
@@ -46,7 +46,7 @@ describe Project do
   
   it "should give the right stylesheet when a stylesheet has not been uploaded" do
     @project = Project.new
-    @project.stylesheet.stub(:file?) { false }
+    @project.stylesheet_attachment.stub(:file?) { false }
     
     @project.stylesheet.should be == @project.layout
   end

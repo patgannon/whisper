@@ -34,13 +34,7 @@ class PagesController < ApplicationController
   end
   
   def sort
-    ids = params[:menu_page]
-    puts params[:menu_page].inspect
-    ids.each_with_index{|x, i|
-      page = Page.find(x)
-      puts "saving page #{page.id} #{page.title} with position #{i}"
-      page.update_attributes!(:position => i)
-    }
+    Page.sort(params[:menu_page])
     render :nothing => true
   end
   
@@ -59,8 +53,13 @@ class PagesController < ApplicationController
   end
   
   def update
-    @page = @project.pages.find(params[:id])
-    @page.update_attributes!(:html => params[:html])
+    @page = Page.find(params[:id])
+    params[:page_elements].try(:each) do |index, attr|
+      klass = attr["type"].camelize.constantize
+      obj = klass.find attr["id"]
+      obj.update_attributes attr["data"]
+    end
+
     respond_with @page
   end
   

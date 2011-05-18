@@ -1,0 +1,41 @@
+= content_for :head do
+  = stylesheet_link_tag 'ui-lightness/jquery-ui-1.8.9.custom.css'
+  = javascript_include_tag 'jquery-ui-1.8.9.custom.min.js'
+  = javascript_include_tag 'jquery.plugins/jquery.easydate-0.2.4.min.js'
+  = render :partial => "pages/aloha_editor"
+  :javascript
+    const FORM_ACTION = '#{page_element_path(@page, @page_element)}';
+
+    function save_element(){
+      $.ajax({type: "PUT",
+        url: FORM_ACTION + '.json',
+        data: {
+          page_element: {html: $('#html').html()}
+        },
+        success: function() {
+          lastSaved = new Date();
+          $('#updated').html('Saved at ' + lastSaved.toString());
+        },
+        error: function() {
+          $('#updated').html('Error saving.  Last successful update was ' + lastSaved.toString());
+        },
+        dataType: 'json',
+      });
+    }
+
+    $(document).ready(function() {
+      $('.gallery_link').click(function(){
+        window.open($(this).attr('href'), 'gallery', "height=200, width=200");
+        return false;
+      });
+     	$('a#save_now').click(function(){ save_element(); return false;});
+     	$('a#done_editing').click(function(){ save_element(); return true;});
+    });
+
+= link_to 'Save Now', '#', :id=>'save_now'  
+= link_to 'Done', page_path(@page), :id=>'done_editing'
+
+= render :partial => 'edit_text_area', :locals => {:text_area => @page_element}
+#updated Not saved
+
+

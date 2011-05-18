@@ -5,7 +5,7 @@ module GalleriesHelper
   
   def build_s3_info
     # s3.yml is a file in the config folder, it's formatted for paperclip
-    s3config = YAML.load_file("#{RAILS_ROOT}/config/s3.yml")[Rails.env]
+    s3config = YAML.load_file("#{Rails.root}/config/s3.yml")[Rails.env]
     bucket = s3config['bucket']
     access_key = s3config['access_key_id']
     secret = s3config['secret_access_key']

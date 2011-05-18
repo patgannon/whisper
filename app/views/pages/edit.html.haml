@@ -1,26 +1,136 @@
+
+= link_to 'Done Editing Page', page_path(@page), :id=>'done_editing'
+#updated Not saved
+
+#page_elements
+  - for element in @page.elements
+    %div[element]{:element=>"element_#{element.id}", :class => 'page_element'}
+      .controls.shown
+        %b Controls
+        -# .resizeButton Resize
+        .editButton Click to edit text
+      = render :partial => element.partial(:edit), :locals => {element.name.to_sym => element}
+= link_to 'Save Now', '#', :id=>'save_now'  
+
 = content_for :head do
-  = stylesheet_link_tag 'ui-lightness/jquery-ui-1.8.9.custom.css'
-  = javascript_include_tag 'jquery-ui-1.8.9.custom.min.js'
-  = javascript_include_tag 'jquery.plugins/jquery.easydate-0.2.4.min.js'
-  = render :partial => "aloha_editor"
+  = stylesheet_link_tag 'ui-lightness/jquery-ui-1.8.13.custom.css'
+  = javascript_include_tag 'jquery-ui-1.8.13.custom.min.js'
+  = javascript_include_tag 'jquery.serialize_page_elements'
+  :css
+    .controls {
+      background-color: #bfbfbf;
+      width: 125px;
+    }
+    
+    .controls div {
+      text-decoration: underline;
+    }
+    
+    .controls div:hover {
+      cursor: pointer;
+      background-color: #a7a7a7;
+    }
+    .controls.hidden {
+      position: absolute;
+      z-index: 100;
+    }
+    
+    .controls.hidden div {
+      display:none;
+    }
+    
+    .controls.shown {
+      position: relative;
+    }
+    
+    .controls.shown div {
+      display:block;
+    }
+    
   :javascript
-    const FORM_ACTION = '#{project_page_path(@project, @page)}';
+    const FORM_ACTION = '#{page_path(@page)}';
 
     $(document).ready(function() {
       $('.gallery_link').click(function(){
         window.open($(this).attr('href'), 'gallery', "height=200, width=200");
         return false;
       });
-     	$('a#save_now').click(function(){ saveHtml(); return false;});
-     	$('a#done_editing').click(function(){ saveHtml(); return true;});
+     	$('a#save_now').click(function(){ saveElements(); return false;});
+     	$('a#done_editing').click(function(){ saveElements(); return true;});
+
+      $('#page_elements').sortable({
+        containment: 'parent',
+        update:      postSortData
+      });
+      
+      $('.page_element').resizable({handles: 'all', ghost: true});
+      $('.editButton').toggle(
+        function(){
+          $(this).html('Done');
+          $(this).parent().parent().find('.contents').aloha();
+        },
+        function() {
+          $(this).html('Edit');
+          $el = $(this).parent().parent();
+          $('a#save_now').click();
+          $(this).parent().parent().find('.contents').mahalo();
+        }
+      );
+
+      $('.controls').toggle(
+        function(){
+          $(this).addClass('shown');
+          $(this).removeClass('hidden');
+        },
+        function() {
+          $(this).removeClass('shown');
+          $(this).addClass('hidden');
+        }
+      );
+
+      
+      $('.resizeButton').toggle(
+        function(){
+          $(this).html('Done');
+          $el = $(this).parent().parent();
+          $el.addClass('ui-widget-content');
+          $el.resizable({
+            stop: function(event, ui) {
+              console.log(this);
+            }
+          });
+        },
+        function() {
+          $(this).html('Resize');
+          $el = $(this).parent().parent();
+          $el.removeClass('ui-widget-content');
+          $el.resizable('destroy');
+        }
+      );
     });
 
-= link_to 'Save Now', '#', :id=>'save_now'  
-= link_to 'Done', page_path(@page), :id=>'done_editing'
-#updated Not saved
-#html.article
-  != raw @page.html
-
-
+    function postSortData(event, ui){
+      $.post(
+        '#{sort_page_elements_path(@page, :format => :js)}', 
+        $('#page_elements').sortable('serialize', {attribute: 'element'})
+      );
+    }
+    
+    function saveElements() {
+      $.ajax({type: "PUT",
+          url: FORM_ACTION + '.json',
+          data: {page_elements: $('#page_elements').serialize_page_elements()},
+          success: function() {
+            lastSaved = new Date();
+            $('#updated').html('Saved at ' + lastSaved.toString());
+          },
+          error: function() {
+            $('#updated').html('Error saving.  Last successful update was ' + lastSaved.toString());
+          },
+          dataType: 'json',
+          });
+      
+    }
+  = render :partial => "aloha_editor"
 
 

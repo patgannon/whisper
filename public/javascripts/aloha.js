@@ -20,6 +20,7 @@ GENTICS.Aloha.settings = {
 	 		]
 		}
 	},
+	
 	"plugins": {
 	 	"com.gentics.aloha.plugins.Format": {
 		 	// all elements with no specific configuration get this configuration
@@ -30,7 +31,7 @@ GENTICS.Aloha.settings = {
 				// formatting for all editable DIVs
 				'div'		: [ 'b', 'i', 'del', 'sub', 'sup'  ], 
 				// content is a DIV and has class .article so it gets both buttons
-				'.article'	: [ 'b', 'i', 'p', 'title', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'pre', 'removeFormat']
+				'.contents'	: [ 'b', 'i', 'p', 'title', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'pre', 'removeFormat']
 		  	}
 		},
 	 	"com.gentics.aloha.plugins.List": { 
@@ -42,7 +43,7 @@ GENTICS.Aloha.settings = {
 				// all divs get OL
 				'div'		: [ 'ol' ], 
 				// content is a DIV. It would get only OL but with class .article it also gets UL.
-				'.article'	: [ 'ul' ]
+				'.contents'	: [ 'ul' ]
 		  	}
 		},
 	 	"com.gentics.aloha.plugins.Link": {
@@ -77,7 +78,7 @@ GENTICS.Aloha.settings = {
 			config : [ ],
 		  	editables : {
 				// Allow insert tables only into .article
-				'.article'	: [ 'table' ] 
+				'.contents'	: [ 'table' ] 
 		  	}
 		}
   	}
@@ -88,10 +89,10 @@ $(document).ready(function() {
       if (typeof(AUTH_TOKEN) == "undefined") return;
       // settings.data is a serialized string like "foo=bar&baz=boink" (or null)
       settings.data = settings.data || "";
-      settings.data += (settings.data ? "&" : "") + "authenticity_token=" + encodeURIComponent(AUTH_TOKEN);
+      settings.data += (settings.data ? "&" : "") + "authenticity_token=" + encodeURIComponent($('meta[name=csrf-token]').attr('content'));
     });
 
-    $('.article').aloha();
+    $('.text_area .contents').aloha();
     // $('.article').focusout(function(){
     //     $('#article').html($('#html').html());
     //     $('#form').submit();
@@ -99,39 +100,8 @@ $(document).ready(function() {
 
     //  $('.resizable').resizable();
 
-	$('.article').focusout(function(){ saveHtml(); });
+//	$('.article').focusout(function(){ saveHtml(); });
 });
 
 var lastSaved = null;
-
-function saveHtml(){
-  $.ajax({type: "PUT",
-          url: FORM_ACTION + '.json',
-          data: {html: $('#html').html()},
-          success: function() {
-            lastSaved = new Date();
-            $('#updated').html('Saved at ' + lastSaved.toString());
-          },
-          error: function() {
-            $('#updated').html('Error saving.  Last successful update was ' + lastSaved.toString());
-          },
-          dataType: 'json',
-          });
-}
-
-function save(){
-
-    var content = "";
-    	// iterate all dom elements which have been made aloha editable
-    	jQuery.each(GENTICS.Aloha.editables,function (index, editable) {
-    		// and get their clean and valid html5 content, and remember it to fake saving 
-    		
-    		content = content + "Editable ID: " + editable.getId() +"\nHTML code: " + editable.getContents() + "\n\n";
-    	});
-    	// this fakes the saving of the content to your backend.
-    	// TODO implement this to save the edited aloha content into your backend
-    	alert(this.i18n('saveMessage')+"\n\n"+content);
-    
-}
-
 
