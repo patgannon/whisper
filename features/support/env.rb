@@ -3,8 +3,14 @@
 # newer version of cucumber-rails. Consider adding your own code to a new file 
 # instead of editing this one. Cucumber will automatically load all features/**/*.rb
 # files.
+ENV["RAILS_ENV"] = "test"
+require File.expand_path(File.dirname(__FILE__) + '/../../config/environment')
+require 'cucumber/rails/world'
+require 'cucumber/formatter/unicode'
+require 'webrat/integrations/rspec-rails'
+require 'cucumber/rails/rspec'
 
-require 'cucumber/rails'
+#require 'cucumber/rails'
 
 # Capybara defaults to XPath selectors rather than Webrat's default of CSS3. In
 # order to ease the transition to Capybara we set the default here. If you'd
@@ -34,4 +40,6 @@ ActionController::Base.allow_rescue = false
 DatabaseCleaner.strategy = :truncation
 
 # require File.expand_path(File.join(File.dirname(__FILE__), "devise_steps"))
+
+
 

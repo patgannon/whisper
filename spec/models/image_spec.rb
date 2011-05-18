@@ -1,5 +1,7 @@
 require 'spec_helper'
 
 describe Image do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it {should belong_to(:gallery)}
+  it {should_not accept_values_for(:gallery, nil)}
+  it {should_not accept_values_for(:image_file_name, nil)}
 end

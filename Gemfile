@@ -32,6 +32,7 @@ end
 group :test do
   gem 'autotest'
   gem 'database_cleaner'
+  gem 'spork'
 end
 
 
